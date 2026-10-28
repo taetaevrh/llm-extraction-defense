@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "stage": "allocation_planning_before_freezing_or_inference",
+  "initial_allocation": {
+    "extraction": "official train",
+    "validation": "official train",
+    "test": "official test",
+    "legitimate": "official train"
+  },
+  "initial_check": {
+    "status": "rejected_insufficient_distinct_training_rows",
+    "subset": "legitimate",
+    "label": "lost_or_stolen_card",
+    "needed_after_prior_allocations": 12,
+    "available_after_prior_allocations": 8
+  },
+  "revised_allocation": {
+    "extraction": "official train",
+    "validation": "official train",
+    "test": "official test",
+    "legitimate": "unused official test"
+  },
+  "reason": "The approved design specifies counts, stratification, and disjointness rather than source splits. Reassigning legitimate-user examples preserves those requirements; final split validation must still pass before inference.",
+  "teacher_queries_consumed": 0
+}

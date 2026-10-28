@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-28T19:40:57.562036+00:00",
+  "dataset_id": "PolyAI/banking77",
+  "revision": "1846984189f2bc0ac51c6fc3a600fa9e1714e0c6",
+  "upstream_revision": "57ec275d8078af65b7731c2a98be812d844a6d6b",
+  "license": "CC-BY-4.0",
+  "decision": "suitable_for_attributed_academic_pilot",
+  "additional_conflicting_restrictions_found": false,
+  "review_scope": "Pinned dataset card, publisher README and root LICENSE",
+  "attribution": {
+    "creators": [
+      "Inigo Casanueva",
+      "Tadas Temcinas",
+      "Daniela Gerz",
+      "Matthew Henderson",
+      "Ivan Vulic"
+    ],
+    "title": "Efficient Intent Detection with Dual Sentence Encoders",
+    "year": 2020,
+    "publisher": "PolyAI",
+    "paper": "https://arxiv.org/abs/2003.04807",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Eight-intent subset filtering, normalized-text deduplication, seeded stratified splitting, and teacher-generated training labels; no raw data redistributed."
+  },
+  "sources": {
+    "dataset_card": {
+      "url": "https://huggingface.co/datasets/PolyAI/banking77/resolve/1846984189f2bc0ac51c6fc3a600fa9e1714e0c6/README.md",
+      "sha256": "f3786a5327fd6533c7c0ff3ff654e20ee3d1261d2fa41667381f59a2e42364e1"
+    },
+    "publisher_readme": {
+      "url": "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/57ec275d8078af65b7731c2a98be812d844a6d6b/README.md",
+      "sha256": "7b9ce9069931cc2de89dce8c7ffb53d07806cf413601ccf133b9af5227b3a373"
+    },
+    "publisher_license": {
+      "url": "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/57ec275d8078af65b7731c2a98be812d844a6d6b/LICENSE",
+      "sha256": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661"
+    }
+  },
+  "teacher": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "license": "apache-2.0"
+  },
+  "student": {
+    "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "license": "apache-2.0"
+  },
+  "replaces": "TweetEval; original stop/provenance remains preserved in Task 02 preflight files"
+}

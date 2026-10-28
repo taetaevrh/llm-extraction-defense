@@ -1,1 +1,1 @@
-"""Reserved for the teacher interface after research design review."""
+"""Text-only teacher process and budget accounting."""

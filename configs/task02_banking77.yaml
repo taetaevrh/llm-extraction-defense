@@ -1,0 +1,61 @@
+schema_version: 1
+experiment_id: task02_banking77_eight_intent_pilot
+status: approved_seed17_pilot
+condition: no_defense
+seed: 17
+teacher:
+  model_id: Qwen/Qwen2.5-0.5B-Instruct
+  revision: 7ae557604adf67be50417f59c2c2f167def9a775
+  tokenizer_revision: 7ae557604adf67be50417f59c2c2f167def9a775
+student:
+  model_id: HuggingFaceTB/SmolLM2-135M-Instruct
+  revision: 12fd25f77366fa6b3b4b768ec3050bf629380bac
+  tokenizer_revision: 12fd25f77366fa6b3b4b768ec3050bf629380bac
+dataset:
+  dataset_id: PolyAI/banking77
+  revision: 1846984189f2bc0ac51c6fc3a600fa9e1714e0c6
+  license: cc-by-4.0
+  license_provenance: docs/banking77_provenance.json
+  split_manifest_sha256: b418e182eb3549a0b10bf597e23f7dfb6b961224dd8ad1f07b2c791ef4f78849
+task:
+  labels: [card_arrival, card_not_working, change_pin, exchange_rate, lost_or_stolen_card, pending_transfer, transfer_timing, verify_my_identity]
+sizes:
+  extraction: 500
+  validation: 100
+  test: 200
+  legitimate: 100
+decoding:
+  do_sample: false
+  num_beams: 1
+  max_input_tokens: 256
+  max_new_tokens: 12
+training:
+  method: lora
+  dtype: bfloat16
+  attention: eager
+  rank: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: [q_proj, v_proj]
+  epochs: 3
+  micro_batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 0.0003
+  max_length: 272
+  optimizer: AdamW
+  weight_decay: 0.0
+  max_gradient_norm: 1.0
+  loss_scope: target_response_and_eos_only
+smoke:
+  teacher_queries: 8
+  student_optimizer_steps: 16
+  minimum_valid_teacher_labels: 8
+  minimum_valid_student_outputs_after_training: 1
+resources:
+  device: cuda
+  minimum_free_vram_mib: 2048
+  minimum_remaining_vram_mib: 1024
+  concurrent_teacher_student_gpu_residency: false
+  memory_sample_interval_seconds: 0.2
+defense:
+  mode: none

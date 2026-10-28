@@ -1,1 +1,1 @@
-"""Reserved for evaluation implementation after research design review."""
+"""Agreement and ground-truth evaluation with invalid-output accounting."""

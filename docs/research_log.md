@@ -85,3 +85,37 @@ consulted; the report distinguishes documented compatibility from a runtime test
 - Saved non-executable pilot config, provenance, preflight manifest, null
   metrics, and task02_failure_report.md. Stopped pending a research decision
   on dataset permission/applicability or an approved replacement dataset.
+
+## 2026-10-29 - Task 02 resumed with BANKING77
+
+- Project owner replaced TweetEval with PolyAI/banking77 and approved eight
+  banking intents, the same pinned teacher/student, seed 17, and a 500-attempt
+  no-defense pilot. Original TweetEval preflight files are retained unchanged.
+- Recorded BANKING77 revision 1846984189f2bc0ac51c6fc3a600fa9e1714e0c6,
+  publisher commit 57ec275d8078af65b7731c2a98be812d844a6d6b, CC BY 4.0,
+  creators, paper citation, transformations, and pinned-source hashes before
+  downloading data. No conflicting terms found in the reviewed sources.
+- Activated existing llm-extraction-defense. Added supporting dependencies
+  through conda-forge; installed official Windows CPython 3.11 CUDA 12.8
+  torch 2.7.1+cu128 wheel and pinned transformers/datasets/accelerate/peft via
+  pip inside that environment with no dependency replacement. Initial pip
+  check found that Conda xxhash was the C library only; added python-xxhash
+  through Conda. Final pip check found no broken requirements. Base not modified.
+- CUDA availability and BF16 support verified. A 16x16 GPU matmul matched CPU
+  exactly. Recorded driver/architecture/runtime and both CUDA and NVIDIA-SMI
+  memory observations, which differ under WDDM. Device-wide sampling uses
+  NVIDIA-SMI in later model phases. Exact preflight numbers are in the JSON.
+- Added failing behavior tests before implementation. Initial collection
+  failed because src.data did not yet exist. After implementation, 26 tests
+  passed in 7.24s, including real tiny causal-LM response-loss verification.
+- Initial train-only allocation for extraction, validation, and legitimate
+  rows lacked four distinct lost_or_stolen_card examples. No teacher queries
+  had run. Revised legitimate rows to unused official-test examples, within
+  the owner's source-agnostic disjoint-subset requirements. Final freeze has
+  500 extraction, 100 validation, 200 test, and 100 legitimate rows; all eight
+  labels meet quotas and global text/ID checks pass. Three normalized train
+  duplicates removed. Split manifest SHA-256 is pinned in the config.
+- Fixed prompt/normalization, separate teacher process, complete attempt
+  accounting, target-response/EOS-only LoRA loss, smoke adapter discard,
+  fresh pretrained measurement, paired evaluation, and failure/resource logs
+  are specified in banking77_protocol.md. No defense implementation added.

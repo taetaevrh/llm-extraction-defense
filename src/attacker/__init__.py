@@ -1,1 +1,1 @@
-"""Reserved for extraction and student implementation after design review."""
+"""Student adaptation from teacher-generated hard labels."""

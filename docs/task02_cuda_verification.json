@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+  "pytorch": "2.7.1+cu128",
+  "torch_cuda_runtime": "12.8",
+  "cudnn": 90701,
+  "cuda_is_available": true,
+  "bf16_supported": true,
+  "gpu_name": "NVIDIA GeForce RTX 4060 Ti",
+  "capability": [
+    8,
+    9
+  ],
+  "compiled_architectures": [
+    "sm_50",
+    "sm_60",
+    "sm_61",
+    "sm_70",
+    "sm_75",
+    "sm_80",
+    "sm_86",
+    "sm_90",
+    "sm_100",
+    "sm_120"
+  ],
+  "free_vram_mib_before_computation": 7075.0,
+  "total_vram_mib": 8187.5,
+  "tiny_matmul_seconds": 0.08956819999730214,
+  "tiny_matmul_sum": 66672640.0,
+  "tiny_matmul_matches_cpu_exactly": true,
+  "tiny_matmul_peak_allocated_mib": 32.00244140625,
+  "nvidia_smi": "name, memory.total [MiB], memory.free [MiB], driver_version, compute_cap\nNVIDIA GeForce RTX 4060 Ti, 8188 MiB, 5033 MiB, 617.42, 8.9",
+  "deterministic_algorithms": true,
+  "tf32": false
+}

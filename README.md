@@ -1,14 +1,15 @@
 # LLM Extraction Defense Research
 
-Task 02 status: stopped before implementation at the dataset-license gate.
-See the [Task 02 preflight report](docs/task02_failure_report.md) for exact
-candidate revisions, source evidence, and the research decision needed.
-The Task 01 description and setup below remain historical initialization notes.
+Task 02 resumed with the project-owner-approved BANKING77 replacement. The
+no-defense pipeline is implemented and smoke-gated. See the
+[BANKING77 protocol](docs/banking77_protocol.md) and
+[approved configuration](configs/task02_banking77.yaml). The original
+[TweetEval stop report](docs/task02_failure_report.md) remains historical evidence.
 
 Undergraduate senior research project investigating defenses against black-box
-LLM model extraction. Task 01 establishes the environment and protocol only.
-No defense, model adapter, extraction runner, model download, or training is
-implemented. No novelty claim is made.
+LLM model extraction. Task 01 established the scaffold; Task 02 adds teacher
+inference, student LoRA adaptation, and evaluation for eight intents.
+No defense is implemented and no novelty claim is made.
 
 ## Roles and review boundary
 
@@ -16,20 +17,33 @@ implemented. No novelty claim is made.
 - ChatGPT: research and algorithm design, experimental protocol, analysis.
 - Codex: implementation, tests, execution, reproducibility.
 
-Review the research question, threat model, model/data choices, and protocol
-before implementation continues.
+The owner approved this seed-17 no-defense pilot. Stop after it and review the
+results before designing defenses or running more experiments.
+
+## Run the approved baseline
+
+From the repository root in PowerShell: `./scripts/run_banking77.ps1`.
+The script activates the existing Conda environment, sets startup determinism
+variables, and runs a fresh exclusive run directory. It checks CUDA, validates
+the frozen split hash, downloads only pinned artifacts, performs a smoke test,
+discards its adapter, then performs the pilot. Do not rerun merely to seek a
+better result. Every new run consumes a new recorded teacher-query budget.
+
+The learner receives only text and teacher-generated labels; the curator keeps
+ground truth for splitting/evaluation. See the protocol for the local simulation
+boundary, 500 extraction plus 308 evaluation/smoke calls, and limitations.
 
 ## Repository layout
 
 ```text
-configs/          Versioned experiment specifications (currently provisional)
-src/teacher/      Future authorized black-box teacher interface
-src/attacker/     Future student and extraction code
+configs/          Initial proposals and approved BANKING77 configuration
+src/teacher/      Text-only teacher process and query accounting
+src/attacker/     Response-only LoRA student adaptation
 src/defense/      Future defense code; no algorithm yet
-src/evaluation/   Future agreement, task, utility, and resource evaluation
-tests/            Scaffold/configuration checks; no model execution
+src/evaluation/   Agreement, task metrics, and class distributions
+tests/            Synthetic fixtures and a tiny random CPU model; no downloads
 experiments/      Run artifact contracts and manifest template
-results/          Metrics contract and template; no measured results yet
+results/          Metrics contract, ignored runs, reviewed aggregate summaries
 docs/             Environment evidence, research question, protocol, research log
 environment.yml   Conda environment specification
 ```
@@ -67,8 +81,14 @@ resolved dependencies in `environment.yml` and a version snapshot. Do not
 install GPU packages until checking the GPU architecture, driver, Python ABI,
 wheel runtime, and platform together. See [environment report](docs/environment_report.md).
 
-The initial environment is for configuration and tests. PyTorch and a bundled
-CUDA runtime are deliberately absent; GPU execution is not validated.
+The current environment adds official PyTorch 2.7.1+cu128 and a pinned model
+stack to the Task 01 toolchain. Most supporting dependencies are from Conda;
+the official Windows CUDA wheel and matching high-level model packages use
+pip inside this Conda environment. GPU matrix computation was verified; see
+[CUDA verification](docs/task02_cuda_verification.json). Task 01 environment
+reports/snapshots are retained as historical records. Current snapshots use
+the `docs/banking77_` prefix. The full resolved YAML and pip freeze are version
+inventories; recreate from environment.yml to retain the official GPU wheel URL.
 
 ## Reproducibility conventions
 
