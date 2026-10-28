@@ -119,3 +119,10 @@ consulted; the report distinguishes documented compatibility from a runtime test
   accounting, target-response/EOS-only LoRA loss, smoke adapter discard,
   fresh pretrained measurement, paired evaluation, and failure/resource logs
   are specified in banking77_protocol.md. No defense implementation added.
+- Initial execution 20261028T195641Z_banking77_seed17_fd03c5eb failed during
+  model artifact preparation with WinError 1314 (cache symlink privilege).
+  CUDA and frozen splits had passed; no teacher/model inference or training,
+  zero teacher queries. Run-local manifest/failure files are preserved.
+  Switched snapshot_download to ordinary revision-specific local directories
+  under ignored models/, with local-only model loading. No OS privilege change,
+  package change, revision change, or outcome-based experiment adjustment.

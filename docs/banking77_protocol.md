@@ -69,6 +69,10 @@ labels, and other text are invalid and saved separately. Match valid labels
 only; two invalid replies never count as agreement.
 
 Teacher inference runs in a separate OS process with JSON text input/output.
+Pinned artifacts use ordinary local files under ignored
+`models/<repository>/<revision>/`; model loading is local-only. This avoids
+Windows cache symlink privilege requirements. Downloaded files are hashed in
+the run manifest; model revisions do not change.
 Weights, tensors, logits, hidden states, and truth are not returned to the
 training component. Every backend attempt is logged before budget accounting
 can advance to another query, including invalid responses and errors. No

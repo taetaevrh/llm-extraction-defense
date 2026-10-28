@@ -1,14 +1,21 @@
 """Pinned, local-only model loading after explicit artifact preparation."""
 
+from pathlib import Path
+
 from src.task import messages
+
+
+def local_model_path(spec):
+    return Path(__file__).resolve().parents[1] / "models" / spec["model_id"].replace("/", "--") / spec["revision"]
 
 
 def load_model(spec):
     import torch
     from transformers import AutoModelForCausalLM, AutoTokenizer
-    tokenizer = AutoTokenizer.from_pretrained(spec["model_id"], revision=spec["revision"], local_files_only=True, trust_remote_code=False)
+    directory = local_model_path(spec)
+    tokenizer = AutoTokenizer.from_pretrained(str(directory), local_files_only=True, trust_remote_code=False)
     model = AutoModelForCausalLM.from_pretrained(
-        spec["model_id"], revision=spec["revision"], local_files_only=True,
+        str(directory), local_files_only=True,
         trust_remote_code=False, use_safetensors=True, torch_dtype=torch.bfloat16,
         attn_implementation="eager",
     ).to("cuda")

@@ -118,3 +118,13 @@ def test_real_causal_lm_loss_uses_only_shifted_response_targets():
     result = model(input_ids=ids, labels=labels)
     manual = torch.nn.functional.cross_entropy(result.logits[0, 2:5], ids[0, 3:6])
     torch.testing.assert_close(result.loss, manual)
+
+
+def test_local_model_directory_is_repository_scoped_and_revision_specific():
+    from pathlib import Path
+    from src.models import local_model_path
+    spec = {"model_id": "publisher/model", "revision": "a" * 40}
+    path = local_model_path(spec)
+    assert path.relative_to(Path(__file__).resolve().parents[1]).as_posix() == (
+        "models/publisher--model/" + "a" * 40
+    )

@@ -52,11 +52,13 @@ def sha256_file(path):
 
 def prepare_models(config):
     from huggingface_hub import snapshot_download
+    from src.models import local_model_path
     files = {}
     for role in ("teacher", "student"):
         spec = config[role]
         directory = Path(snapshot_download(
             spec["model_id"], revision=spec["revision"],
+            local_dir=local_model_path(spec),
             allow_patterns=["config.json", "generation_config.json", "tokenizer.json", "tokenizer_config.json", "special_tokens_map.json", "vocab.json", "merges.txt", "model.safetensors", "model.safetensors.index.json", "model-*.safetensors", "LICENSE", "README.md"],
         ))
         files[role] = {str(p.relative_to(directory)): {"sha256": sha256_file(p), "bytes": p.stat().st_size} for p in sorted(directory.rglob("*")) if p.is_file()}
