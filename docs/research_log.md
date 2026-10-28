@@ -56,3 +56,32 @@ consulted; the report distinguishes documented compatibility from a runtime test
   exclude local environment/cache directories, run outputs, weight extensions,
   and representative credential paths. No commit, push, models, or training.
 - Stopped for research design review at the end of Task 01.
+
+## 2026-10-29 - Task 02 license preflight stopped
+
+- User approved Qwen2.5-0.5B-Instruct / SmolLM2-135M-Instruct on TweetEval
+  sentiment with 500 extraction attempts, 200 held-out and 100 legitimate
+  validation examples, seed 17, deterministic outputs, no defense.
+- Task 01 was already committed at 7ee36b11b21bd23176e4e2c947067ae526134f64
+  and the working tree was clean. Created `task02/no-defense-baseline`.
+- Resolved exact model/dataset revisions and read pinned cards before any
+  weights/data. See task02_provenance.json for API URLs, timestamps, and hashes.
+  Both model cards identify Apache 2.0. The dataset repository metadata is
+  unknown, while the sentiment-specific card identifies CC BY 3.0 and also
+  requires Twitter/API terms compliance.
+- Checked the referenced historical task-organizer license statement,
+  upstream README, and current X Developer Agreement/Policy. The agreement's
+  foundation-model fine-tuning restriction raises an unresolved applicability
+  question for this historical off-platform dataset. Triggered the user's
+  explicit unclear-license stop condition. No categorical legal conclusion.
+- No pip/Conda package installations, weight/data downloads, teacher queries,
+  GPU tensor computation, split creation, or training. The project Conda
+  environment was activated by name and Python 3.11.18 / PyTorch absence
+  confirmed. environment.yml and all Task 01 dependency records are unchanged.
+- `nvidia-smi` observed 8,188 MiB total and 6,123 MiB free VRAM, driver 617.42,
+  compute capability 8.9. These are preflight values, not experiment peaks.
+- Existing suite: `python -m pytest -q` in activated llm-extraction-defense:
+  **4 passed in 0.16s**. No extraction pipeline tests or measurements exist yet.
+- Saved non-executable pilot config, provenance, preflight manifest, null
+  metrics, and task02_failure_report.md. Stopped pending a research decision
+  on dataset permission/applicability or an approved replacement dataset.

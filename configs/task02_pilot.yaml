@@ -1,0 +1,47 @@
+schema_version: 1
+experiment_id: task02_no_defense_pilot
+status: stopped_at_dataset_license_preflight
+condition: no_defense
+seed: 17
+teacher:
+  model_id: Qwen/Qwen2.5-0.5B-Instruct
+  revision: 7ae557604adf67be50417f59c2c2f167def9a775
+  tokenizer_revision: 7ae557604adf67be50417f59c2c2f167def9a775
+  license_declared: apache-2.0
+student:
+  model_id: HuggingFaceTB/SmolLM2-135M-Instruct
+  revision: 12fd25f77366fa6b3b4b768ec3050bf629380bac
+  tokenizer_revision: 12fd25f77366fa6b3b4b768ec3050bf629380bac
+  license_declared: apache-2.0
+dataset:
+  dataset_id: cardiffnlp/tweet_eval
+  configuration: sentiment
+  revision: b3a375baf0f409c77e6bc7aa35102b7b3534f8be
+  repository_license_metadata: unknown
+  subset_license_named_by_card: CC-BY-3.0
+  additional_terms: Twitter/X Terms of Service and API terms
+  license_gate: unresolved
+  split_manifest_sha256: null
+task:
+  labels: [negative, neutral, positive]
+budget:
+  extraction_teacher_query_attempts: 500
+  held_out_test_examples: 200
+  legitimate_user_validation_examples: 100
+  tuning_validation_examples: null
+decoding:
+  do_sample: false
+  num_beams: 1
+  max_input_tokens: 256
+  max_new_tokens: 8
+defense:
+  mode: none
+training:
+  method_preference: lora_if_supported
+  loss_scope: target_response_only
+  resolved_settings: null
+  status: not_started
+execution:
+  allowed: false
+  stop_reason: dataset_license_unclear_for_proposed_llm_fine_tuning
+# User-approved pilot choices recorded for review. No runner or splits exist yet.

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "record_id": "task02_license_preflight_2026-10-29",
+  "status": "not_run_license_gate",
+  "teacher_student_agreement": {
+    "before_training": null,
+    "after_training": null,
+    "held_out_examples_evaluated": 0
+  },
+  "task_accuracy": {
+    "teacher": null,
+    "student_before_training": null,
+    "student_after_training": null
+  },
+  "invalid_outputs": null,
+  "class_distributions": null,
+  "legitimate_user_utility": null,
+  "queries": {
+    "extraction_attempts": 0,
+    "evaluation_attempts": 0,
+    "successful_training_labels": 0
+  },
+  "experiment_runtime_seconds": null,
+  "experiment_peak_gpu_allocated_mib": null,
+  "experiment_peak_gpu_reserved_mib": null,
+  "experiment_failures": [],
+  "preflight_failure": {
+    "code": "DATASET_LICENSE_UNCLEAR",
+    "report": "docs/task02_failure_report.md"
+  },
+  "sufficiently_reliable_for_defense_research": false,
+  "assessment": "No baseline executed; no evidence about extraction effectiveness or training feasibility."
+}

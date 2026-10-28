@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "record_id": "task02_license_preflight_2026-10-29",
+  "record_type": "preflight_only_no_experiment_run",
+  "status": "stopped",
+  "stage": "dataset_license_preflight",
+  "branch": "task02/no-defense-baseline",
+  "code_revision_at_preflight": "7ee36b11b21bd23176e4e2c947067ae526134f64",
+  "local_date": "2026-10-29",
+  "timezone": "Asia/Bangkok",
+  "configuration": "configs/task02_pilot.yaml",
+  "provenance": "docs/task02_provenance.json",
+  "failure_report": "docs/task02_failure_report.md",
+  "metrics": "results/task02_preflight.json",
+  "conda": {
+    "name": "llm-extraction-defense",
+    "prefix_relative_to_repository": ".conda/envs/llm-extraction-defense",
+    "python": "3.11.18",
+    "packages_changed": false,
+    "environment_yml_sha256": "6de572d5b66f80a0eb5d56b53e1cd9326613e9eaec7d2893039c94a03da8dc57",
+    "resolved_yml_sha256": "219dc499593d14e87aaf316a6dc863dbd3b98b4e7b1c8d151fa171d218aba27d",
+    "explicit_lock_sha256": "bc2d40c64ab783d7ed37a6ff5c224a72ca336e5735757c667953d4c36d5ffc7d"
+  },
+  "gpu_observation": {
+    "model": "NVIDIA GeForce RTX 4060 Ti",
+    "total_vram_mib": 8188,
+    "free_vram_mib_at_preflight_query": 6123,
+    "driver": "617.42",
+    "compute_capability": "8.9",
+    "source": "nvidia-smi CSV query during preflight; not an experiment peak measurement"
+  },
+  "pytorch": {
+    "installed": false,
+    "version": null,
+    "bundled_cuda_version": null,
+    "cuda_is_available": null,
+    "gpu_computation_verified": false,
+    "reason": "Stopped at license gate before installation or GPU computation"
+  },
+  "validation": {
+    "scope": "existing Task 01 scaffold only",
+    "command": "python -m pytest -q",
+    "environment": "activated llm-extraction-defense",
+    "passed": 4,
+    "failed": 0,
+    "reported_test_runtime_seconds": 0.16
+  },
+  "failure": {
+    "code": "DATASET_LICENSE_UNCLEAR",
+    "required_stop": "User Task 02: stop if a model or dataset license is unsuitable or unclear",
+    "detail": "Sentiment card identifies CC BY 3.0 and also requires Twitter/API terms; current X agreement III.A(k) restricts foundation-model fine-tuning. Applicability to historical off-platform data has not been established."
+  }
+}

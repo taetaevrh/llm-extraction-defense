@@ -1,5 +1,10 @@
 # LLM Extraction Defense Research
 
+Task 02 status: stopped before implementation at the dataset-license gate.
+See the [Task 02 preflight report](docs/task02_failure_report.md) for exact
+candidate revisions, source evidence, and the research decision needed.
+The Task 01 description and setup below remain historical initialization notes.
+
 Undergraduate senior research project investigating defenses against black-box
 LLM model extraction. Task 01 establishes the environment and protocol only.
 No defense, model adapter, extraction runner, model download, or training is

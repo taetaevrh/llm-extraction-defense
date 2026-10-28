@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-28T19:30:04.787624+00:00",
+  "assets": [
+    {
+      "role": "teacher",
+      "repository": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen2.5-0.5B-Instruct/revision/7ae557604adf67be50417f59c2c2f167def9a775",
+      "metadata_license": "apache-2.0",
+      "card_url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/resolve/7ae557604adf67be50417f59c2c2f167def9a775/README.md",
+      "card_sha256": "b19c806a904db6dc878a0462e70b551f6b7ac78dfbb88c2eb966ca2b9109ae15",
+      "gated": false,
+      "decision": "model_card_license_identified_apache_2_0"
+    },
+    {
+      "role": "student",
+      "repository": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "metadata_url": "https://huggingface.co/api/models/HuggingFaceTB/SmolLM2-135M-Instruct/revision/12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "metadata_license": "apache-2.0",
+      "card_url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/resolve/12fd25f77366fa6b3b4b768ec3050bf629380bac/README.md",
+      "card_sha256": "4f97533ad95b1b2fea15fbc075c01b94578ebdd7c8138888fa43fa3abd530dc4",
+      "gated": false,
+      "decision": "model_card_license_identified_apache_2_0"
+    },
+    {
+      "role": "dataset",
+      "repository": "cardiffnlp/tweet_eval",
+      "revision": "b3a375baf0f409c77e6bc7aa35102b7b3534f8be",
+      "metadata_url": "https://huggingface.co/api/datasets/cardiffnlp/tweet_eval/revision/b3a375baf0f409c77e6bc7aa35102b7b3534f8be",
+      "metadata_license": [
+        "unknown"
+      ],
+      "card_url": "https://huggingface.co/datasets/cardiffnlp/tweet_eval/resolve/b3a375baf0f409c77e6bc7aa35102b7b3534f8be/README.md",
+      "card_sha256": "ca4e9635625a8e334e1cd0a4e4c12dd27764f1871f5d118399855c8c5076c0df",
+      "gated": false,
+      "configuration": "sentiment",
+      "subset_license_named_by_card": "CC-BY-3.0",
+      "additional_terms_required_by_card": [
+        "Twitter Terms of Service",
+        "Twitter API Terms of Service"
+      ],
+      "decision": "unclear_for_proposed_llm_fine_tuning_stop"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://groups.google.com/g/semevaltweet/c/k5DDcvVb_Vo/m/zEOdECFyBQAJ",
+      "finding": "Dataset-card-linked task-organizer reply identifies CC BY 3.0; historical thread from 2015."
+    },
+    {
+      "url": "https://github.com/cardiffnlp/tweeteval#license",
+      "finding": "Upstream points users to individual-task licenses and Twitter rules."
+    },
+    {
+      "url": "https://docs.x.com/developer-terms/agreement",
+      "section": "III.A(k)",
+      "finding": "Current agreement restricts X API or X Content use for foundation/frontier-model training or fine-tuning."
+    },
+    {
+      "url": "https://docs.x.com/developer-terms/policy",
+      "finding": "Current policy describes X Content access, redistribution, and offline-content obligations."
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by/3.0/",
+      "finding": "CC BY 3.0 permits reuse/adaptation with attribution; it does not establish the applicability of separate X terms to this historical dataset."
+    }
+  ],
+  "outcome": "stopped_at_dataset_license_preflight",
+  "uncertainty": "No established permission or documented exemption resolving the dataset-card-required X terms for this historical off-platform LLM adaptation pilot. No categorical legal conclusion is made.",
+  "weight_files_downloaded": 0,
+  "dataset_data_files_downloaded": 0,
+  "download_scope": "Only public API metadata and README model/dataset cards; browser additionally read licensing pages."
+}
