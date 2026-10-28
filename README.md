@@ -6,6 +6,11 @@ no-defense pipeline is implemented and smoke-gated. See the
 [approved configuration](configs/task02_banking77.yaml). The original
 [TweetEval stop report](docs/task02_failure_report.md) remains historical evidence.
 
+The first pilot is complete: [measured results and limitations](docs/banking77_baseline_report.md).
+Held-out agreement increased from 0% to 82%, but the teacher's 47.5% accuracy
+and the pretrained student's high invalid-output rate limit interpretation.
+Stop for research review before any further run or defense work.
+
 Undergraduate senior research project investigating defenses against black-box
 LLM model extraction. Task 01 established the scaffold; Task 02 adds teacher
 inference, student LoRA adaptation, and evaluation for eight intents.

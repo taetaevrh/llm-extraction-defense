@@ -126,3 +126,43 @@ consulted; the report distinguishes documented compatibility from a runtime test
   Switched snapshot_download to ordinary revision-specific local directories
   under ignored models/, with local-only model loading. No OS privilege change,
   package change, revision change, or outcome-based experiment adjustment.
+- After the cache-path fix, `python -m pytest -q`: **27 passed in 7.31s**.
+  Executed successful pilot from clean source commit
+  a11165eceadd161a50b983abd9cc7833efceeae1 on task02/no-defense-baseline.
+- Run 20261028T195903Z_banking77_seed17_1a1274a4 completed. Smoke used eight
+  teacher calls, produced eight valid teacher labels, and changed smoke-student
+  valid outputs from 0/8 to 8/8 after 16 training steps. The smoke adapter was
+  discarded. Main pilot: 500 extraction attempts, 498 valid teacher labels,
+  two invalid responses; 200 test + 100 legitimate calls. **808 total** teacher
+  calls including smoke; no retries or extra extraction calls.
+- Main adaptation: 498 teacher-only examples, three epochs, 187 optimizer
+  updates, 460800 trainable LoRA parameters, 8610 supervised response/EOS tokens.
+  Losses and gradients remained finite. No pilot CUDA failure or OOM.
+- On the same 200 held-out examples: teacher accuracy 95/200 (47.5%);
+  student-teacher agreement 0/200 -> 164/200 (82%); student ground-truth accuracy
+  0/200 -> 74/200 (37%). Invalid student outputs 197 -> 0; teacher invalid 0.
+  Teacher predicted verify_my_identity 128/200; student after predicted it
+  150/200. No teacher/student test exchange_rate predictions. These limitations
+  prevent treating agreement as strong evidence of useful capability recovery.
+- Separate legitimate set: teacher accuracy 36/100, student accuracy 0/100 ->
+  35/100, agreement 0/100 -> 83/100; invalid student outputs 99 -> 0.
+  Teacher coverage 100%, no denial, latency p50 0.293s and p95 0.322s.
+- Measured pilot wall time 966.21s; successful preparation 21.70s; smoke 38.57s;
+  total successful run including both 1026.49s. Excludes dependency installation
+  and the earlier failed preparation. Student training: 327.76s, peak Torch
+  allocated 637.53 MiB, reserved 876 MiB. Teacher query peak: 990.78 MiB
+  allocated, 1030 MiB reserved. Highest sampled whole-device use: 4124 MiB,
+  including other applications. Driver sampling may miss short spikes.
+- Retained Qwen eager/sliding-window warning; pinned config explicitly has
+  use_sliding_window=false, sliding_window=32768, and inputs capped at 256.
+  No backend/settings changed after outcomes. All captured model-file hashes
+  remained unchanged after the run.
+- Independently recomputed all reported accuracy/agreement/invalid counts and
+  checked row alignment, 808 ledger entries, frozen split hash, finite updates,
+  and teacher-only training artifact schema. Reviewed summaries/manifests and
+  baseline report saved in versioned files; raw data, predictions, weights,
+  adapter, and caches remain ignored. Base Conda history observation unchanged.
+- Scientific conclusion: technical pipeline feasibility and task-specific
+  agreement improvement observed; teacher bias and output-format confounding
+  require review before defense comparisons. One seed/eight intents do not
+  establish general extraction success or full-LLM recovery. Stopped for review.

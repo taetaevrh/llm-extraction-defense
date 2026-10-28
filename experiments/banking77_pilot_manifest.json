@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "run_id": "20261028T195903Z_banking77_seed17_1a1274a4",
+  "status": "completed",
+  "started_at_utc": "2026-10-28T19:59:03.839396+00:00",
+  "finished_at_utc": "2026-10-28T20:16:10.468803+00:00",
+  "seed": 17,
+  "config": {
+    "schema_version": 1,
+    "experiment_id": "task02_banking77_eight_intent_pilot",
+    "status": "approved_seed17_pilot",
+    "condition": "no_defense",
+    "seed": 17,
+    "teacher": {
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "tokenizer_revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+    },
+    "student": {
+      "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "tokenizer_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac"
+    },
+    "dataset": {
+      "dataset_id": "PolyAI/banking77",
+      "revision": "1846984189f2bc0ac51c6fc3a600fa9e1714e0c6",
+      "license": "cc-by-4.0",
+      "license_provenance": "docs/banking77_provenance.json",
+      "split_manifest_sha256": "b418e182eb3549a0b10bf597e23f7dfb6b961224dd8ad1f07b2c791ef4f78849"
+    },
+    "task": {
+      "labels": [
+        "card_arrival",
+        "card_not_working",
+        "change_pin",
+        "exchange_rate",
+        "lost_or_stolen_card",
+        "pending_transfer",
+        "transfer_timing",
+        "verify_my_identity"
+      ]
+    },
+    "sizes": {
+      "extraction": 500,
+      "validation": 100,
+      "test": 200,
+      "legitimate": 100
+    },
+    "decoding": {
+      "do_sample": false,
+      "num_beams": 1,
+      "max_input_tokens": 256,
+      "max_new_tokens": 12
+    },
+    "training": {
+      "method": "lora",
+      "dtype": "bfloat16",
+      "attention": "eager",
+      "rank": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "epochs": 3,
+      "micro_batch_size": 1,
+      "gradient_accumulation_steps": 8,
+      "learning_rate": 0.0003,
+      "max_length": 272,
+      "optimizer": "AdamW",
+      "weight_decay": 0.0,
+      "max_gradient_norm": 1.0,
+      "loss_scope": "target_response_and_eos_only"
+    },
+    "smoke": {
+      "teacher_queries": 8,
+      "student_optimizer_steps": 16,
+      "minimum_valid_teacher_labels": 8,
+      "minimum_valid_student_outputs_after_training": 1
+    },
+    "resources": {
+      "device": "cuda",
+      "minimum_free_vram_mib": 2048,
+      "minimum_remaining_vram_mib": 1024,
+      "concurrent_teacher_student_gpu_residency": false,
+      "memory_sample_interval_seconds": 0.2
+    },
+    "defense": {
+      "mode": "none"
+    }
+  },
+  "config_sha256": "8ce3bcf06049f9bc18a883d9399ae708e0a374d55144c8985dce5e8e767b5f38",
+  "prompt_template": "Classify the banking customer's message into exactly one intent.\nAllowed intents: card_arrival, card_not_working, change_pin, exchange_rate, lost_or_stolen_card, pending_transfer, transfer_timing, verify_my_identity.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+  "prompt_sha256": "2550077ced4f4510bcbc7fa937e085dc72c7bc93cff4964b10395334b5ae9f7c",
+  "normalization": "Whole canonical label only; trim whitespace, paired/unpaired quotes/backticks, case, and one final period/exclamation. Explanations/ambiguous text invalid.",
+  "git_commit": "a11165eceadd161a50b983abd9cc7833efceeae1",
+  "git_status": "",
+  "code_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "provenance": {
+    "schema_version": 1,
+    "checked_at_utc": "2026-10-28T19:40:57.562036+00:00",
+    "dataset_id": "PolyAI/banking77",
+    "revision": "1846984189f2bc0ac51c6fc3a600fa9e1714e0c6",
+    "upstream_revision": "57ec275d8078af65b7731c2a98be812d844a6d6b",
+    "license": "CC-BY-4.0",
+    "decision": "suitable_for_attributed_academic_pilot",
+    "additional_conflicting_restrictions_found": false,
+    "review_scope": "Pinned dataset card, publisher README and root LICENSE",
+    "attribution": {
+      "creators": [
+        "Inigo Casanueva",
+        "Tadas Temcinas",
+        "Daniela Gerz",
+        "Matthew Henderson",
+        "Ivan Vulic"
+      ],
+      "title": "Efficient Intent Detection with Dual Sentence Encoders",
+      "year": 2020,
+      "publisher": "PolyAI",
+      "paper": "https://arxiv.org/abs/2003.04807",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "Eight-intent subset filtering, normalized-text deduplication, seeded stratified splitting, and teacher-generated training labels; no raw data redistributed."
+    },
+    "sources": {
+      "dataset_card": {
+        "url": "https://huggingface.co/datasets/PolyAI/banking77/resolve/1846984189f2bc0ac51c6fc3a600fa9e1714e0c6/README.md",
+        "sha256": "f3786a5327fd6533c7c0ff3ff654e20ee3d1261d2fa41667381f59a2e42364e1"
+      },
+      "publisher_readme": {
+        "url": "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/57ec275d8078af65b7731c2a98be812d844a6d6b/README.md",
+        "sha256": "7b9ce9069931cc2de89dce8c7ffb53d07806cf413601ccf133b9af5227b3a373"
+      },
+      "publisher_license": {
+        "url": "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/57ec275d8078af65b7731c2a98be812d844a6d6b/LICENSE",
+        "sha256": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661"
+      }
+    },
+    "teacher": {
+      "id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "license": "apache-2.0"
+    },
+    "student": {
+      "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "license": "apache-2.0"
+    },
+    "replaces": "TweetEval; original stop/provenance remains preserved in Task 02 preflight files"
+  },
+  "environment_files_sha256": {
+    "environment.yml": "1288421fe216dc3f45451d67d6e97ac9a9d3a575e109c71d9cf6dbc8fb305bd0",
+    "docs/banking77_environment.resolved.yml": "51a9f04603067c2ee86346e9bc3cb07251771f75a8e5b73ad302e8b6fe35a870",
+    "docs/banking77_conda_win64.explicit.txt": "b56b52d66492e91cd6895624a6f49ea2d74ccc40309816a6777410c43e19ea0a",
+    "docs/banking77_pip_freeze.txt": "d298e567958b6957d9724bd8933c23dc1562e811b76ede560ef030682f8743e7"
+  },
+  "split_manifest_sha256": "b418e182eb3549a0b10bf597e23f7dfb6b961224dd8ad1f07b2c791ef4f78849",
+  "model_files": {
+    "teacher": {
+      ".cache\\huggingface\\.gitignore": {
+        "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+        "bytes": 1
+      },
+      ".cache\\huggingface\\download\\config.json.metadata": {
+        "sha256": "e08dabce9a97ccee75ec7bffe838677b0ff290dfa09820373d9dce9ffb204266",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\generation_config.json.metadata": {
+        "sha256": "9f3794c9bec7713a964790f8994419b7d87c34c11681df6e7b3709bde5b88f99",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\LICENSE.metadata": {
+        "sha256": "71e6037f1af26f6559e1247cf7a34bcb46456a7aa7a59cbd40da084c7c55474c",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\merges.txt.metadata": {
+        "sha256": "641e1ad5928b238eb0ab428505e7861501f24ddca9d63453ff1a68e1e0ab6cfa",
+        "bytes": 103
+      },
+      ".cache\\huggingface\\download\\model.safetensors.metadata": {
+        "sha256": "8ad6d2574f6a6e445b9555ab94408f6082e949a373e2cc1d23a833dfc2689be4",
+        "bytes": 127
+      },
+      ".cache\\huggingface\\download\\README.md.metadata": {
+        "sha256": "888635ee17dc24c31ce24cf08e3475d443bc4f6b0060a50a4b2a282f52b7b1a7",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\tokenizer.json.metadata": {
+        "sha256": "bb583c633e2c0eb59be230c6378c9a23892a7cd6a4fff348ab7e8fde058973fa",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\tokenizer_config.json.metadata": {
+        "sha256": "20d28238a5ff07a697860368d9692bd01c56327fc24534bf1b6cb31638de292e",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\vocab.json.metadata": {
+        "sha256": "17b6f70d897ecf60d1c2cc882b24f547462c0312df240fb0c99300accfbb37cf",
+        "bytes": 103
+      },
+      "config.json": {
+        "sha256": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+        "bytes": 659
+      },
+      "generation_config.json": {
+        "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+        "bytes": 242
+      },
+      "LICENSE": {
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "bytes": 11343
+      },
+      "merges.txt": {
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "bytes": 1671839
+      },
+      "model.safetensors": {
+        "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+        "bytes": 988097824
+      },
+      "README.md": {
+        "sha256": "b19c806a904db6dc878a0462e70b551f6b7ac78dfbb88c2eb966ca2b9109ae15",
+        "bytes": 4917
+      },
+      "tokenizer.json": {
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "bytes": 7031645
+      },
+      "tokenizer_config.json": {
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "bytes": 7305
+      },
+      "vocab.json": {
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "bytes": 2776833
+      }
+    },
+    "student": {
+      ".cache\\huggingface\\.gitignore": {
+        "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1",
+        "bytes": 1
+      },
+      ".cache\\huggingface\\download\\config.json.metadata": {
+        "sha256": "672485deaf3506938c404bb13e3335cf6afa3d813c58c22b04ca706e8b09b82f",
+        "bytes": 102
+      },
+      ".cache\\huggingface\\download\\generation_config.json.metadata": {
+        "sha256": "f8223b0dfc8c246e5941298d39d7d4af52ca4185cd95ec5087be2ae51dc71f7d",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\merges.txt.metadata": {
+        "sha256": "ca85311253c70ffedb364f57cea360f95376c194485507b2d58ae0d98e5a6ebb",
+        "bytes": 103
+      },
+      ".cache\\huggingface\\download\\model.safetensors.metadata": {
+        "sha256": "92f0672b92674e3f7dea77a5d470bb0545d2adb9bae1eff8bf7135f8c8f7b7b6",
+        "bytes": 128
+      },
+      ".cache\\huggingface\\download\\README.md.metadata": {
+        "sha256": "42575cedac1eef3124de5c08ae8ef4f5fefff05f2a490cb1a3928b031078f764",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\special_tokens_map.json.metadata": {
+        "sha256": "0f80440d53d72ec641349e0a347b6e4f547117dd21f6235c914255253fa7fc85",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\tokenizer.json.metadata": {
+        "sha256": "7d27005194daa463054ea1812dfc26d70783ab11341b9d79d031c85f23f81a6c",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\tokenizer_config.json.metadata": {
+        "sha256": "ae7c2cd7fea07ba9a5ba6398cda6e12a548c34be0178f7de10703994ba4f2f35",
+        "bytes": 104
+      },
+      ".cache\\huggingface\\download\\vocab.json.metadata": {
+        "sha256": "b8197cc1cfedb61d8a67205bded8f4779de17a03a6232abf079e6ade4fdd773f",
+        "bytes": 104
+      },
+      "config.json": {
+        "sha256": "8eb740e8bbe4cff95ea7b4588d17a2432deb16e8075bc5828ff7ba9be94d982a",
+        "bytes": 861
+      },
+      "generation_config.json": {
+        "sha256": "87b916edaaab66b3899b9d0dd0752727dff6666686da0504d89ae0a6e055a013",
+        "bytes": 132
+      },
+      "merges.txt": {
+        "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+        "bytes": 466391
+      },
+      "model.safetensors": {
+        "sha256": "5af571cbf074e6d21a03528d2330792e532ca608f24ac70a143f6b369968ab8c",
+        "bytes": 269060552
+      },
+      "README.md": {
+        "sha256": "4f97533ad95b1b2fea15fbc075c01b94578ebdd7c8138888fa43fa3abd530dc4",
+        "bytes": 6772
+      },
+      "special_tokens_map.json": {
+        "sha256": "2b7379f3ae813529281a5c602bc5a11c1d4e0a99107aaa597fe936c1e813ca52",
+        "bytes": 655
+      },
+      "tokenizer.json": {
+        "sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+        "bytes": 2104556
+      },
+      "tokenizer_config.json": {
+        "sha256": "4ec77d44f62efeb38d7e044a1db318f6a939438425312dfa333b8382dbad98df",
+        "bytes": 3764
+      },
+      "vocab.json": {
+        "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79",
+        "bytes": 800662
+      }
+    }
+  },
+  "preparation_seconds": 21.69948229996953,
+  "smoke_seconds": 38.57446410000557,
+  "smoke_passed": true,
+  "failures": [],
+  "raw_artifacts_relative_path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4",
+  "reviewed_metrics": "results/banking77_pilot_summary.json"
+}

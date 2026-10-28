@@ -1,0 +1,14 @@
+{
+  "run_id": "20261028T195641Z_banking77_seed17_fd03c5eb",
+  "status": "failed_before_inference",
+  "started_at_utc": "2026-10-28T19:56:41.267910+00:00",
+  "finished_at_utc": "2026-10-28T19:57:17.698814+00:00",
+  "git_commit": "9b20f16649bc7e1aedd2c7e31df7dd8a49dd63d0",
+  "stage": "model_preparation",
+  "exception_type": "OSError",
+  "message": "[WinError 1314] A required privilege is not held by the client: '..\\\\..\\\\blobs\\\\4b8373851d093eb9f3017443f27781c6971eff24' -> 'D:\\\\MU\\\\Y3S3-Y4S1\\\\Senior Project\\\\me-al\\\\.cache\\\\huggingface\\\\hub\\\\models--Qwen--Qwen2.5-0.5B-Instruct\\\\snapshots\\\\7ae557604adf67be50417f59c2c2f167def9a775\\\\README.md'",
+  "teacher_queries": 0,
+  "raw_failure_path": "experiments/runs/20261028T195641Z_banking77_seed17_fd03c5eb/failure.json",
+  "failure_sha256": "a25e7c5c950e605263d56ac5dddcd6a83ca0b03eed651c119a0456920a93802d",
+  "resolution": "Use ordinary repository-local pinned files, avoiding Windows symlink creation; revisions and experimental settings unchanged."
+}
