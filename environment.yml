@@ -1,0 +1,12 @@
+name: llm-extraction-defense
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11.18
+  - numpy=2.2.6
+  - pyyaml=6.0.3
+  - pytest=8.4.2
+  - pip=26.2.2
+# Task 01 intentionally omits PyTorch, CUDA runtime packages, and model libraries.
+# Select and pin a GPU build after design review and a compatibility check.

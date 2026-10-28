@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "run_id": null,
+  "status": "not_run",
+  "agreement": {"matches": null, "examples": null, "fraction": null},
+  "student_task": {"correct": null, "examples": null, "accuracy": null},
+  "untrained_student_task": {"accuracy": null, "agreement": null},
+  "teacher_task": {"correct": null, "examples": null, "accuracy": null},
+  "legitimate_user": {
+    "examples": null, "correct": null, "denied": null,
+    "end_to_end_accuracy": null, "coverage": null,
+    "served_accuracy": null, "latency_p50_seconds": null,
+    "latency_p95_seconds": null
+  },
+  "queries": {
+    "extraction_attempts": null, "successful_responses": null,
+    "denied": null, "errors": null, "evaluation_attempts": null,
+    "input_tokens": null, "output_tokens": null
+  },
+  "runtime_seconds": {
+    "teacher_collection": null, "student_training": null,
+    "evaluation": null, "total": null
+  },
+  "resources": {
+    "peak_gpu_allocated_mib": null, "peak_gpu_reserved_mib": null,
+    "sampled_device_peak_used_mib": null, "sampling_interval_seconds": null,
+    "oom_count": null
+  },
+  "failure_reason": null
+}

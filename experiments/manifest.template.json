@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "run_id": null,
+  "status": "not_run",
+  "condition": null,
+  "started_at_utc": null,
+  "finished_at_utc": null,
+  "command": null,
+  "seed_streams": {"run": null, "denial": null, "data_loader": null},
+  "code": {"git_commit": null, "dirty": null, "diff_sha256": null},
+  "config_sha256": null,
+  "model_versions": {
+    "teacher_id": null, "teacher_revision": null,
+    "teacher_tokenizer_revision": null,
+    "student_id": null, "student_revision": null,
+    "student_tokenizer_revision": null,
+    "adapter_revision": null, "precision": null, "quantization": null
+  },
+  "data": {"dataset_revision": null, "split_manifest_sha256": null},
+  "prompt_template_sha256": null,
+  "environment": {
+    "python": null, "pytorch": null, "torch_cuda_runtime": null,
+    "driver": null, "gpu": null, "os": null,
+    "dependency_snapshot": null, "deterministic_algorithms": null,
+    "tf32": null
+  },
+  "results_path": null,
+  "failure_reason": null
+}

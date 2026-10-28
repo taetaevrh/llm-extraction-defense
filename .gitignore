@@ -1,0 +1,71 @@
+# Repository-local Conda environments and package caches
+/.conda/
+/.cache/
+/cache/
+
+# Python and editor artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+*.egg-info/
+/build/
+/dist/
+Thumbs.db
+.DS_Store
+
+# Credentials and local configuration (never put secrets in experiment configs)
+.env
+.env.*
+!.env.example
+*credentials*.json
+*secret*.json
+*.pem
+*.key
+*.p12
+*.pfx
+.netrc
+_netrc
+
+# All raw/downloaded data, weights, checkpoints, logs, and run output
+/data/
+/datasets/
+/models/
+/weights/
+/checkpoints/
+/logs/
+/wandb/
+/mlruns/
+/experiments/runs/
+/results/runs/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.parquet
+*.arrow
+*.jsonl
+*.csv
+*.tsv
+*.log
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.pdf
+*.mp4
+
+# Review small, aggregate result summaries explicitly before adding to Git.
+# .gitignore cannot detect arbitrary large files or secrets embedded in source.

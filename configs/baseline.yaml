@@ -1,0 +1,51 @@
+schema_version: 1
+experiment_id: initial_no_defense_baseline
+status: requires_research_design_review
+condition: no_defense
+seeds: [17, 29, 43]
+denial_seed: 101
+defense:
+  mode: none
+  denial_rate: 0.0
+teacher:
+  model_id: null
+  revision: null
+  tokenizer_revision: null
+  interface: hard_label_text_only
+student:
+  model_id: null
+  revision: null
+  tokenizer_revision: null
+dataset:
+  dataset_id: null
+  revision: null
+  split_manifest_sha256: null
+  extraction_split: null
+  validation_split: null
+  held_out_test_split: null
+  legitimate_user_split: null
+budget:
+  teacher_query_attempts: 500
+  max_input_tokens: 256
+  max_output_tokens: 8
+decoding:
+  do_sample: false
+  num_beams: 1
+training:
+  method: null
+  precision: null
+  max_steps: null
+  learning_rate: null
+  micro_batch_size: 1
+  gradient_accumulation_steps: null
+evaluation:
+  primary_metric: held_out_teacher_student_agreement
+  agreement_rule: exact_normalized_task_label
+  invalid_or_refused_label: disagreement
+  report_untrained_student: true
+  bootstrap_resamples: 2000
+resources:
+  device: cuda
+  concurrent_teacher_student_gpu_residency: false
+  safety_free_vram_mib: 1024
+# Candidate pilot values, not an executable or approved experiment.
