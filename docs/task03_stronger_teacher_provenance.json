@@ -1,0 +1,14 @@
+{
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "license": "apache-2.0",
+  "card_url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/README.md",
+  "card_sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+  "checked_before_download_at_utc": "2026-10-29T04:19:55.936904+00:00",
+  "bf16_parameters": 1543714304,
+  "estimated_weights_mib": 2944.4013671875,
+  "assumed_runtime_allowance_mib": 1024,
+  "required_measured_headroom_mib": 1024,
+  "minimum_driver_free_mib_before_download": 4992.4013671875,
+  "note": "Parameter-based preflight estimate, not measured inference memory; runtime guard and actual peaks determine safe loading."
+}

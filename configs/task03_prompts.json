@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "original_alias": "rotation_0",
+  "variants": [
+    {
+      "id": "rotation_0",
+      "family": "rotation",
+      "order": [
+        "card_arrival",
+        "card_not_working",
+        "change_pin",
+        "exchange_rate",
+        "lost_or_stolen_card",
+        "pending_transfer",
+        "transfer_timing",
+        "verify_my_identity"
+      ],
+      "template": "Classify the banking customer's message into exactly one intent.\nAllowed intents: card_arrival, card_not_working, change_pin, exchange_rate, lost_or_stolen_card, pending_transfer, transfer_timing, verify_my_identity.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+      "max_input_tokens": 256,
+      "alias": "original",
+      "sha256": "2550077ced4f4510bcbc7fa937e085dc72c7bc93cff4964b10395334b5ae9f7c"
+    },
+    {
+      "id": "rotation_1",
+      "family": "rotation",
+      "order": [
+        "card_not_working",
+        "change_pin",
+        "exchange_rate",
+        "lost_or_stolen_card",
+        "pending_transfer",
+        "transfer_timing",
+        "verify_my_identity",
+        "card_arrival"
+      ],
+      "template": "Classify the banking customer's message into exactly one intent.\nAllowed intents: card_not_working, change_pin, exchange_rate, lost_or_stolen_card, pending_transfer, transfer_timing, verify_my_identity, card_arrival.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+      "max_input_tokens": 256,
+      "alias": null,
+      "sha256": "705bf94eb40e13cc97c12c4adcf08359f8685abbed6e42439a901fff15247902"
+    },
+    {
+      "id": "rotation_2",
+      "family": "rotation",
+      "order": [
+        "change_pin",
+        "exchange_rate",
+        "lost_or_stolen_card",
+        "pending_transfer",
+        "transfer_timing",
+        "verify_my_identity",
+        "card_arrival",
+        "card_not_working"
+      ],
+      "template": "Classify the banking customer's message into exactly one intent.\nAllowed intents: change_pin, exchange_rate, lost_or_stolen_card, pending_transfer, transfer_timing, verify_my_identity, card_arrival, card_not_working.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+      "max_input_tokens": 256,
+      "alias": null,
+      "sha256": "7ce4f466c44fead049e3ea2c393af3cd61dfecfd622043bc6cb774e4964eed22"
+    },
+    {
+      "id": "rotation_3",
+      "family": "rotation",
+      "order": [
+        "exchange_rate",
+        "lost_or_stolen_card",
+        "pending_transfer",
+        "transfer_timing",
+        "verify_my_identity",
+        "card_arrival",
+        "card_not_working",
+        "change_pin"
+      ],
+      "template": "Classify the banking customer's message into exactly one intent.\nAllowed intents: exchange_rate, lost_or_stolen_card, pending_transfer, transfer_timing, verify_my_identity, card_arrival, card_not_working, change_pin.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+      "max_input_tokens": 256,
+      "alias": null,
+      "sha256": "7363cae700ba978e0fa8550a565f4708822881dc0d9691b07d244aebcfbb11d2"
+    },
+    {
+      "id": "rotation_4",
+      "family": "rotation",
+      "order": [
+        "lost_or_stolen_card",
+        "pending_transfer",
+        "transfer_timing",
+        "verify_my_identity",
+        "card_arrival",
+        "card_not_working",
+        "change_pin",
+        "exchange_rate"
+      ],
+      "template": "Classify the banking customer's message into exactly one intent.\nAllowed intents: lost_or_stolen_card, pending_transfer, transfer_timing, verify_my_identity, card_arrival, card_not_working, change_pin, exchange_rate.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+      "max_input_tokens": 256,
+      "alias": null,
+      "sha256": "942b69d0d04064562c6e5b8a987aee3bdbffaf0f1a9ac2b8161ab7a5b1feac90"
+    },
+    {
+      "id": "rotation_5",
+      "family": "rotation",
+      "order": [
+        "pending_transfer",
+        "transfer_timing",
+        "verify_my_identity",
+        "card_arrival",
+        "card_not_working",
+        "change_pin",
+        "exchange_rate",
+        "lost_or_stolen_card"
+      ],
+      "template": "Classify the banking customer's message into exactly one intent.\nAllowed intents: pending_transfer, transfer_timing, verify_my_identity, card_arrival, card_not_working, change_pin, exchange_rate, lost_or_stolen_card.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+      "max_input_tokens": 256,
+      "alias": null,
+      "sha256": "2ea57754ccdfe5412d4c506d2b1e96f0c4d3e6d0fa6c90155a9379ac509eb20f"
+    },
+    {
+      "id": "rotation_6",
+      "family": "rotation",
+      "order": [
+        "transfer_timing",
+        "verify_my_identity",
+        "card_arrival",
+        "card_not_working",
+        "change_pin",
+        "exchange_rate",
+        "lost_or_stolen_card",
+        "pending_transfer"
+      ],
+      "template": "Classify the banking customer's message into exactly one intent.\nAllowed intents: transfer_timing, verify_my_identity, card_arrival, card_not_working, change_pin, exchange_rate, lost_or_stolen_card, pending_transfer.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+      "max_input_tokens": 256,
+      "alias": null,
+      "sha256": "1806826ab0b24a7ab2935504dd0d0ad21b16d59ab98168b6ee828e3fd4ff7f4d"
+    },
+    {
+      "id": "rotation_7",
+      "family": "rotation",
+      "order": [
+        "verify_my_identity",
+        "card_arrival",
+        "card_not_working",
+        "change_pin",
+        "exchange_rate",
+        "lost_or_stolen_card",
+        "pending_transfer",
+        "transfer_timing"
+      ],
+      "template": "Classify the banking customer's message into exactly one intent.\nAllowed intents: verify_my_identity, card_arrival, card_not_working, change_pin, exchange_rate, lost_or_stolen_card, pending_transfer, transfer_timing.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+      "max_input_tokens": 256,
+      "alias": null,
+      "sha256": "1f30b79bcfedfd9162037d475b42204cb79a21d4e4768a81c78fa7fd9baeaf4e"
+    },
+    {
+      "id": "reverse",
+      "family": "reverse",
+      "order": [
+        "verify_my_identity",
+        "transfer_timing",
+        "pending_transfer",
+        "lost_or_stolen_card",
+        "exchange_rate",
+        "change_pin",
+        "card_not_working",
+        "card_arrival"
+      ],
+      "template": "Classify the banking customer's message into exactly one intent.\nAllowed intents: verify_my_identity, transfer_timing, pending_transfer, lost_or_stolen_card, exchange_rate, change_pin, card_not_working, card_arrival.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+      "max_input_tokens": 256,
+      "alias": null,
+      "sha256": "7ca372ff289510650db4c62665c7feb173d856ae48f8e8112dc558d6542bfd36"
+    },
+    {
+      "id": "definitions",
+      "family": "definitions",
+      "order": [
+        "card_arrival",
+        "card_not_working",
+        "change_pin",
+        "exchange_rate",
+        "lost_or_stolen_card",
+        "pending_transfer",
+        "transfer_timing",
+        "verify_my_identity"
+      ],
+      "template": "Classify the banking customer's message by the help they are requesting.\nChoose exactly one of these intent names, using the definitions below:\ncard_arrival: The customer is waiting for a bank card to arrive or asks about its delivery.\ncard_not_working: The customer's existing bank card does not work or is declined.\nchange_pin: The customer wants to change or reset the card PIN.\nexchange_rate: The customer asks which currency exchange rate applies or how it is calculated.\nlost_or_stolen_card: The customer's bank card has been lost or stolen.\npending_transfer: An already initiated bank transfer is pending or has not completed.\ntransfer_timing: The customer asks how long a bank transfer normally takes.\nverify_my_identity: The customer asks how or why to verify their identity or which identity documents to provide.\nReply with only the exact intent name. Do not explain.\nCustomer message:\n{text}\nIntent:",
+      "max_input_tokens": 512,
+      "alias": null,
+      "sha256": "32c07a68858577e777521a1b7b7976b94a5e284d1cebe1161462ff3f9af2595c"
+    }
+  ],
+  "normalization": "unchanged src.task.normalize_label",
+  "frozen_at_utc": "2026-10-29T04:19:54.480583+00:00"
+}

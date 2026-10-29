@@ -166,3 +166,37 @@ consulted; the report distinguishes documented compatibility from a runtime test
   agreement improvement observed; teacher bias and output-format confounding
   require review before defense comparisons. One seed/eight intents do not
   establish general extraction success or full-LLM recovery. Stopped for review.
+
+## 2026-10-29 - Task 03 diagnostic protocol and inventory
+
+- Owner requested diagnosis only, directly on main, no branches/PRs, no new
+  training or defense, with a verified commit and normal push after completion.
+  Initial origin fetch showed main...origin/main = 0 ahead / 0 behind.
+- Audited Task02 split/protocol/report/code/results and all local BANKING77
+  response artifacts. Found 900 assigned canonical rows, 808 actually queried
+  rows, and eight smoke rows. Exclude all prior assignments from a new test;
+  the eight smoke rows also cannot enter the Teacher validation diagnostic.
+- Froze 88 eligible reserved validation examples, 11 per class, seed 17.
+  These rows were neither extraction-training nor smoke-training examples.
+  Known test/legitimate outcomes are not used for prompt/model/rule selection.
+- The per-class inventory covers all 77 classes. In the eight-intent scope,
+  remaining mixed-source class counts are 79,37,46,38,11,77,57,33 in approved
+  order. Thus at most 88 balanced fresh examples (11/class), or just 16 from
+  official-test rows alone. No new independent test was created or queried.
+- Froze ten unique Teacher prompts before inference: rotations 0..7 (original
+  is rotation_0), reverse, and intent definitions. Every label occupies each
+  position once across the rotations. Metrics, paired/stratified bootstrap,
+  selection ranking and conditional larger-model comparison are preregistered
+  in task03_protocol.md and configs/task03_diagnostics.yaml.
+- Verified Qwen2.5-1.5B-Instruct revision
+  989aa7980e4cf806f80c7fef2b1adb7bc71aa306 and Apache 2.0 card before any weight
+  download. BF16 weight estimate uses actual parameter count; runtime and
+  1 GiB measured-headroom requirements are separate. A driver-memory guard
+  applies to loading and inference. Candidate tested only if needed.
+- Student auxiliary rule frozen before scoring known historical rows: mean
+  conditional label-token log probability, no EOS/prompt/padding contribution,
+  equal priors and fixed tie rule. Sum likelihoods are also logged. Preserve
+  original free generation as primary API behavior; no new adaptation.
+- Added tests for cyclic permutations, metric correctness/invalid handling,
+  data exclusions, and causal likelihood indexing. Initial red test failed
+  because diagnostic modules did not exist; no package installation was needed.

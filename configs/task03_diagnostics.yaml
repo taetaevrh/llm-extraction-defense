@@ -1,0 +1,51 @@
+schema_version: 1
+task: teacher_diagnosis_and_student_evaluation_audit
+seed: 17
+prior_run: experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4
+prior_split_manifest: docs/banking77_split_manifest.json
+dataset_revision: 1846984189f2bc0ac51c6fc3a600fa9e1714e0c6
+validation_per_class: 11
+small_teacher:
+  model_id: Qwen/Qwen2.5-0.5B-Instruct
+  revision: 7ae557604adf67be50417f59c2c2f167def9a775
+strong_teacher:
+  model_id: Qwen/Qwen2.5-1.5B-Instruct
+  revision: 989aa7980e4cf806f80c7fef2b1adb7bc71aa306
+  license: apache-2.0
+  parameters_bf16: 1543714304
+  runtime_allowance_mib: 1024
+student:
+  model_id: HuggingFaceTB/SmolLM2-135M-Instruct
+  revision: 12fd25f77366fa6b3b4b768ec3050bf629380bac
+prompt_manifest: configs/task03_prompts.json
+validation_manifest: docs/task03_validation_manifest.json
+decoding:
+  do_sample: false
+  num_beams: 1
+  max_new_tokens: 12
+  dtype: bfloat16
+  attention: eager
+minimum_measured_free_mib: 1024
+stronger_condition: only_if_no_small_teacher_prompt_meets_all_quality_targets
+stronger_comparison: all_same_ten_unique_prompts_and_same_88_validation_rows
+quality_targets:
+  accuracy_minimum: 0.70
+  macro_f1_minimum: 0.65
+  all_class_recalls_positive: true
+  maximum_predicted_label_fraction: 0.35
+ranking: accuracy_desc_then_macro_f1_desc_then_invalid_asc_then_frozen_model_and_prompt_order
+student_diagnostic:
+  subsets: [test, legitimate]
+  prompt: unchanged_Task02_original_with_native_chat_template
+  score: mean_conditional_token_log_probability_of_exact_label_string
+  compute_and_record: both_sum_log_likelihood_and_mean_token_log_probability
+  include_eos: false
+  include_prompt_or_padding: false
+  equal_class_priors: true
+  exact_tie_rule: first_approved_label
+  candidate_batch_size: 8
+  training: forbidden
+  majority_comparator: most_frequent_valid_Task02_extraction_teacher_label
+  old_results_use: auxiliary_diagnosis_only_not_prompt_or_rule_selection
+next_extraction_pilot: forbidden
+defense: forbidden

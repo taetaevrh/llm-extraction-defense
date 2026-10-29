@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "dataset_revision": "1846984189f2bc0ac51c6fc3a600fa9e1714e0c6",
+  "seed": 17,
+  "per_class": 11,
+  "examples": 88,
+  "rows": [
+    {
+      "id": "train:1338",
+      "label": "card_not_working",
+      "text_sha256": "12640143489d22708e5cab8ccb3a8926aa61fe6bb7d02b4b0db0f2d94166aa8d"
+    },
+    {
+      "id": "train:6975",
+      "label": "change_pin",
+      "text_sha256": "f3972deddd64db5dc2f21f2eed8963ab6a1f3efa61441dcb7f93cea8c53418e7"
+    },
+    {
+      "id": "train:6129",
+      "label": "pending_transfer",
+      "text_sha256": "8414d711e6db9c33a97b891f5275c75cba0b49ff5c94d2b4780feb93a65b3088"
+    },
+    {
+      "id": "train:9864",
+      "label": "verify_my_identity",
+      "text_sha256": "9dad6aa3cd5363840b18ad528a7c956991ea357f237d22dcae7996236136d66c"
+    },
+    {
+      "id": "train:6646",
+      "label": "transfer_timing",
+      "text_sha256": "a0f7399008d2f16cdd1a75b3d545e99947ae202b7831a1a52d307fe996c99d53"
+    },
+    {
+      "id": "train:403",
+      "label": "exchange_rate",
+      "text_sha256": "ecc441eabf0a66c37918431bbd0027f32446cdd3d95b7ec5d6c8a01a231d6134"
+    },
+    {
+      "id": "train:1513",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "c7ba6797c26cf6d6ebb76b2b82ba3f5c90f48e9682222e1712ff5419484023a4"
+    },
+    {
+      "id": "train:1246",
+      "label": "card_not_working",
+      "text_sha256": "ff885abd75216865bbfa546611e58c965e8ea3197ddfcb10d67cda725f2b7fc2"
+    },
+    {
+      "id": "train:383",
+      "label": "exchange_rate",
+      "text_sha256": "1927130b8101da2cd3a6d30631f85e28980670fe0bc9f2fb21c16022152894e2"
+    },
+    {
+      "id": "train:136",
+      "label": "card_arrival",
+      "text_sha256": "454c0df1ec24cf11022246b186a99c7643c2210c6d297c19e0886dd082400979"
+    },
+    {
+      "id": "train:6625",
+      "label": "transfer_timing",
+      "text_sha256": "be75320b86f947c29bbbebcdc57c2da95c4043814f72ee5073fcee7b400bdc23"
+    },
+    {
+      "id": "train:9777",
+      "label": "verify_my_identity",
+      "text_sha256": "ed86e39d5e9287417efa3d3e7764a6214171fe0eee60f47de33ff717ad2ebafc"
+    },
+    {
+      "id": "train:1517",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "9657857a696090aa180ae055826cacff33006ed991862da63b9ffd2d93647805"
+    },
+    {
+      "id": "train:6629",
+      "label": "transfer_timing",
+      "text_sha256": "7a0fee99e788ee8b02a6224ee2881d064c6b48debc306421708bb2368f553024"
+    },
+    {
+      "id": "train:7001",
+      "label": "change_pin",
+      "text_sha256": "6ac4400da11e358082b328494137ba2369b033a8bd95100979fcd1cbd63b12a5"
+    },
+    {
+      "id": "train:122",
+      "label": "card_arrival",
+      "text_sha256": "d3ece9887cec6f33dfe629d207e9a135d49436e849db8858f9423a2b4875a77d"
+    },
+    {
+      "id": "train:1305",
+      "label": "card_not_working",
+      "text_sha256": "38e62645cc1839480dbe5f0e6fb6a6a5d647975a9a0eb6eea0c1f3f8a73dee9f"
+    },
+    {
+      "id": "train:304",
+      "label": "exchange_rate",
+      "text_sha256": "abc5d67c3ff845f960f3de091ab89adcfa743775e245f88af43a832b204a3da8"
+    },
+    {
+      "id": "train:1316",
+      "label": "card_not_working",
+      "text_sha256": "d5aff5b452ea5caf1c55ef53ab53236de78f239402c1575644660f011ec3a16f"
+    },
+    {
+      "id": "train:315",
+      "label": "exchange_rate",
+      "text_sha256": "29a129619c299cb331a7c6c2f6a40d13da064f5c75242338b8dc2335439845e8"
+    },
+    {
+      "id": "train:88",
+      "label": "card_arrival",
+      "text_sha256": "3488009e7ee11494d727877106a0de955331005f3fd6c4883b88b7c187bca6e7"
+    },
+    {
+      "id": "train:6120",
+      "label": "pending_transfer",
+      "text_sha256": "c66e57d250e554fa101ebaa55a26b5c40fe33d92d7b3338fffc35827bd5fab06"
+    },
+    {
+      "id": "train:1326",
+      "label": "card_not_working",
+      "text_sha256": "f69fc9a96dbf710ff8930145910bedb97c70c94c89b030df82cc56558996c7ae"
+    },
+    {
+      "id": "train:9791",
+      "label": "verify_my_identity",
+      "text_sha256": "f683c9e1e91b91ff7f31e4b2ac8cc888daec64a8e83e0ce328ce48823aafe791"
+    },
+    {
+      "id": "train:6028",
+      "label": "pending_transfer",
+      "text_sha256": "e52ef22f54fb2927481e282f05aaf1aba2dababd166ad47b72b3c706dac24366"
+    },
+    {
+      "id": "train:6116",
+      "label": "pending_transfer",
+      "text_sha256": "933c9d1c812c414fc350a207a612556128582c9ca96bae1356a6681eda0f5d59"
+    },
+    {
+      "id": "train:72",
+      "label": "card_arrival",
+      "text_sha256": "d671aaaee87a9b18974c2e4529d3e03d57b188af528b3bae22a8e943fc173b08"
+    },
+    {
+      "id": "train:6678",
+      "label": "transfer_timing",
+      "text_sha256": "70a739f46e7bce91161fa5cb4d251c371065a85ce66bcf1843f50f06277fa3a3"
+    },
+    {
+      "id": "train:6924",
+      "label": "change_pin",
+      "text_sha256": "997c20989ea1592c85300f882c95571af42ae3ba41bf94a28b6a73dee8ff6ef3"
+    },
+    {
+      "id": "train:9828",
+      "label": "verify_my_identity",
+      "text_sha256": "2016632a29ee8b78779547aa380845eccff6cfa73079b3403c1e3aada4039f0e"
+    },
+    {
+      "id": "train:9867",
+      "label": "verify_my_identity",
+      "text_sha256": "4cbd0dd18d67d139e92b39ce85e473f8ae34a2e11b4618d6a903f008494a349e"
+    },
+    {
+      "id": "train:6990",
+      "label": "change_pin",
+      "text_sha256": "8dc39745dbbd89e0417137bad7f400bbeff4b12cac73bf4a6813d0736a4bad52"
+    },
+    {
+      "id": "train:9820",
+      "label": "verify_my_identity",
+      "text_sha256": "588b5f75f664a6cd3fdcacf8351feaa2100bbc8d49cbd8ae77d998b9c4555c73"
+    },
+    {
+      "id": "train:362",
+      "label": "exchange_rate",
+      "text_sha256": "da89b27ba747b8b2f0092c756db27886626cb11149d64f6c2ac547e7e44f1c94"
+    },
+    {
+      "id": "train:1514",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "d3bcba344dbda25e0e034fc944b381d81e3bed9a4a51ad189baf1ba2b8d71503"
+    },
+    {
+      "id": "train:6662",
+      "label": "transfer_timing",
+      "text_sha256": "89ab66868a7187d214fd3f29c3e88947e5ca3226def4b0361e8a008d7996f9a6"
+    },
+    {
+      "id": "train:7002",
+      "label": "change_pin",
+      "text_sha256": "9919507142b1650f729e66e1bfbaf708ce8a21042e6536d60f4544709ff8865e"
+    },
+    {
+      "id": "train:6655",
+      "label": "transfer_timing",
+      "text_sha256": "d114bc4783f15c6d17f2763b2305a070db0f098ce6d6c8bd703fe41bce3902c6"
+    },
+    {
+      "id": "train:1314",
+      "label": "card_not_working",
+      "text_sha256": "26c0e1f805e5862907fd0c86c6c6085076ef8dafcb66652ab5ec2337dfdd3749"
+    },
+    {
+      "id": "train:6085",
+      "label": "pending_transfer",
+      "text_sha256": "ff85d1f2ee1bd821fe044537951cb59a24c4c691839ead2cb7da6bef2e32e638"
+    },
+    {
+      "id": "train:293",
+      "label": "exchange_rate",
+      "text_sha256": "f6be3ac87666e07a0694b2bd74c95d116eb944c084e497d534d5984695240c3a"
+    },
+    {
+      "id": "train:1541",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "f91d0a91c449df253aaba38e6cdea8e8c37120a92780c91a506ea92c98a938ee"
+    },
+    {
+      "id": "train:1487",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "b6d2b8c2d95fcd3999f631cac04d884c1db23645568e44fbde87407abe3e7c24"
+    },
+    {
+      "id": "train:6616",
+      "label": "transfer_timing",
+      "text_sha256": "160717d6d5db68c8e5b194e67dbe9fa6f9e70fea07430dfce5168180a2ed739d"
+    },
+    {
+      "id": "train:1343",
+      "label": "card_not_working",
+      "text_sha256": "5a02432e77278a8d054653c09df71ad251a345a54034dbb66c62af951affbdb5"
+    },
+    {
+      "id": "train:6060",
+      "label": "pending_transfer",
+      "text_sha256": "3bbb2f3f0460fce3d930b9f2690adb446623edc477ba8162d93c90cbf693f4d0"
+    },
+    {
+      "id": "train:1503",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "0b07e0d38b5ef9ed57690a9af8be60a0210f88b85153df5d3bb1d7c590c4c1b2"
+    },
+    {
+      "id": "train:6104",
+      "label": "pending_transfer",
+      "text_sha256": "aa354600996749e228a0094d6053a98d1837ddd243e24ef44da3763c3af8c8d1"
+    },
+    {
+      "id": "train:325",
+      "label": "exchange_rate",
+      "text_sha256": "22d95e8190b7d036ec5f3eedf2f83a06b66d2319ee2aa1fada345731b5b91927"
+    },
+    {
+      "id": "train:59",
+      "label": "card_arrival",
+      "text_sha256": "3e90b257e74bbb1e9ef252f4e8ae1ab20541a5006eeb51a3dd60d18d0c87c101"
+    },
+    {
+      "id": "train:6981",
+      "label": "change_pin",
+      "text_sha256": "c96d7ab2399796c46769622eb530dd8d0fa3aab765092ea9a204367f9640cfe9"
+    },
+    {
+      "id": "train:6637",
+      "label": "transfer_timing",
+      "text_sha256": "09d035c2f2bb34de7cb36cd44cfa7bcf7e92d308ade1eb8383217022a0a80c92"
+    },
+    {
+      "id": "train:352",
+      "label": "exchange_rate",
+      "text_sha256": "9d6c930f05f2b608b4e1da1a4b4a5a39e953d45b5451c338505b82f8c408b27e"
+    },
+    {
+      "id": "train:1331",
+      "label": "card_not_working",
+      "text_sha256": "d8dcb6d9937c98cd1593e7393c4dd2031b16c42d22f77084a98c7353318afdd3"
+    },
+    {
+      "id": "train:1477",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "de4405c3c33034d05d47fc26a99c79d3c21defa03c0fd4c2b15b00f45689ea0d"
+    },
+    {
+      "id": "train:6631",
+      "label": "transfer_timing",
+      "text_sha256": "913c5961d4203a010fa705e92f057a77d3d11168e8c85bc234637ccd6a9ee1f2"
+    },
+    {
+      "id": "train:1488",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "5efce5d42f6877383456bca33ab01c2fc08583fb8dce1f3e01307a29940982fa"
+    },
+    {
+      "id": "train:1535",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "3763ae8da7189f47e6a635042898f42046a902485a4b46194805c9939ff3d00b"
+    },
+    {
+      "id": "train:99",
+      "label": "card_arrival",
+      "text_sha256": "07c40426c608d80dd75577fce3748fb5fcdc8ddae39d0d46f0410f7c24d74b7b"
+    },
+    {
+      "id": "train:6907",
+      "label": "change_pin",
+      "text_sha256": "7036c0199ca55828b3fa70e84811129ea054ba67f75762ea96fec65f02bf15c9"
+    },
+    {
+      "id": "train:6021",
+      "label": "pending_transfer",
+      "text_sha256": "9950da56922cbf7af883a44b84d5e7e31e12330301ed0857300aa5dcb4e41e36"
+    },
+    {
+      "id": "train:21",
+      "label": "card_arrival",
+      "text_sha256": "4194652e8192063e98542338f56c25bd88cf0cbdf63eba8fc1ffedda2437bbde"
+    },
+    {
+      "id": "train:12",
+      "label": "card_arrival",
+      "text_sha256": "f5db5032304777af291ab19e92612429d560075c6e3bf77b521ceda4a8069ece"
+    },
+    {
+      "id": "train:6125",
+      "label": "pending_transfer",
+      "text_sha256": "ead26cdff7185a012a54b1fcc0b0a2e5c97581ef4ac53186217629a06ac2daf7"
+    },
+    {
+      "id": "train:344",
+      "label": "exchange_rate",
+      "text_sha256": "91aa2d932ca8a5a301bf9b0f7e9a12219e9eaecbf1d4523e4ab2a3b796d9e855"
+    },
+    {
+      "id": "train:9776",
+      "label": "verify_my_identity",
+      "text_sha256": "d0f095b8edda98ab5847db76df09e5083f069aaae2e36c82f2c3dd0b5cd7345c"
+    },
+    {
+      "id": "train:9809",
+      "label": "verify_my_identity",
+      "text_sha256": "3008fa4cfc971a033a847696836fbb50f2e9b719b7df3ade8006989debb454de"
+    },
+    {
+      "id": "train:6953",
+      "label": "change_pin",
+      "text_sha256": "fb26086868819a6ce6098b27787de123262d76b2bac128c35e3f63e129d03943"
+    },
+    {
+      "id": "train:1262",
+      "label": "card_not_working",
+      "text_sha256": "355d4812828e43980e689d2ad1ca1a55770f47106de80958386b11c05e8f469a"
+    },
+    {
+      "id": "train:1310",
+      "label": "card_not_working",
+      "text_sha256": "1a1c46cb48644f2c80dcfd8bd4c9c9683f3cb4821173f4fcb1fe48e1a3c9eecb"
+    },
+    {
+      "id": "train:6952",
+      "label": "change_pin",
+      "text_sha256": "5086645c1db8ade9c1e2464a577f199f015c4e190bf80b52ba16e66e6f80181b"
+    },
+    {
+      "id": "train:9872",
+      "label": "verify_my_identity",
+      "text_sha256": "2db99d494db2e9c4c9482f41523f7c54e0200b5610906bc474db447daaa33a7f"
+    },
+    {
+      "id": "train:6967",
+      "label": "change_pin",
+      "text_sha256": "add7e9dc45a2e43386e258ff19a99ca433d4652cbfa219d4bb4d9ed121c95d23"
+    },
+    {
+      "id": "train:1502",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "b7f63b2de2a0dd43dbb062143c0744d666273733916aeb43f4f8dff38712cd74"
+    },
+    {
+      "id": "train:9850",
+      "label": "verify_my_identity",
+      "text_sha256": "63f2f577ebd2e10752eafa190f6edb85b1bcb043394d80bc535d165f4e4c510e"
+    },
+    {
+      "id": "train:1548",
+      "label": "lost_or_stolen_card",
+      "text_sha256": "4364400afdecf8240a57904e59116c413c6404b9526074ff8b054c1b491facc9"
+    },
+    {
+      "id": "train:1323",
+      "label": "card_not_working",
+      "text_sha256": "9400a25c17a6e424979d6b30c6ff346edd59ab03b1d7f09a5d3c2051c50aea72"
+    },
+    {
+      "id": "train:6612",
+      "label": "transfer_timing",
+      "text_sha256": "31bda7332f46206ab56bec3a636deae202352904f67ab2c727df48dffcd43b5a"
+    },
+    {
+      "id": "train:6651",
+      "label": "transfer_timing",
+      "text_sha256": "acf94076ce6142cf3b85473ff2bccb9dc848171a0f23d32883c0b862f9875da2"
+    },
+    {
+      "id": "train:1",
+      "label": "card_arrival",
+      "text_sha256": "b84ea5d622419cccbd49729ef75e1c47a857875ba23352624ca56c26580f666c"
+    },
+    {
+      "id": "train:6128",
+      "label": "pending_transfer",
+      "text_sha256": "a1c63aa20786ebb232f65ebd3d72cb426921948608b9d9f56a8eb83f9a7422b9"
+    },
+    {
+      "id": "train:129",
+      "label": "card_arrival",
+      "text_sha256": "d1a489d09ea619555420481e749e835a9c7889f788bd02b4dd1dc08bad7dfd71"
+    },
+    {
+      "id": "train:314",
+      "label": "exchange_rate",
+      "text_sha256": "0143d4e713f706e0aec8abde44865478fd7ebf01de02fcf88be12ebe4fb48077"
+    },
+    {
+      "id": "train:365",
+      "label": "exchange_rate",
+      "text_sha256": "1ff985fee01f68821028c3e30ef7027b242958a7ff9922637d70728d26e6aecc"
+    },
+    {
+      "id": "train:6957",
+      "label": "change_pin",
+      "text_sha256": "e9ead6055bd2bf9d782ce181def77f396441bbb3ba91ce2a33de298a8c63ab2d"
+    },
+    {
+      "id": "train:110",
+      "label": "card_arrival",
+      "text_sha256": "ecf0d981f6627246fb8875460d43bd42787b6b52c380cb9e864b5d8747a317d6"
+    },
+    {
+      "id": "train:9784",
+      "label": "verify_my_identity",
+      "text_sha256": "eabbedaf0977854c5d2a089e73568a949eb2fcac53274606787a1a8241355192"
+    },
+    {
+      "id": "train:6059",
+      "label": "pending_transfer",
+      "text_sha256": "cd8e6c1dc91a5eaaa8cb3aa3434ad0f0bab9832de94b89d2f38089f5af74f816"
+    }
+  ],
+  "restriction": "Reserved validation only; excludes Task02 extraction, known test, legitimate, and every smoke row. No new independent test is claimed."
+}
