@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "run_id": "20261029T042435Z_task03_diagnostics_932130fe",
+  "status": "completed",
+  "stage": "completed",
+  "started_at_utc": "2026-10-29T04:24:55.423344+00:00",
+  "finished_at_utc": "2026-10-29T04:35:34.292700+00:00",
+  "config": {
+    "schema_version": 1,
+    "task": "teacher_diagnosis_and_student_evaluation_audit",
+    "seed": 17,
+    "prior_run": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4",
+    "prior_split_manifest": "docs/banking77_split_manifest.json",
+    "dataset_revision": "1846984189f2bc0ac51c6fc3a600fa9e1714e0c6",
+    "validation_per_class": 11,
+    "small_teacher": {
+      "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+    },
+    "strong_teacher": {
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "license": "apache-2.0",
+      "parameters_bf16": 1543714304,
+      "runtime_allowance_mib": 1024
+    },
+    "student": {
+      "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac"
+    },
+    "prompt_manifest": "configs/task03_prompts.json",
+    "validation_manifest": "docs/task03_validation_manifest.json",
+    "decoding": {
+      "do_sample": false,
+      "num_beams": 1,
+      "max_new_tokens": 12,
+      "dtype": "bfloat16",
+      "attention": "eager"
+    },
+    "minimum_measured_free_mib": 1024,
+    "stronger_condition": "only_if_no_small_teacher_prompt_meets_all_quality_targets",
+    "stronger_comparison": "all_same_ten_unique_prompts_and_same_88_validation_rows",
+    "quality_targets": {
+      "accuracy_minimum": 0.7,
+      "macro_f1_minimum": 0.65,
+      "all_class_recalls_positive": true,
+      "maximum_predicted_label_fraction": 0.35
+    },
+    "ranking": "accuracy_desc_then_macro_f1_desc_then_invalid_asc_then_frozen_model_and_prompt_order",
+    "student_diagnostic": {
+      "subsets": [
+        "test",
+        "legitimate"
+      ],
+      "prompt": "unchanged_Task02_original_with_native_chat_template",
+      "score": "mean_conditional_token_log_probability_of_exact_label_string",
+      "compute_and_record": "both_sum_log_likelihood_and_mean_token_log_probability",
+      "include_eos": false,
+      "include_prompt_or_padding": false,
+      "equal_class_priors": true,
+      "exact_tie_rule": "first_approved_label",
+      "candidate_batch_size": 8,
+      "training": "forbidden",
+      "majority_comparator": "most_frequent_valid_Task02_extraction_teacher_label",
+      "old_results_use": "auxiliary_diagnosis_only_not_prompt_or_rule_selection"
+    },
+    "next_extraction_pilot": "forbidden",
+    "defense": "forbidden"
+  },
+  "git_commit": "8ac2d51107a0ab735423df5d826c879e0b477efd",
+  "source_clean": true,
+  "seed": 17,
+  "frozen_files_sha256": {
+    "configs\\task03_diagnostics.yaml": "c0fe22bcc8156cb233613c1765eadc0d9847a97d2902fa6cc7fe49894afa60cf",
+    "docs\\task03_validation_manifest.json": "ed99b14199c24e59cca13d4374a34c4270abbca18456b85e7ba2ff41c0b035b2",
+    "configs\\task03_prompts.json": "6f3f4272c02fc8ce590aca66ffaf6d35c2015988803acf663c4ed5c8fc03e7cb"
+  },
+  "environment_inventory_sha256": "a9fee85c36c11bbc80dc73e23d42f768844c96a0868da5bb6dcd5ec7e34dfd99",
+  "prior_model_artifact_manifest_sha256": "a8dba96f3667f668e936447bf528b5038fbef5a2fa10af921ddef8136fa21ce4",
+  "adapter_files_sha256": {
+    "adapter_config.json": "4d830927c44eaa7f7cb4bee6e8dc77803de8c1abfa52aa7b3f4104401672df54",
+    "adapter_model.safetensors": "46b710f901838b294c9e4f1d575393572c8cb6b786e257c8c1fee66b68840a8d",
+    "merges.txt": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+    "README.md": "2860c25e141253dee5aba6b02b3d513eaf7c125187d760d9c50cf6c7e899cc0f",
+    "special_tokens_map.json": "68d920624c05998fa87a133555aff625768fc69f1b41baf0592f8d09b60896b3",
+    "tokenizer.json": "7d27c493c729a66ecefc837280b05d948b1ed50d130eebdbf911b1b36cf38ed7",
+    "tokenizer_config.json": "4ab8a5c09082de3362e1f12467e02d47e7ed9fd4e81eac370662b286dbb84bbd",
+    "vocab.json": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79"
+  },
+  "protected_Task01_Task02_files_sha256": {
+    ".gitignore": "0be24b7916940cd8c9fe0801300ecb69ac0f960d554eeab16b93a9cfed9d4ae7",
+    "configs/baseline.yaml": "14b5c7b9f4ab9d10a623e62da4303a415baa0cd57bc65e1dc0111be84ae0c123",
+    "configs/task02_banking77.yaml": "d6bf391ae3dc05ce8d257f04507d19a8498134da48a02f808c2ca9cdcb0b79b2",
+    "configs/task02_pilot.yaml": "f63f416d5f8c6aa771feab890adf1f570d3f7a3b3e45661994f8219514060c28",
+    "docs/banking77_baseline_report.md": "5a30367268f048d8f8042be38dfd988bdc3efd4d2386e3d6b82b17bdad96599d",
+    "docs/banking77_conda_win64.explicit.txt": "b56b52d66492e91cd6895624a6f49ea2d74ccc40309816a6777410c43e19ea0a",
+    "docs/banking77_dependency_versions.json": "a9fee85c36c11bbc80dc73e23d42f768844c96a0868da5bb6dcd5ec7e34dfd99",
+    "docs/banking77_environment.resolved.yml": "51a9f04603067c2ee86346e9bc3cb07251771f75a8e5b73ad302e8b6fe35a870",
+    "docs/banking77_pilot_verification.json": "4afdfd9030921e1a389f145b0523ea31ed46744143123a056a90a857598bc091",
+    "docs/banking77_pip_freeze.txt": "d298e567958b6957d9724bd8933c23dc1562e811b76ede560ef030682f8743e7",
+    "docs/banking77_protocol.md": "477b815f586d6ae50a4c203ad87104db45bfea2c83df55f55066294f696fed3c",
+    "docs/banking77_provenance.json": "232f79404553f7ee4c880e6e51ae30aed52eb313dee44b4ae6a31dc603a18008",
+    "docs/banking77_split_manifest.json": "b418e182eb3549a0b10bf597e23f7dfb6b961224dd8ad1f07b2c791ef4f78849",
+    "docs/banking77_split_preflight.json": "1e78e1bd77d48022c09dfb3f5704eea9ff27a0f1ccd69de029704f432cc51348",
+    "docs/conda-win-64.explicit.txt": "bc2d40c64ab783d7ed37a6ff5c224a72ca336e5735757c667953d4c36d5ffc7d",
+    "docs/dependency_versions.json": "f4c0e5b27e04f9fd33c02e2b4e728821ce265b210d948554569319b14cfbdc5b",
+    "docs/environment.resolved.yml": "219dc499593d14e87aaf316a6dc863dbd3b98b4e7b1c8d151fa171d218aba27d",
+    "docs/environment_report.md": "364abcc54b6ef03a5cc2e5426b8309b8f7a62f70b54f3cd1ac146086cd0bb190",
+    "docs/experiment_protocol.md": "b9287204d08859e5494d85782e182135a7fe03116d679bd04de29504793608bd",
+    "docs/research_question.md": "b8291424a899570b6142bf398ddd7914b25e4e93c2d3370dadbbbd5614ec140e",
+    "docs/task02_cuda_verification.json": "50f13545d1826a173791ebac648202e5f646b234f48f2918a2f60a6fb8537294",
+    "docs/task02_failure_report.md": "4031d03383b1bf43bf833e958fa235fc93ac61f29ad7c301c292788fc27b262d",
+    "docs/task02_provenance.json": "f4a2f48de188402beb85253ed197fa362778a9983c4438ba4f295dfe3dad4ed9",
+    "environment.yml": "1288421fe216dc3f45451d67d6e97ac9a9d3a575e109c71d9cf6dbc8fb305bd0",
+    "experiments/README.md": "95f48d65d8257bece77a289635d8ba33d56b15d6ca3b4c181960e6a11fb08fc5",
+    "experiments/banking77_pilot_manifest.json": "a8dba96f3667f668e936447bf528b5038fbef5a2fa10af921ddef8136fa21ce4",
+    "experiments/banking77_preparation_failure.json": "0f3e0f5842110f69307a3e04a801cacd857e93dd7f0c14594228e7a75a13a069",
+    "experiments/manifest.template.json": "c67595675231244bd97482718e5249e02d9a79bf671eb31a6e42791b421d18c1",
+    "experiments/task02_preflight_manifest.json": "82d222ff16062d7cd4743add90e98405873cce12fe43b65b01111d5d437244a9",
+    "results/README.md": "92233e11ca0a6783cc348d9038116c0755f6eac5f3da0888151a4ba2ee74465f",
+    "results/banking77_pilot_summary.json": "2077971bb9e6ebc4383cd98fc16d97797150b9d8d30a1cd94c096cdea0863598",
+    "results/metrics.template.json": "3d817a8c3bec1077d6f775001495c689b31a254e6a6aba3240bb20be7a097e4c",
+    "results/task02_preflight.json": "1bfc0c694d490c8f577e93cf9bc0ccaed4a498fdd3b3f1ad2c1c03467e4efd42",
+    "scripts/run_banking77.ps1": "4bf71cb3fbb298a80776e1a11cc44a335013b5c25e554312fc22ba34d0d5ffda",
+    "src/__init__.py": "d9cff252bda8c5affc3e3bd7ca9064a30d8c1fbd1d7ec6bcf996d53e3494c611",
+    "src/attacker/__init__.py": "c6bb1d006c5e028e27347c04511f007291958e82758eab41ad6e1980540e35af",
+    "src/attacker/training.py": "bb0ad03c7e69b3f3a159cc3dbc7708ab5f7f3778f2b6dc6cb72023fcfcdb9c2f",
+    "src/data.py": "a5b2ab8a6a214ed6a4fa8a1093a2d763addf5a1777103cb7c00eee88a244b286",
+    "src/defense/__init__.py": "008200e187642df502e0a688b779e9e45f1112756c228c8e8820072a4211040a",
+    "src/evaluation/__init__.py": "e001c3c9105c82eed1ae0d33cdb26b9fbe0d14e531aac9d6f1e703af7f75e3af",
+    "src/evaluation/metrics.py": "f8cec5716521637a2bdc32006e283378a9a2f7913396e8ac34d3347e07bb5a0a",
+    "src/models.py": "655307dee1f5a247ed947bb19b04222a1d8d1b236ad118cec0bb2df7b7efaa2d",
+    "src/preflight.py": "e263ad144625acbaf251dec63b13af700e151b1e01dfb4db4b37f32d73027631",
+    "src/run_baseline.py": "367a2069461c12e4c20887575f1f5ea2cffcb224806dbe30e678da85e7b3a11d",
+    "src/runtime.py": "5828a47339cbf9092855f99afa237d91515b5fb14735b1376dcf227f7de1d73b",
+    "src/task.py": "f63aac220c4aaac3e9fbef1aaa077a801462a28e21fdc9c2642065b1c7d6475a",
+    "src/teacher/__init__.py": "d4dc970088ed5573cd0cc998408130a6623e5a87d9d4426726217c2df2e424cb",
+    "src/teacher/client.py": "7c79651417ed9c147328a294596ed119126b0c94f70c98196d234ecf8a70ad2c",
+    "src/teacher/worker.py": "aaa749b07e7b7dc2c1880c514ad88e877863f1f910d10f2ba77cdb6217b179f4",
+    "tests/test_extraction.py": "fd61bbe235599e9dd65891f2501ff8b5559658c70c35d577c518c107a5c6cd18",
+    "tests/test_scaffold.py": "df687cb47705650e42ba54574d5378064becf03bf591c67f6fca715f6440bd39"
+  },
+  "Task01_Task02_artifacts_preserved": true,
+  "failures": [],
+  "wall_seconds": 638.6197664999636,
+  "stronger_model_artifacts": {
+    "model": {
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "license": "apache-2.0",
+      "parameters_bf16": 1543714304,
+      "runtime_allowance_mib": 1024
+    },
+    "files": {
+      "config.json": {
+        "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+        "bytes": 660
+      },
+      "generation_config.json": {
+        "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+        "bytes": 242
+      },
+      "LICENSE": {
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "bytes": 11343
+      },
+      "merges.txt": {
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "bytes": 1671839
+      },
+      "model.safetensors": {
+        "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+        "bytes": 3087467144
+      },
+      "README.md": {
+        "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+        "bytes": 4917
+      },
+      "tokenizer.json": {
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "bytes": 7031645
+      },
+      "tokenizer_config.json": {
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "bytes": 7305
+      },
+      "vocab.json": {
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "bytes": 2776833
+      }
+    }
+  },
+  "stronger_download_preflight": {
+    "used_mib": 2180.0,
+    "free_mib": 5770.0,
+    "required_mib": 4992.4013671875,
+    "weights_estimate_mib": 2944.4013671875,
+    "runtime_allowance_mib": 1024,
+    "headroom_mib": 1024,
+    "at_utc": "2026-10-29T04:31:43.398132+00:00"
+  },
+  "result_summary": "results/task03_results_summary.json"
+}

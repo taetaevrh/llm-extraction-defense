@@ -1,5 +1,13 @@
 # LLM Extraction Defense Research
 
+Task 03 diagnosis is complete: [report](docs/task03_diagnostic_report.md),
+[machine-readable results](results/task03_results_summary.json), and
+[remaining-data inventory](docs/task03_data_inventory.json). Qwen1.5B with
+intent definitions met the provisional validation criteria, but no new
+independent test or extraction pilot was run. Only 88 balanced untouched
+examples remain in the eight-intent scope. Stop for research review before
+further training or defense work. Task 01/02 records below remain historical.
+
 Task 02 resumed with the project-owner-approved BANKING77 replacement. The
 no-defense pipeline is implemented and smoke-gated. See the
 [BANKING77 protocol](docs/banking77_protocol.md) and

@@ -17,7 +17,7 @@ from src.evaluation.metrics import agreement
 from src.models import load_model
 from src.preflight import ROOT, configure_paths
 from src.runtime import seed_everything, write_json
-from src.task import LABELS, normalize_label
+from src.task import LABELS, PROMPT_TEMPLATE, normalize_label
 
 
 def jsonl(path):
@@ -34,10 +34,11 @@ class AttemptLedger:
         with self.path.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(record) + "\n")
 
-    def start(self, row_id, phase, prompt_hash, candidates=1):
+    def start(self, row_id, phase, prompt_hash, candidates=1, scoring_rule_hash=None):
         self.count += 1
         self.append({"event": "start", "attempt": self.count, "id": row_id, "phase": phase,
                      "prompt_sha256": prompt_hash, "candidate_evaluations": candidates,
+                     "scoring_rule_sha256": scoring_rule_hash,
                      "at_utc": datetime.now(timezone.utc).isoformat()})
         return self.count
 
@@ -135,7 +136,8 @@ def student_diagnosis(config, role, directory, run):
     extraction = jsonl(prior / "extraction_responses.jsonl")
     majority_label = Counter(r["teacher_label"] for r in extraction if r["teacher_label"] in LABELS).most_common(1)[0][0]
     summaries = {}
-    prompt_hash = hashlib.sha256(config["student_diagnostic"]["score"].encode()).hexdigest()
+    prompt_hash = hashlib.sha256(PROMPT_TEMPLATE.encode()).hexdigest()
+    scoring_rule_hash = hashlib.sha256(config["student_diagnostic"]["score"].encode()).hexdigest()
     try:
         for name in config["student_diagnostic"]["subsets"]:
             rows = inputs[name]
@@ -143,7 +145,7 @@ def student_diagnosis(config, role, directory, run):
             with GuardedPhase(name, resources) as guard, (directory / f"{name}.jsonl").open("x", encoding="utf-8") as log:
                 for index, row in enumerate(rows):
                     guard.check()
-                    attempt = ledger.start(row["id"], name, prompt_hash, candidates=8)
+                    attempt = ledger.start(row["id"], name, prompt_hash, candidates=8, scoring_rule_hash=scoring_rule_hash)
                     started = time.perf_counter()
                     try:
                         record = forced_choice(model, tokenizer, row["text"])

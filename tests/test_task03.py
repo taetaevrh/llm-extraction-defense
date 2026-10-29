@@ -82,3 +82,28 @@ def test_forced_choice_scores_only_candidate_tokens_and_averages_length():
     assert sums[0] == pytest.approx(2 * sums[1])
     logits[:, 0, :] = 100  # Prompt-only scores must not affect the answer.
     assert label_log_scores(logits, ids, 2, [2, 1])[1] == pytest.approx(means)
+
+
+def test_position_bootstrap_keeps_rotations_paired_and_constant_classifier_at_null():
+    from src.diagnostics.analysis import position_summary
+    orders = [list(LABELS[i:] + LABELS[:i]) for i in range(8)]
+    constant = [[LABELS[-1]] * 8 for _ in range(8)]
+    result = position_summary(constant, list(LABELS), orders, bootstrap_resamples=20)
+    assert result["final_option_rate"] == 0.125
+    assert result["excess_over_valid_adjusted_reference_95_interval"] == [0.0, 0.0]
+    always_final = [[order[-1]] * 8 for order in orders]
+    assert position_summary(always_final, list(LABELS), orders, bootstrap_resamples=20)["final_option_rate"] == 1.0
+
+
+def test_ledger_records_start_before_result_and_distinguishes_prompt_and_rule(tmp_path):
+    import json
+    from src.diagnostics.worker import AttemptLedger
+    path = tmp_path / "attempts.jsonl"
+    ledger = AttemptLedger(path)
+    attempt = ledger.start("row:1", "auxiliary", "prompt-hash", 8, "rule-hash")
+    records = [json.loads(line) for line in path.read_text().splitlines()]
+    assert len(records) == 1 and records[0]["event"] == "start"
+    assert records[0]["prompt_sha256"] == "prompt-hash"
+    assert records[0]["scoring_rule_sha256"] == "rule-hash"
+    ledger.finish(attempt, "error:RuntimeError", 0.1)
+    assert len(path.read_text().splitlines()) == 2

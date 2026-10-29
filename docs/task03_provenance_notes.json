@@ -1,0 +1,15 @@
+{
+  "run_id": "20261029T042435Z_task03_diagnostics_932130fe",
+  "scope": "Additive audit note; original experiment records were not overwritten",
+  "issue": "Student attempt ledgers from executed source 8ac2d51 stored the scoring-rule identifier hash in a field named prompt_sha256.",
+  "actual_scoring_rule_identifier_sha256": "678a93d9713e10e7a5c8733ce7b3ac70dab55c3e65a15ac7e399665f39c94e61",
+  "correct_original_user_prompt_template_sha256": "2550077ced4f4510bcbc7fa937e085dc72c7bc93cff4964b10395334b5ae9f7c",
+  "original_prompt_already_frozen_in": "configs/task03_prompts.json: rotation_0 (also protected Task02 src/task.py)",
+  "rendering": "Use pinned SmolLM2 tokenizer native chat template and original frozen dataset text; no prompt variant or scoring rule was changed.",
+  "affected_files": [
+    "student_pretrained/attempts.jsonl",
+    "student_adapted/attempts.jsonl"
+  ],
+  "numeric_results_affected": false,
+  "source_fix": "Future new runs record the actual prompt template hash and separate scoring_rule_sha256; raw historical ledgers are preserved."
+}

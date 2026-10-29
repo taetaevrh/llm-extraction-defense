@@ -1,0 +1,25 @@
+{
+  "verified_at_utc": "2026-10-29T04:43:17.444860+00:00",
+  "run_id": "20261029T042435Z_task03_diagnostics_932130fe",
+  "unit_tests": {
+    "command": "python -m pytest -q",
+    "passed": 35,
+    "failed": 0,
+    "reported_seconds": 6.01
+  },
+  "pip_check": "No broken requirements found; no environment packages changed",
+  "independent_audit": {
+    "teacher_metrics_precision_recall_f1_accuracy": "recomputed all twenty prompt configurations",
+    "teacher_attempt_starts_and_finishes": 1760,
+    "student_attempt_starts_and_finishes": 600,
+    "student_candidate_scores": 4800,
+    "label_selection_rule": "all saved sums/lengths/means and argmax predictions checked",
+    "reserved_validation_alignment": "all twenty conditions share exactly the same 88 row IDs",
+    "protected_historical_artifacts": "all recorded hashes unchanged",
+    "saved_adapter": "all file hashes unchanged",
+    "stronger_downloaded_model": "all recorded model file hashes unchanged",
+    "memory": "every model/phase measured >=1024 MiB driver free",
+    "training_steps": 0
+  },
+  "metadata_correction": "docs/task03_provenance_notes.json; raw logs unchanged, no numeric change or rerun"
+}

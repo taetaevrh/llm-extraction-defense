@@ -200,3 +200,61 @@ consulted; the report distinguishes documented compatibility from a runtime test
 - Added tests for cyclic permutations, metric correctness/invalid handling,
   data exclusions, and causal likelihood indexing. Initial red test failed
   because diagnostic modules did not exist; no package installation was needed.
+- Executed new run 20261029T042435Z_task03_diagnostics_932130fe from clean
+  source commit 8ac2d51 on main. The original prompt is rotation_0, an explicit
+  alias rather than a duplicated independent condition. Both Teachers used
+  exactly the same 88 reserved validation inputs across all ten unique prompts.
+- Small Teacher: original 35/88 (39.8%) accuracy, macro-F1 0.393; best definitions
+  50/88 (56.8%), macro-F1 0.534. None met all quality criteria. Across rotations,
+  final-option selection was 86/704 (12.2%), paired/stratified 95% interval
+  11.2–13.2%; the valid-adjusted excess interval included zero. verify_my_identity
+  counts remained 48–76/88 across positions (59 first, 64 last). Order sensitivity
+  was observed, but a general last-option preference did not explain the collapse.
+- Conditional stronger-model pre-download check found 5770 MiB driver free
+  against a conservative 4992.40 MiB budget (2944.40 estimated weights + 1024
+  runtime + 1024 headroom). Before load, 5686 MiB remained. All weights were
+  pinned, attributed Apache 2.0, and downloaded only after this gate passed.
+- Stronger Teacher completed all ten conditions. Best validation configuration
+  was Qwen2.5-1.5B-Instruct + definitions: 79/88 (89.8%), macro-F1 0.897,
+  zero invalids, every class recall positive (minimum 8/11), maximum predicted
+  label share 13/88 (14.8%). It met all provisional targets. These are selection
+  scores, not independent new-test results. No Teacher was fine-tuned.
+- Stronger model peak Torch allocated 3001.86 MiB, reserved 3194 MiB; sampled
+  device peak 5593 MiB; minimum measured driver free 2357 MiB. No sample breached
+  the 1 GiB guard, no OOM, and no simultaneous Teacher/Student GPU residency.
+- Student audit used the original frozen prompt and rule, the saved adapter
+  with is_trainable=false, and known historical test/legitimate rows only for
+  retrospective diagnosis. Test forced-choice accuracy was 19% pretrained and
+  35% adapted; macro-F1 0.127 -> 0.332; old-Teacher agreement 8% -> 81%.
+  Original generation metrics remain unchanged (0% -> 37% accuracy and 0% ->
+  82% agreement). Legitimate forced-choice accuracy 17% -> 35%, agreement
+  8% -> 84%. These local-logit scores are not black-box API responses.
+- Of Task02's 164 test agreement matches, 121 (73.8%) were majority-label
+  matches and 97 (59.1%) copied Teacher errors; 43 were non-majority matches.
+  The constant extraction-majority comparator scored 64% agreement and 12.5%
+  accuracy. There is behavior beyond a constant response, but formatting,
+  Teacher bias, and copied errors dominate interpretation; causal proportions
+  of format learning versus semantic transfer are not identifiable here.
+- Total Task03 Teacher attempts 1760 (1755 valid, five invalid), plus 600
+  Student input attempts / 4800 candidate likelihood evaluations. All attempts
+  have start/finish ledger records. No inference failures or replacements.
+  Diagnostic execution wall time 638.62 seconds, including stronger download
+  and process overhead, excluding protocol/inventory preparation and tests.
+- Post-run audit found a logging-field labeling bug: Student prompt_sha256
+  held the score-rule identifier hash; the correct original prompt/hash was
+  already frozen elsewhere. Preserved raw ledgers and added provenance notes;
+  future source records prompt and rule hashes separately. No numeric results
+  changed and no inference was rerun. Added coverage for this metadata boundary.
+- Final suite: python -m pytest -q, 35 passed in 6.01s; pip check passed.
+  Independent checks recomputed Teacher metrics, checked score/selection and
+  ledger totals, preserved protected Task01/02 files and adapter hashes, and
+  rehashed stronger weights. No environment packages changed; no base install.
+- Saved task03_diagnostic_report.md, full aggregate results, reviewed run
+  manifest, all-class data inventory, frozen validation/prompt manifests, and
+  verification records. Raw examples, responses, scores, caches, and weights
+  remain ignored. No new test was manufactured by recycling known rows.
+- Recommendation for review: freeze the selected Teacher/prompt and confirm
+  it without training on new licensed, independently labeled balanced in-domain
+  data, ideally >=200 rows. Existing unused pools permit only 88 mixed-source
+  balanced rows or 16 official-test-only rows, so any smaller holdout or task
+  change needs an explicit research decision. No next extraction/defense run.
