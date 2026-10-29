@@ -105,3 +105,14 @@ def test_blocked_rebuild_preserves_null_and_checks_local_hashes(tmp_path):
     (tmp_path / "attempts.jsonl").write_text("tamper")
     with pytest.raises(ValueError, match="hash mismatch"):
         build_summary(tmp_path)
+
+
+def test_aggregate_rejects_per_class_and_distribution_tampering():
+    result = metrics_with_uncertainty(list(LABELS), list(LABELS), resamples=10)
+    result["per_class"][LABELS[0]]["precision"] = 0.5
+    with pytest.raises(ValueError, match="per-class precision"):
+        validate_aggregate(result)
+    result["per_class"][LABELS[0]]["precision"] = 1
+    result["predicted_distribution"][LABELS[0]] = 8
+    with pytest.raises(ValueError, match="distribution"):
+        validate_aggregate(result)

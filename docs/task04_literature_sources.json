@@ -1,0 +1,90 @@
+{
+  "checked_date": "2026-10-29",
+  "runtime": "existing llm-extraction-defense Conda Python 3.11; auxiliary bundled pure-Python pypdf6.10.0 loaded read-only, not installed",
+  "sources": [
+    {
+      "id": "prada",
+      "url": "https://arxiv.org/pdf/1805.02628",
+      "pdf_sha256": "d43ab63c43e40414c65e9048107a646b61f592f5112e51ec4b72a3632ff94da1",
+      "pages": 17,
+      "text_sha256": "f17dca19a08f003d6210682f6c2043f576ee07e9552cd5efe26a6301f7a9fd40",
+      "parser_version": "6.10.0"
+    },
+    {
+      "id": "poison",
+      "url": "https://arxiv.org/pdf/1906.10908",
+      "pdf_sha256": "6b6cf957713b846e4d178a48d8a3c11a665ab70c57760bd958a4c491aa149fb1",
+      "pages": 17,
+      "text_sha256": "f228e7fb94f47cbdfb10650338f3388843a80e624e4dd85f4f42eb07f504c7a3",
+      "parser_version": "6.10.0"
+    },
+    {
+      "id": "dawn",
+      "url": "https://arxiv.org/pdf/1906.00830",
+      "pdf_sha256": "519006a7f0b4f7bdb3cb04fa566ffc4707885343ab1bb8dcecca6c71f9e1cfa9",
+      "pages": 16,
+      "text_sha256": "e38265f277245cc0d46679ed78f8b7b5b5d8633fc07b32d3b9e2ce55aa63bbd0",
+      "parser_version": "6.10.0"
+    },
+    {
+      "id": "bert",
+      "url": "https://aclanthology.org/2021.naacl-main.161.pdf",
+      "pdf_sha256": "fe38a080e3d73540475f36a365f7c35e50f53cf952d57d6f7a87acb4af37abf0",
+      "pages": 7,
+      "text_sha256": "23c1c8f4787d6cf5928ae017a854751d444fc2dca38670fce64dc84b3e5318ce",
+      "parser_version": "6.10.0"
+    },
+    {
+      "id": "mmd",
+      "url": "https://arxiv.org/pdf/2606.05725",
+      "pdf_sha256": "e057d7170cd6050cd6cd89bac72896face4ad49f3d209209edadfe0dc0590849",
+      "pages": 19,
+      "text_sha256": "653bd87288a41cdc11d00e011d006c220e5007f2b9c0f2e26f899261368c8788",
+      "parser_version": "6.10.0"
+    },
+    {
+      "id": "trap",
+      "url": "https://arxiv.org/pdf/2606.15810",
+      "pdf_sha256": "f7815b6541654aad556e905d687944e28e5a37d2403f7d80afa208bb99972415",
+      "pages": 22,
+      "text_sha256": "8bf02a089d147e09359e7a6ee6f30808a77121ac622222ddc4ab0ec1c109719c",
+      "parser_version": "6.10.0"
+    },
+    {
+      "id": "lifecycle",
+      "url": "https://arxiv.org/pdf/2610.00839v2",
+      "pdf_sha256": "7b806eb4110f019773bfb2ad25f16c5f74e155513a95781b745d0aba248c5723",
+      "pages": 24,
+      "text_sha256": "8594695cb954a5bc5b2d7eb457d3c2dc8015f01cb6c1ab1ff0d312fde9512aa2",
+      "parser_version": "6.10.0"
+    },
+    {
+      "id": "knockoff",
+      "url": "https://arxiv.org/pdf/1812.02766",
+      "pdf_sha256": "23fcd6c2d60a381daabfa7b71e2052eb8a59d9d0743b8f52c9ee0a8cb8e42c93",
+      "pages": 17,
+      "text_sha256": "cbb16e018d3c3fe324015e86f2b96622d9982917f9b53d417cf37fef807c8ddb",
+      "parser_version": "6.10.0"
+    },
+    {
+      "id": "seat",
+      "url": "https://surrealyz.github.io/files/pubs/seat-aisec2021.pdf",
+      "pdf_sha256": "96662f60e8f1440f595039714dbe172d44b7b18ffff78b79b2a9bfb7c894b20b",
+      "pages": 12,
+      "text_sha256": "a1f8b8e85c3fbc83f44ea49171391b42b6e981652bc9ffdd42ae687f7d976bdc",
+      "parser_version": "6.10.0"
+    },
+    {
+      "id": "vardetect",
+      "url": "https://arxiv.org/pdf/2107.05166",
+      "pdf_sha256": "c27f30f8bb68a4386e317fe59ffd783412237ab87bf0717f0149f291be4de5e8",
+      "pages": 16,
+      "text_sha256": "b41bb370e1aacd180348b2bf3b13f073ed057abfd1127d8519240a795c307a48",
+      "parser_version": "6.10.0"
+    },
+    {
+      "id": "cap",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

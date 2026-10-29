@@ -2,6 +2,7 @@
 
 import json
 import math
+import hashlib
 from pathlib import Path
 
 from src.task import LABELS
@@ -41,6 +42,34 @@ def historical_audit(root):
                 check_metrics(f"Task03/{role}/{subset}/{method}", methods[method])
     raw2 = root / manifest["config"]["prior_run"]
     raw3 = root / "experiments/runs" / task3["run_id"]
+    for relative, expected in manifest["protected_Task01_Task02_files_sha256"].items():
+        path = root / relative
+        if path.exists():
+            if digest(path) != expected:
+                raise ValueError(f"Historical protected artifact changed: {relative}")
+        else:
+            unavailable.append({"artifact": relative, "blocks": "Historical protected hash comparison"})
+    records.append({"check": "Task03/protected_Task01_Task02_hashes", "status": "rerun_passed", "recorded_files": len(manifest["protected_Task01_Task02_files_sha256"])})
+    for relative, expected in manifest["frozen_files_sha256"].items():
+        if digest(root / relative) != expected:
+            raise ValueError(f"Task03 frozen file changed: {relative}")
+    records.append({"check": "Task03/frozen_configuration_prompt_validation_hashes", "status": "rerun_passed"})
+    query_path = raw2 / "queries.jsonl"
+    if query_path.exists():
+        queries = read_jsonl(query_path)
+        for phase, filename in (("extraction", "extraction_responses.jsonl"), ("test", "teacher_test.jsonl"), ("legitimate", "teacher_legitimate.jsonl")):
+            path = raw2 / filename
+            if not path.exists():
+                unavailable.append({"artifact": str(path.relative_to(root)), "blocks": "Task02 input/output SHA comparison"})
+                continue
+            responses = read_jsonl(path)
+            events = [r for r in queries if r["phase"] == phase]
+            assert len(responses) == len(events)
+            for event, response in zip(events, responses):
+                assert hashlib.sha256(response["text"].encode()).hexdigest() == event["input_sha256"]
+                assert hashlib.sha256(response["raw"].encode()).hexdigest() == event["output_sha256"]
+                assert normalize_label(response["raw"]) == event["normalized_label"] == response["teacher_label"]
+            records.append({"check": f"Task02/{phase}/raw_query_hashes_and_normalization", "status": "rerun_passed", "rows": len(responses)})
     for relative, expected_counts in (("queries.jsonl", {"extraction": 500, "test": 200, "legitimate": 100}),
                                      ("smoke/queries.jsonl", {"smoke": 8})):
         path = raw2 / relative
@@ -78,6 +107,7 @@ def historical_audit(root):
         teachers = read_jsonl(path)
         assert [r["id"] for r in teachers] == expected
         teacher = [r["teacher_label"] for r in teachers]
+        assert [normalize_label(r["raw"]) for r in teachers] == teacher
         truth = [r["label"] for r in splits[subset]]
         assert same_confusion(diagnostic_metrics(teacher, truth)["confusion"], task2["evaluation"][subset]["teacher"]["confusion"])
         for phase, metric_name in (("before", "student_before"), ("after", "student_after")):
@@ -117,6 +147,7 @@ def historical_audit(root):
             starts = [e for e in entries if e["event"] == "start"]
             ends = [e for e in entries if e["event"] == "finish"]
             assert len(starts) == len(ends) == expected
+            assert len({e["attempt"] for e in starts}) == expected
             assert {e["attempt"] for e in starts} == {e["attempt"] for e in ends}
             records.append({"check": f"Task03/{role}/query_count", "status": "rerun_passed", "starts": len(starts), "finishes": len(ends), "sha256": digest(path)})
         else:
@@ -127,6 +158,8 @@ def historical_audit(root):
             assert digest(path) == expected
         else:
             unavailable.append({"artifact": str(path.relative_to(root)), "blocks": "Saved adapter hash verification only; no adapter recreation"})
+    records.append({"check": "Task03/recorded_adapter_file_hashes", "status": "rerun_passed" if all((raw2 / "student_adapter" / name).exists() for name in manifest["adapter_files_sha256"]) else "unavailable",
+                    "recorded_files": len(manifest["adapter_files_sha256"])})
     return {"schema_version": 1, "status": "rerun_checks_passed" if not unavailable else "partially_unavailable",
         "rerun_checks": records, "unavailable": unavailable,
         "historical_only": ["Historical timing and GPU-memory samples are records, not reproduced by CPU verification.",

@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "run_id": "20261029T071617Z_task04_confirmation_c2f6770c",
+  "status": "blocked",
+  "metrics": null,
+  "unmeasured_reason": "MemoryError: Conservative preload gate: 4406 MiB driver-free < 4992.40 MiB required; no Teacher loaded",
+  "attempts": {
+    "smoke": 0,
+    "confirmation": 0
+  },
+  "total_teacher_attempts": 0,
+  "completed_confirmation_records": 0,
+  "source_composition": {
+    "card_arrival": {
+      "train": 11
+    },
+    "card_not_working": {
+      "train": 11
+    },
+    "change_pin": {
+      "train": 10,
+      "test": 1
+    },
+    "exchange_rate": {
+      "train": 10,
+      "test": 1
+    },
+    "lost_or_stolen_card": {
+      "train": 8,
+      "test": 3
+    },
+    "pending_transfer": {
+      "train": 10,
+      "test": 1
+    },
+    "transfer_timing": {
+      "train": 8,
+      "test": 3
+    },
+    "verify_my_identity": {
+      "train": 10,
+      "test": 1
+    }
+  },
+  "remaining_inventory_after_run": {
+    "pipeline_unused_by_class_and_source": {
+      "card_arrival": {
+        "test": 2,
+        "train": 77
+      },
+      "card_not_working": {
+        "test": 2,
+        "train": 35
+      },
+      "change_pin": {
+        "test": 2,
+        "train": 44
+      },
+      "exchange_rate": {
+        "test": 2,
+        "train": 36
+      },
+      "lost_or_stolen_card": {
+        "test": 3,
+        "train": 8
+      },
+      "pending_transfer": {
+        "test": 3,
+        "train": 74
+      },
+      "transfer_timing": {
+        "test": 3,
+        "train": 54
+      },
+      "verify_my_identity": {
+        "test": 3,
+        "train": 30
+      }
+    },
+    "pipeline_unused_total": 378,
+    "unassigned_after_confirmation_reservation_by_class": {
+      "card_arrival": 68,
+      "card_not_working": 26,
+      "change_pin": 35,
+      "exchange_rate": 27,
+      "lost_or_stolen_card": 0,
+      "pending_transfer": 66,
+      "transfer_timing": 46,
+      "verify_my_identity": 22
+    },
+    "unassigned_after_confirmation_reservation_total": 290,
+    "balanced_pipeline_unused_maximum": 88
+  },
+  "resources": {},
+  "wall_seconds": 18.46811549999984,
+  "resource_preflight": {
+    "used_mib": 3544.0,
+    "free_mib": 4406.0,
+    "required_preload_budget_mib": 4992.4013671875,
+    "bf16_parameter_bytes_mib": 2944.4013671875,
+    "historical_runtime_allowance_mib": 1024,
+    "minimum_driver_free_mib": 1024,
+    "policy": "Retain Task03 conservative preload allowance; do not reduce it to bypass current GPU contention"
+  },
+  "model_workload_measurements": {
+    "runtime_seconds": null,
+    "peak_allocated_mib": null,
+    "peak_reserved_mib": null,
+    "reason": "No model workload started; resource preflight blocked execution"
+  },
+  "executed_source_commit": "995441350ee21cf90157a42aaf28ea3c5ec0a141",
+  "frozen_hashes": {
+    "configuration_sha256": "14a5bb8777b8e18a043a00530107cfbc9f093065db0559fa6ecb6d90f0788b31",
+    "input_manifest_sha256": "2c6c64bc6f232577e5135b7ae6a2faf1ab8084a51e6365b0d4d4aa252dab5aa6",
+    "protocol_sha256": "37ff34d2bac2fc7fa33e6f7eb727a5822e244e83bdb301d8650a75e1058e7d1b",
+    "prompt_template_sha256": "32c07a68858577e777521a1b7b7976b94a5e284d1cebe1161462ff3f9af2595c"
+  },
+  "environment": {
+    "status": "passed",
+    "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+    "pytorch": "2.7.1+cu128",
+    "torch_cuda_runtime": "12.8",
+    "cudnn": 90701,
+    "cuda_is_available": true,
+    "bf16_supported": true,
+    "gpu_name": "NVIDIA GeForce RTX 4060 Ti",
+    "capability": [
+      8,
+      9
+    ],
+    "compiled_architectures": [
+      "sm_50",
+      "sm_60",
+      "sm_61",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ],
+    "free_vram_mib_before_computation": 7075.0,
+    "total_vram_mib": 8187.5,
+    "tiny_matmul_seconds": 0.27772240003105253,
+    "tiny_matmul_sum": 66672640.0,
+    "tiny_matmul_matches_cpu_exactly": true,
+    "tiny_matmul_peak_allocated_mib": 32.00244140625,
+    "nvidia_smi": "name, memory.total [MiB], memory.free [MiB], driver_version, compute_cap\nNVIDIA GeForce RTX 4060 Ti, 8188 MiB, 4398 MiB, 617.42, 8.9",
+    "deterministic_algorithms": true,
+    "tf32": false,
+    "nvidia_free_vram_mib_after_computation": 4398.0,
+    "memory_reading_note": "CUDA free memory and NVIDIA-SMI physical-device readings can differ under Windows WDDM; both recorded.",
+    "installed_packages": [
+      "accelerate==1.6.0",
+      "aiohappyeyeballs @ file:///home/conda/feedstock_root/build_artifacts/aiohappyeyeballs_1782986737989/work",
+      "aiohttp @ file:///D:/bld/bld/rattler-build_aiohttp_1791734350/work",
+      "aiosignal @ file:///home/conda/feedstock_root/build_artifacts/aiosignal_1751626463503/work",
+      "attrs @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_attrs_1773935801/work",
+      "backports.zstd @ file:///D:/bld/bld/rattler-build_backports.zstd_1792690552/work",
+      "Brotli @ file:///D:/bld/brotli-split_1792653575697/work",
+      "certifi @ file:///home/conda/feedstock_root/build_artifacts/certifi_1792763948800/work/certifi",
+      "charset-normalizer @ file:///D:/bld/bld/rattler-build_charset-normalizer_1790766070/work",
+      "colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1733218098505/work",
+      "datasets==3.5.0",
+      "dill @ file:///home/conda/feedstock_root/build_artifacts/dill_1706434688412/work",
+      "exceptiongroup @ file:///home/conda/feedstock_root/build_artifacts/exceptiongroup_1763918002538/work",
+      "filelock @ file:///home/conda/feedstock_root/build_artifacts/filelock_1792380786489/work",
+      "frozenlist @ file:///D:/bld/frozenlist_1792669140571/work",
+      "fsspec @ file:///home/conda/feedstock_root/build_artifacts/fsspec_1734650190311/work",
+      "h2 @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_h2_1785796355/work",
+      "hpack @ file:///home/conda/feedstock_root/build_artifacts/hpack_1782283902770/work",
+      "huggingface_hub @ file:///home/conda/feedstock_root/build_artifacts/huggingface_hub_1744136132727/work",
+      "hyperframe @ file:///home/conda/feedstock_root/build_artifacts/hyperframe_1737618333194/work",
+      "idna @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_idna_1790020377/work",
+      "iniconfig @ file:///home/conda/feedstock_root/build_artifacts/iniconfig_1791588459171/work",
+      "Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_jinja2_1764517220/work",
+      "MarkupSafe @ file:///D:/bld/bld/rattler-build_markupsafe_1793132065/work",
+      "mpmath @ file:///home/conda/feedstock_root/build_artifacts/mpmath_1773661943568/work",
+      "multidict @ file:///D:/bld/multidict_1793017715895/work",
+      "multiprocess @ file:///D:/bld/multiprocess_1724954693267/work",
+      "networkx @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_networkx_1731521053/work",
+      "numpy @ file:///D:/bld/numpy_1747544598377/work/dist/numpy-2.2.6-cp311-cp311-win_amd64.whl#sha256=25e74f9fc5d96572a55bd862a27d842458bd6d3b8d7a612e6bb03bc3f1fd084d",
+      "packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1785888127/work",
+      "pandas @ file:///D:/bld/pandas_1744430491874/work",
+      "peft==0.15.2",
+      "pluggy @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pluggy_1792063298/work",
+      "propcache @ file:///D:/bld/propcache_1792906177661/work",
+      "psutil @ file:///D:/bld/psutil_1755851298735/work",
+      "pyarrow==19.0.1",
+      "Pygments @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pygments_1786995678/work",
+      "PySocks @ file:///D:/bld/pysocks_1733217287171/work",
+      "pytest @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pytest_1762354779/work",
+      "python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_python-dateutil_1792674886/work",
+      "pytz @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pytz_1791103834/work",
+      "PyYAML @ file:///D:/bld/pyyaml_1770223251282/work",
+      "regex @ file:///D:/bld/regex_1730952204165/work",
+      "requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1733217035951/work",
+      "safetensors @ file:///D:/bld/safetensors_1740651439698/work",
+      "six @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_six_1753199211/work",
+      "sympy @ file:///home/conda/feedstock_root/build_artifacts/sympy_1771952241027/work",
+      "tokenizers @ file:///D:/bld/tokenizers_1741890318553/work/bindings/python",
+      "tomli @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_tomli_1791394576/work",
+      "torch==2.7.1+cu128",
+      "tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1735661334605/work",
+      "transformers==4.51.3",
+      "typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_typing_extensions_1783002732/work",
+      "tzdata @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_python-tzdata_h5ded981_1793205938/work",
+      "urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1789566614899/work",
+      "win_inet_pton @ file:///D:/bld/win_inet_pton_1733130564612/work",
+      "xxhash @ file:///D:/bld/python-xxhash_1788582852420/work",
+      "yarl @ file:///D:/bld/yarl_1791286004777/work"
+    ]
+  },
+  "model_verification": {
+    "status": "all_pinned_files_rehashed",
+    "files": {
+      "config.json": {
+        "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+        "bytes": 660
+      },
+      "generation_config.json": {
+        "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+        "bytes": 242
+      },
+      "LICENSE": {
+        "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "bytes": 11343
+      },
+      "merges.txt": {
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "bytes": 1671839
+      },
+      "model.safetensors": {
+        "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+        "bytes": 3087467144
+      },
+      "README.md": {
+        "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+        "bytes": 4917
+      },
+      "tokenizer.json": {
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "bytes": 7031645
+      },
+      "tokenizer_config.json": {
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "bytes": 7305
+      },
+      "vocab.json": {
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "bytes": 2776833
+      }
+    },
+    "teacher": {
+      "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "tokenizer_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    }
+  },
+  "failures": [
+    {
+      "type": "MemoryError",
+      "message": "Conservative preload gate: 4406 MiB driver-free < 4992.40 MiB required; no Teacher loaded",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\MU\\Y3S3-Y4S1\\Senior Project\\me-al\\src\\task04\\run.py\", line 124, in main\n    raise MemoryError(f\"Conservative preload gate: {before['free_mib']:.0f} MiB driver-free < {required:.2f} MiB required; no Teacher loaded\")\nMemoryError: Conservative preload gate: 4406 MiB driver-free < 4992.40 MiB required; no Teacher loaded\n"
+    }
+  ],
+  "prediction_file_sha256": null,
+  "training_steps": 0,
+  "defense_evaluations": 0,
+  "interpretation": "Limited pipeline-untouched confirmation; not proof of pretraining absence, a final defense test, or 95% population threshold attainment"
+}

@@ -1,0 +1,25 @@
+{
+  "reviewed_summary_and_report": "exact_offline_match",
+  "manifest_inputs": 88,
+  "historical_tracked_files_checked": 75,
+  "reference_commit": "b4c65a35f649f0a1577c771708102475ee8be0d5",
+  "teacher_attempts": 0,
+  "model_imports_or_calls": 0,
+  "checked_at_utc": "2026-10-29T07:29:44.294002+00:00",
+  "unit_tests": {
+    "command": "python -m pytest -q",
+    "passed": 43,
+    "failed": 0,
+    "last_seconds": 9.67,
+    "previous_seconds": 7.5
+  },
+  "pip_check": "No broken requirements found.",
+  "historical_rerun_records": 78,
+  "unavailable": [],
+  "conda_inventory_matches_task02": true,
+  "conda_inventory_entries": 139,
+  "offline_import_check": "neither torch nor transformers imported",
+  "model_workload_executed": false,
+  "student_training_steps": 0,
+  "defense_evaluations": 0
+}

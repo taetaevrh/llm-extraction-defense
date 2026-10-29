@@ -167,3 +167,11 @@ logs, notebooks, snapshots, and command history. No credentials are needed now.
 - [Provisional research question](docs/research_question.md)
 - [Experiment protocol and first baseline plan](docs/experiment_protocol.md)
 - [Research log](docs/research_log.md)
+
+## Task 04: frozen confirmation and proposal preparation (2026-10-29)
+
+- [Actual confirmation report](docs/task04_confirmation_report.md): resource preflight blocked before model loading; zero Teacher queries, null metrics/decision.
+- [Preregistered protocol](docs/task04_protocol.md), [frozen inputs](docs/task04_confirmation_manifest.json), and [reproducibility audit](docs/task04_reproducibility_audit.md).
+- [Next baseline plan](docs/task04_next_baseline_plan.md), [evaluation-data plan](docs/task04_evaluation_data_plan.md), [primary related work](docs/task04_related_work.md), and [proposal outline/deadline plan](docs/task04_proposal_outline.md).
+
+Task04 used existing Conda dependencies and verified actual CUDA/BF16 execution. The 88 reserved examples remain unqueried. No Student training, defense, new branch/PR, or automatic push followed. Further model work requires research review of the resource blocker and unchanged frozen confirmation. Novelty remains unresolved.

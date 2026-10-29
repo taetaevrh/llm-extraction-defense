@@ -41,6 +41,16 @@ def build_summary(run):
         raise ValueError("Duplicate attempt identity")
     if manifest["status"] == "completed" and (counts != {"smoke": 8, "confirmation": 88} or {e["attempt"] for e in starts} != {e["attempt"] for e in finishes}):
         raise ValueError("Completed run has missing attempts/finishes")
+    confirmation_starts = [e for e in starts if e["phase"] == "confirmation"]
+    if [e["id"] for e in confirmation_starts] != [r["id"] for r in data["rows"][:len(confirmation_starts)]]:
+        raise ValueError("Confirmation attempt IDs differ from frozen prefix")
+    if records and [r["id"] for r in records] != [e["id"] for e in confirmation_starts[:len(records)]]:
+        raise ValueError("Prediction IDs differ from attempted IDs")
+    if manifest["status"] == "completed":
+        endings = {e["attempt"]: e for e in finishes}
+        for event, prediction in zip(confirmation_starts, records):
+            if endings[event["attempt"]]["label"] != prediction["label"]:
+                raise ValueError("Ledger labels differ from saved predictions")
     metric = reconstruct(data, records, config) if manifest["status"] == "completed" else None
     return {"schema_version": 1, "run_id": manifest["run_id"], "status": manifest["status"],
         "metrics": metric, "unmeasured_reason": None if metric is not None else manifest.get("failure", "Incomplete confirmation"),
@@ -48,6 +58,12 @@ def build_summary(run):
         "source_composition": data["source_composition"], "remaining_inventory_after_run": manifest.get("remaining_inventory_after_run"),
         "resources": manifest.get("resources"), "wall_seconds": manifest.get("wall_seconds"),
         "resource_preflight": manifest.get("resource_preflight"),
+        "model_workload_measurements": {"runtime_seconds": sum(v["seconds"] for v in manifest["resources"].values()),
+            "peak_allocated_mib": max(v["peak_allocated_mib"] for v in manifest["resources"].values()),
+            "peak_reserved_mib": max(v["peak_reserved_mib"] for v in manifest["resources"].values()),
+            "reason": None} if manifest.get("resources") else {
+                "runtime_seconds": None, "peak_allocated_mib": None, "peak_reserved_mib": None,
+                "reason": "No model workload started; resource preflight blocked execution"},
         "executed_source_commit": manifest["executed_source_commit"], "frozen_hashes": manifest["frozen_hashes"],
         "environment": manifest.get("environment"), "model_verification": manifest.get("model_verification"),
         "failures": manifest.get("failures", []),

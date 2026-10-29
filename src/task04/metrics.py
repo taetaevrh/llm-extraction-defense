@@ -18,6 +18,8 @@ def wilson(successes, trials):
 
 def validate_aggregate(metrics):
     matrix = metrics["confusion"]
+    if any(not isinstance(v, int) or isinstance(v, bool) or v < 0 for row in matrix.values() for v in row.values()):
+        raise ValueError("Confusion counts must be nonnegative integers")
     count = sum(sum(row.values()) for row in matrix.values())
     correct = sum(matrix.get(label, {}).get(label, 0) for label in LABELS)
     invalid = sum(matrix.get(label, {}).get("invalid", 0) for label in LABELS)
@@ -28,11 +30,24 @@ def validate_aggregate(metrics):
         support = sum(matrix.get(label, {}).values())
         predicted = sum(matrix.get(t, {}).get(label, 0) for t in LABELS)
         tp = matrix.get(label, {}).get(label, 0)
-        f1s.append(2 * tp / (support + predicted) if support + predicted else 0.0)
+        precision = tp / predicted if predicted else 0.0
+        recall = tp / support if support else 0.0
+        f1 = 2 * tp / (support + predicted) if support + predicted else 0.0
+        f1s.append(f1)
+        if "per_class" in metrics:
+            values = metrics["per_class"][label]
+            for key, expected in {"precision": precision, "recall": recall, "f1": f1,
+                                  "support": support, "predicted": predicted, "true_positive": tp}.items():
+                if key in values and not math.isclose(values[key], expected, abs_tol=1e-12):
+                    raise ValueError(f"Confusion per-class {key} mismatch")
     if "macro_f1" in metrics and not math.isclose(sum(f1s) / 8, metrics["macro_f1"], abs_tol=1e-12):
         raise ValueError("Confusion macro-F1 mismatch")
     if "invalid" in metrics and metrics["invalid"] != invalid:
         raise ValueError("Confusion invalid count mismatch")
+    if "predicted_distribution" in metrics:
+        expected_distribution = {p: sum(matrix.get(t, {}).get(p, 0) for t in LABELS) for p in (*LABELS, "invalid")}
+        if expected_distribution != metrics["predicted_distribution"]:
+            raise ValueError("Confusion predicted distribution mismatch")
     return {"examples": count, "correct": correct, "accuracy": correct / count, "macro_f1": sum(f1s) / 8, "invalid": invalid}
 
 

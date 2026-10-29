@@ -1,0 +1,51 @@
+# Future evaluation data and precision plan
+
+Prepared 2026-10-29; **collection, annotation and consent have not occurred**. BANKING77 remains the only verified available licensed dataset here. Dataset/version/attribution: PolyAI BANKING77 `1846984189f2bc0ac51c6fc3a600fa9e1714e0c6`, CC BY 4.0, see existing provenance. Ground truth belongs to the trusted curator/evaluator, never the extraction learner. The dataset is authored benchmark text, not verified live banking-user traffic.
+
+## Availability after the actual blocked Task04 run
+
+All900 prior assignments remain excluded, even unused portions of the original validation split. Task03's reserved88 are a subset of that original900, not88 extra assignments. Scanning subsequent raw runs found no additional outside-pool observed IDs. Task04 queried zero rows: **378 pipeline-unused remain**, of which88 are frozen for confirmation and **290 remain unassigned**. Do not report290 as if88 had already been observed. Complete confirmation would leave290 unused and zero remaining lost_or_stolen_card examples. The reserved confirmation source is77 official train/11 official test; mixing sources is explicit.
+
+| Intent | Pipeline-unused train | Test | Total before confirmation | Frozen confirmation | Unassigned outside reservation |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| card_arrival | 77 | 2 | 79 | 11 | 68 |
+| card_not_working | 35 | 2 | 37 | 11 | 26 |
+| change_pin | 44 | 2 | 46 | 11 | 35 |
+| exchange_rate | 36 | 2 | 38 | 11 | 27 |
+| lost_or_stolen_card | 8 | 3 | 11 | 11 | 0 |
+| pending_transfer | 74 | 3 | 77 | 11 | 66 |
+| transfer_timing | 54 | 3 | 57 | 11 | 46 |
+| verify_my_identity | 30 | 3 | 33 | 11 | 22 |
+| Total | 358 | 20 | 378 | 88 | 290 |
+
+Only88 can be balanced across eight intents before this confirmation. Official-test-only balanced maximum is16, despite20 total unused test rows. A balanced200 cannot be manufactured by repeated rows, reusing known examples, or silently adding synthetic utterances.
+
+## Options and estimands
+
+| Option | Feasible scope and estimand | Benefits | Material limitation |
+| --- | --- | --- | --- |
+| Licensed independent human-authored/annotated examples across all eight intents | Equal-class mean performance on a newly defined independent source; separately weight by a documented deployment prior if one is actually measured | Fresh final cohort and legitimate-session evaluation possible | Not yet obtained; source rights, ethics/consent if collection involves people, annotators, money and time require owner/advisor decisions |
+| Unbalanced remaining BANKING77 | Freeze a finite eligible-pool estimand, sampling known quotas uniformly without replacement, with per-class and official-source reporting | Verified existing license; no invented data | After reservation, lost/stolen has zero eligible rows:290 supports only a **seven-intent conditional** estimand, not an eight-intent macro-F1. Before confirmation378 supports eight-intent unbalanced sampling only if rows are not also assigned to confirmation. Any reallocation requires review before inference |
+| Different licensed benchmark or intent scope | New task with a new Teacher preflight, label definitions, acquisition and frozen evaluation | May permit genuinely independent larger data | New research decision; do not pool its scores with BANKING77 or call it a continuation of the same eight-intent study |
+
+For an unbalanced design, choose before inference either a census of the available pool or per-class sample sizes n_c with random.Random(17) sampling from sorted IDs. The finite-pool micro estimand weights each class by N_c/sum(N_c), with inclusion probabilities n_c/N_c and design weights N_c/n_c if quotas differ. A macro estimand gives all **included** classes equal weight; it differs from micro and requires support in every claimed class. Obtain finite-population stratified uncertainty or use a census with no sampling uncertainty for that finite pool, while retaining model/run/domain uncertainty. Do not interpret public-pool weights as real-user prevalence. Do not select an unusually easy unbalanced subset after inspecting predictions.
+
+**Recommendation:** retain the frozen confirmation reservation and plan a new independently sourced, human-annotated **400-row final set, 50 per intent**, plus separate development/calibration data, subject to actual sourcing and approval. Use existing known cohorts for baseline feasibility while final data are assembled. If independent data cannot be obtained by the proposal deadline, submit the documented design and negative/blocked evidence; do not silently replace independence with unbalanced public data. A separately approved seven-intent unbalanced diagnostic may be useful, but cannot fill the missing eighth-class claim.
+
+## Why these sizes
+
+For planning only, an independent accuracy proportion near80% needs about246 rows for nominal95% normal-approximation half-width5 percentage points; worst case50% needs385. A balanced400 final set is a practical initial target for roughly4 points at80% or5 points worst case overall, **not guaranteed power**. Report actual Wilson intervals; class-stratified sampling and source dependence qualify the binomial interpretation. With only50 per class, recall near80% has a Wilson interval approximately67–89%, so small classwise improvements will remain unresolved. About62/class at80%, or97/class worst case, is needed for approximately10-point normal-approximation precision; more data are needed for narrower class intervals. Eleven/class confirmation is deliberately much weaker.
+
+For paired accuracy or agreement changes, power depends on discordance, not just total n. As a planning approximation, with discordance fraction q=0.20 and meaningful difference d=0.05, two-sided alpha.05/80% power needs about `(1.96+0.84)^2*q/d^2 = 628` independent pairs. A95% paired-difference half-width3 points under q=.20 needs roughly854 pairs. These are assumptions to revisit using **development** discordance, not claimed observed effects. Four hundred pairs cannot automatically establish a five-point defense effect, and200 is not sufficient by declaration. Clustered utterances/sessions require larger effective sample sizes. Predefine a minimum meaningful difference and collect/revise the planned study before opening final results; do not tune n to a favorable final p-value.
+
+Detection uses a different unit: a session/window, not an independent utterance. Target1% session FPR requires many independent benign sessions; with zero false alarms, a one-sided95% upper bound is `1-0.05^(1/n)`, about0.995% for300 and0.299% for1,000. Thus300 zero-alarm sessions barely bound1%, and overlapping windows from a handful of sessions are not300 independent observations. Plan separate benign reference, calibration and held-out benign session cohorts, aiming for at least300 independent held-out sessions and preferably1,000; availability is unresolved. A100-row legitimate-user set supports a small utility diagnostic, not low-FPR certification.
+
+## Collection and annotation protocol to approve
+
+Obtain a documented permissive source or prospectively consented, non-sensitive utterances **for every intent from the same acquisition channels**. Do not inspect private banking messages, collect account information, or supplement only lost/stolen from a new source: source could become a proxy for label. Record source/publisher/version/date, license and attribution, collection instructions, consent/ethics determination where applicable, permitted storage/access and de-identification. No availability, participant enrollment or completed ethics review is assumed here. Independent real-user evaluation must actually involve the defined legitimate population; human-written elicited examples alone are a proxy.
+
+Freeze eight intent definitions with boundary cases before annotation: pending transfer means a transfer shown as pending; timing asks how long a transfer generally takes; card arrival asks delivery/status of a new card; card not working means possession but failure; lost/stolen means missing/compromised physical card; change PIN asks changing credentials; exchange rate asks currency conversion rates; identity verification asks verification procedures/status. Annotators receive definitions and independent examples from development only, no Teacher/Student predictions. Two qualified annotators independently assign one label or ambiguous/out-of-scope; a third/advisor adjudicates disagreements with written reasons. Multi-intent or underspecified cases are flagged rather than forced. Report agreement, disagreement and exclusions; if excluded, do so blinded to model outputs using predeclared rules, preserving an ambiguity audit. Keep naturally difficult legitimate inputs in a separately reported challenge cohort.
+
+Canonicalize with the existing rule, deduplicate against every historical observed/reserved input and across new roles, then manually examine semantic near-duplicates within the same source. An encoder-assisted near-duplicate screen requires its own license/revision and a threshold frozen using development only; it cannot certify semantic independence. Preserve hashes, ID lineage, annotator roles, adjudication versions and a private/raw text store outside Git. Never store personal data in manifests. Split by source entity/author/session before class-stratification to avoid placing paraphrases from one author across sets.
+
+Roles: development defines prompts/hypotheses and estimates discordance; calibration contains benign-only traffic for thresholds/reference distributions; final task evaluation (proposed400) and legitimate utility evaluation are disjoint from both and locked until all methods/settings/decision rules are committed. Detection final sessions must also be disjoint from calibration. Exact development/calibration sizes and independent session count depend on verified collection capacity, which requires owner approval; none is claimed frozen today. An independent custodian should retain final gold labels until predictions are locked. Mark synthetic/model-labeled samples explicitly and use them only for declared exploratory stress tests, never to replace independently annotated final or real-user utility data.
