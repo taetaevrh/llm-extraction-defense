@@ -1,0 +1,625 @@
+{
+  "schema_version": 1,
+  "status": "rerun_checks_passed",
+  "rerun_checks": [
+    {
+      "check": "Task02/test/teacher",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 200,
+        "correct": 95,
+        "accuracy": 0.475,
+        "macro_f1": 0.48981192087809744,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task02/test/student_before",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 200,
+        "correct": 0,
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "invalid": 197
+      }
+    },
+    {
+      "check": "Task02/test/student_after",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 200,
+        "correct": 74,
+        "accuracy": 0.37,
+        "macro_f1": 0.35337591922625133,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task02/legitimate/teacher",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 100,
+        "correct": 36,
+        "accuracy": 0.36,
+        "macro_f1": 0.34584841628959273,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task02/legitimate/student_before",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 100,
+        "correct": 0,
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "invalid": 99
+      }
+    },
+    {
+      "check": "Task02/legitimate/student_after",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 100,
+        "correct": 35,
+        "accuracy": 0.35,
+        "macro_f1": 0.31899509803921566,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/small_teacher/rotation_0",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 35,
+        "accuracy": 0.3977272727272727,
+        "macro_f1": 0.39275910364145655,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/small_teacher/rotation_1",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 23,
+        "accuracy": 0.26136363636363635,
+        "macro_f1": 0.24343382910193256,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/small_teacher/rotation_2",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 29,
+        "accuracy": 0.32954545454545453,
+        "macro_f1": 0.30185383120109643,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/small_teacher/rotation_3",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 34,
+        "accuracy": 0.38636363636363635,
+        "macro_f1": 0.38880209573708024,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/small_teacher/rotation_4",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 27,
+        "accuracy": 0.3068181818181818,
+        "macro_f1": 0.26278892775186913,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/small_teacher/rotation_5",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 39,
+        "accuracy": 0.4431818181818182,
+        "macro_f1": 0.37055150593286185,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/small_teacher/rotation_6",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 35,
+        "accuracy": 0.3977272727272727,
+        "macro_f1": 0.3630474597865902,
+        "invalid": 3
+      }
+    },
+    {
+      "check": "Task03/small_teacher/rotation_7",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 36,
+        "accuracy": 0.4090909090909091,
+        "macro_f1": 0.37634711779448615,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/small_teacher/reverse",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 35,
+        "accuracy": 0.3977272727272727,
+        "macro_f1": 0.33511904761904765,
+        "invalid": 1
+      }
+    },
+    {
+      "check": "Task03/small_teacher/definitions",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 50,
+        "accuracy": 0.5681818181818182,
+        "macro_f1": 0.5337646597100378,
+        "invalid": 1
+      }
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_0",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 76,
+        "accuracy": 0.8636363636363636,
+        "macro_f1": 0.8572957839262187,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_1",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 76,
+        "accuracy": 0.8636363636363636,
+        "macro_f1": 0.8570873512240145,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_2",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 69,
+        "accuracy": 0.7840909090909091,
+        "macro_f1": 0.7545498084291189,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_3",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 68,
+        "accuracy": 0.7727272727272727,
+        "macro_f1": 0.7316176470588236,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_4",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 70,
+        "accuracy": 0.7954545454545454,
+        "macro_f1": 0.7572993569897595,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_5",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 71,
+        "accuracy": 0.8068181818181818,
+        "macro_f1": 0.7785714285714286,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_6",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 70,
+        "accuracy": 0.7954545454545454,
+        "macro_f1": 0.7714112400813169,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_7",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 74,
+        "accuracy": 0.8409090909090909,
+        "macro_f1": 0.8226133241758241,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/strong_teacher/reverse",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 68,
+        "accuracy": 0.7727272727272727,
+        "macro_f1": 0.730735294117647,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/strong_teacher/definitions",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 88,
+        "correct": 79,
+        "accuracy": 0.8977272727272727,
+        "macro_f1": 0.8973249576510447,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/student_pretrained/test/forced_choice",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 200,
+        "correct": 38,
+        "accuracy": 0.19,
+        "macro_f1": 0.12691214536580914,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/student_pretrained/test/historical_free_generation",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 200,
+        "correct": 0,
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "invalid": 197
+      }
+    },
+    {
+      "check": "Task03/student_pretrained/test/majority_comparator",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 200,
+        "correct": 25,
+        "accuracy": 0.125,
+        "macro_f1": 0.027777777777777776,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/student_pretrained/legitimate/forced_choice",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 100,
+        "correct": 17,
+        "accuracy": 0.17,
+        "macro_f1": 0.13246425098241577,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/student_pretrained/legitimate/historical_free_generation",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 100,
+        "correct": 0,
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "invalid": 99
+      }
+    },
+    {
+      "check": "Task03/student_pretrained/legitimate/majority_comparator",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 100,
+        "correct": 12,
+        "accuracy": 0.12,
+        "macro_f1": 0.026785714285714284,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/student_adapted/test/forced_choice",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 200,
+        "correct": 70,
+        "accuracy": 0.35,
+        "macro_f1": 0.3322645036283243,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/student_adapted/test/historical_free_generation",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 200,
+        "correct": 74,
+        "accuracy": 0.37,
+        "macro_f1": 0.35337591922625133,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/student_adapted/test/majority_comparator",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 200,
+        "correct": 25,
+        "accuracy": 0.125,
+        "macro_f1": 0.027777777777777776,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/student_adapted/legitimate/forced_choice",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 100,
+        "correct": 35,
+        "accuracy": 0.35,
+        "macro_f1": 0.3243835120747605,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/student_adapted/legitimate/historical_free_generation",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 100,
+        "correct": 35,
+        "accuracy": 0.35,
+        "macro_f1": 0.31899509803921566,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task03/student_adapted/legitimate/majority_comparator",
+      "status": "rerun_passed",
+      "recomputed": {
+        "examples": 100,
+        "correct": 12,
+        "accuracy": 0.12,
+        "macro_f1": 0.026785714285714284,
+        "invalid": 0
+      }
+    },
+    {
+      "check": "Task02/queries.jsonl/query_counts",
+      "status": "rerun_passed",
+      "counts": {
+        "extraction": 500,
+        "test": 200,
+        "legitimate": 100
+      },
+      "sha256": "925a826e9783b192a0c3c004d2047c5c9b732c4b8bb4acb8706942292a92d370"
+    },
+    {
+      "check": "Task02/smoke/queries.jsonl/query_counts",
+      "status": "rerun_passed",
+      "counts": {
+        "smoke": 8
+      },
+      "sha256": "2bb0773fea145e0504bfae2f630169a418ce54a3353a4af9fb04fcb63d317606"
+    },
+    {
+      "check": "Task03/small_teacher/rotation_0/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "d775f7444b3ce0016000e595e03f992730e272a772e9e8fe8f8c317062d16a82"
+    },
+    {
+      "check": "Task03/small_teacher/rotation_1/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "1bb6f7660838815726b54a82cacfe4c1cdb673553ca0bd7488865b9cbb391e9c"
+    },
+    {
+      "check": "Task03/small_teacher/rotation_2/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "e4ff7f2221ccba2db49918082da307a11a16397805c9d7dc15af8e75962beed6"
+    },
+    {
+      "check": "Task03/small_teacher/rotation_3/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "012b98b425f445d116475f2c0f8a5ee1fb60205a71e66c54b8b47f94bfa4c138"
+    },
+    {
+      "check": "Task03/small_teacher/rotation_4/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "554c177f491a3aef0bd24a52a1db3c4530fe7745e366c9c7c633b6745de165ca"
+    },
+    {
+      "check": "Task03/small_teacher/rotation_5/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "5240665a9521de77947883df058b8db939375d0f197b10632a93ccba9da7c86e"
+    },
+    {
+      "check": "Task03/small_teacher/rotation_6/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "cad1ecdf9753aabeabbefdaf48e5ee3be746ccc6672c3a6efbdd1a51a22747a9"
+    },
+    {
+      "check": "Task03/small_teacher/rotation_7/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "b00375a0f0b7c4936db45c8b7e5c2aee4a10d6757d99f27d69447afeb5685449"
+    },
+    {
+      "check": "Task03/small_teacher/reverse/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "089dd173aaaaeec6e363595c82c32b4a76126ca33d2fb57612d428269c52e2d4"
+    },
+    {
+      "check": "Task03/small_teacher/definitions/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "22dd12bbbab3f4007dba2532ad66180633c392ea7073b5655c0f1ffc89faa7ec"
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_0/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "c8c6843ad51379f8eb2fcd24337f0de838961a28a8675e5c98ae13ce41afbdac"
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_1/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "6662176fa760344c4f952d5e6894d919fc9ea98b2e9172604be45459c8334911"
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_2/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "2e3e0fa437f29ba5992dd08976f4a46a68f83e7ea2530f0f45fa5be681e80d98"
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_3/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "c2d69e8533ecf9d505a07c4e5b2966d65f6cd96e8d52732f249c0bc9d34bbb77"
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_4/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "908b5b11e553799f8f2643697a8fd1eae9c43dae96531e8b80aabe60ba99f4fe"
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_5/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "525a27ec32df13bdb3ba3891927d4e773500130d2a2b95ea50995461250dc137"
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_6/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "e2f5d3bac029c68ede129d81292de6ff5ad3aa4d4d95be188f3575aeba84967f"
+    },
+    {
+      "check": "Task03/strong_teacher/rotation_7/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "510060447bf20958c0ce1760243be5094dab4bad0c21c4039eb13869bbe58aaa"
+    },
+    {
+      "check": "Task03/strong_teacher/reverse/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "0d0dab7543e5240defd5efa08dba4ced75236f634d0459fce3d430217f54dfcc"
+    },
+    {
+      "check": "Task03/strong_teacher/definitions/raw_predictions",
+      "status": "rerun_passed",
+      "sha256": "860af4b83674923585fe3371902af868015a4e267dddfeb2849ff8069f65e73e"
+    },
+    {
+      "check": "Task02/test/before/raw_alignment_agreement",
+      "status": "rerun_passed",
+      "matches": 0,
+      "sha256": "7cf249a78cbd2d167818b56706dfe96655200b4c3bfdfb84dc4f31a171347aef"
+    },
+    {
+      "check": "Task02/test/after/raw_alignment_agreement",
+      "status": "rerun_passed",
+      "matches": 164,
+      "sha256": "549fcf1a6ba8fb4b3ac3eccbd2fd481f4d66ff356d4b08bb22e9c8718a1373b8"
+    },
+    {
+      "check": "Task03/student_pretrained/test/raw_scores_and_alignment",
+      "status": "rerun_passed",
+      "sha256": "b60ca6a5b79e571b8f822843405b2cc6810fc96c5334b695c6dbbf9512603759",
+      "matches": 16
+    },
+    {
+      "check": "Task03/student_adapted/test/raw_scores_and_alignment",
+      "status": "rerun_passed",
+      "sha256": "50e8c6af59b1a25318c3a72e6e4a0e8a2ee851c0ed2a24a3ae1cf2cdc200902f",
+      "matches": 162
+    },
+    {
+      "check": "Task02/legitimate/before/raw_alignment_agreement",
+      "status": "rerun_passed",
+      "matches": 0,
+      "sha256": "52dd0795d3ad5b07a6119752338dfc99617fb0f56d0d85545a3b4629d7ff09c1"
+    },
+    {
+      "check": "Task02/legitimate/after/raw_alignment_agreement",
+      "status": "rerun_passed",
+      "matches": 83,
+      "sha256": "28892effe493275fe53f1b23a6bfd054559021b50d2753fac3a957d3ef9c8d2e"
+    },
+    {
+      "check": "Task03/student_pretrained/legitimate/raw_scores_and_alignment",
+      "status": "rerun_passed",
+      "sha256": "ae85df5cdb6b02ad8134a49f98d2572d628dee088c71771940f3422dac301cbf",
+      "matches": 8
+    },
+    {
+      "check": "Task03/student_adapted/legitimate/raw_scores_and_alignment",
+      "status": "rerun_passed",
+      "sha256": "25eed117e848bc4ae5c99cfbfe793dfed33a85992cfa4e5d385d4eed562b4a9a",
+      "matches": 84
+    },
+    {
+      "check": "Task03/small_teacher/query_count",
+      "status": "rerun_passed",
+      "starts": 880,
+      "finishes": 880,
+      "sha256": "3c936594ef8780d4edd2fdde24809ead8b4032fa896b8c36e5e5534cc53d0524"
+    },
+    {
+      "check": "Task03/strong_teacher/query_count",
+      "status": "rerun_passed",
+      "starts": 880,
+      "finishes": 880,
+      "sha256": "252d48138efe33950954692519fb94fc524da9c6ed927c68321feba44f08f815"
+    },
+    {
+      "check": "Task03/student_pretrained/query_count",
+      "status": "rerun_passed",
+      "starts": 300,
+      "finishes": 300,
+      "sha256": "b292c8f331a658e801c5c2f36258d38f3a495f615eebebe193ac4060492e99be"
+    },
+    {
+      "check": "Task03/student_adapted/query_count",
+      "status": "rerun_passed",
+      "starts": 300,
+      "finishes": 300,
+      "sha256": "49ccae5b0cdaf7f51332102a6b2447b3731f9c40aa722addd4ec060e93869b94"
+    }
+  ],
+  "unavailable": [],
+  "historical_only": [
+    "Historical timing and GPU-memory samples are records, not reproduced by CPU verification.",
+    "No historical model outputs or missing adapters were regenerated.",
+    "Agreement is not derivable from individual gold-label confusion matrices; paired raw rows were checked where present."
+  ],
+  "provenance_correction_respected": "Task03 Student ledger prompt_sha256 is the scoring-rule hash; exact prompt is separately frozen. No raw record rewritten."
+}

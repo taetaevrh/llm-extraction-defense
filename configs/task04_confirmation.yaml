@@ -1,0 +1,44 @@
+schema_version: 1
+task: one_frozen_teacher_confirmation
+seed: 17
+teacher:
+  model_id: Qwen/Qwen2.5-1.5B-Instruct
+  revision: 989aa7980e4cf806f80c7fef2b1adb7bc71aa306
+  tokenizer_revision: 989aa7980e4cf806f80c7fef2b1adb7bc71aa306
+dataset_revision: 1846984189f2bc0ac51c6fc3a600fa9e1714e0c6
+input_manifest: docs/task04_confirmation_manifest.json
+input_manifest_sha256: 2c6c64bc6f232577e5135b7ae6a2faf1ab8084a51e6365b0d4d4aa252dab5aa6
+prompt_source: configs/task03_prompts.json
+prompt_id: definitions
+prompt_template_sha256: 32c07a68858577e777521a1b7b7976b94a5e284d1cebe1161462ff3f9af2595c
+normalization_source_sha256: f63aac220c4aaac3e9fbef1aaa077a801462a28e21fdc9c2642065b1c7d6475a
+decoding:
+  do_sample: false
+  num_beams: 1
+  max_input_tokens: 512
+  max_new_tokens: 12
+  dtype: bfloat16
+  attention: eager
+budgets:
+  smoke: 8
+  confirmation: 88
+  total: 96
+minimum_driver_free_mib: 1024
+smoke_gate: Only operational compatibility, cap/integrity, and memory; no accuracy-based
+  selection or replacement of invalids
+statistics:
+  accuracy_interval: descriptive_two_sided_Wilson_95
+  recall_intervals: descriptive_two_sided_Wilson_95_not_simultaneous
+  bootstrap_resamples: 2000
+  bootstrap_seed: 17
+  macro_f1_interval: within_true_class_percentile_2.5_97.5_linear
+  rng: NumPy_default_rng_PCG64
+decision:
+  accuracy_min: 0.7
+  macro_f1_min: 0.65
+  all_recalls_positive: true
+  maximum_predicted_label_share: 0.35
+  confidence_threshold_guarantee: false
+no_training: true
+no_defense: true
+no_prompt_or_model_search: true

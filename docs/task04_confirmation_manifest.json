@@ -1,0 +1,932 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-29T07:14:00.108448+00:00",
+  "dataset_id": "PolyAI/banking77",
+  "dataset_revision": "1846984189f2bc0ac51c6fc3a600fa9e1714e0c6",
+  "expected_samples": 88,
+  "per_class": 11,
+  "seed": 17,
+  "sampling": "Group in approved label order; lexicographic source:id sort, canonical dedup excluding prior IDs/hashes, random.Random(17) shuffle each pool, first 11; final shuffle with same RNG",
+  "rows": [
+    {
+      "id": "train:6985",
+      "label": "change_pin",
+      "canonical_sha256": "cca2581e2777e4341464970f04bf8ed7be7313b7d2d0bef1f98225066526fed0",
+      "rendered_input_sha256": "3fda76cbd2849cd6dbec95a34ca5d393d19d56f0a8c0802e9a8f5b3585f7af00",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:30",
+      "label": "card_arrival",
+      "canonical_sha256": "bf27c24a07c6102b62efff4917a32e2dd3615ebb5b90de38744fd790dee9e689",
+      "rendered_input_sha256": "33730b2d3af39939950df137a567fd602f2351b60ad28913352cafb879d6bcbc",
+      "input_tokens": 220
+    },
+    {
+      "id": "train:9835",
+      "label": "verify_my_identity",
+      "canonical_sha256": "cf7807fe8f89a9337a4298f1be9e7211e1bf1b73e3ab592c0f42a4bde640e717",
+      "rendered_input_sha256": "e78a0b98b30ff4d96b303b3f435ee7ffc41a82bc29ded82c9346ed08fbb2698f",
+      "input_tokens": 222
+    },
+    {
+      "id": "train:1251",
+      "label": "card_not_working",
+      "canonical_sha256": "cd698a825bb38857312ee5de9c65a7ba4b0f754fbc3fd6eaee5914f8c9c5feff",
+      "rendered_input_sha256": "f6387461518809da0a9315af8effe6cdae4c81b39c4017d8a90f51037faee530",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:1301",
+      "label": "card_not_working",
+      "canonical_sha256": "509f6a275bbef5381befb68b06ac5326447b11dd6665b61d6680f46c7f91c81f",
+      "rendered_input_sha256": "c55987f44ad983e51481b65995e715f90afd1d2ae011d5b7a4339030cbbd8705",
+      "input_tokens": 217
+    },
+    {
+      "id": "train:104",
+      "label": "card_arrival",
+      "canonical_sha256": "766129124d721f5090a71cde9f7004ae4c7c507b7cc143c5f97d4233a521c1b8",
+      "rendered_input_sha256": "45ef07f1ac314284c5743703bd1489bd5f38bf9dac3a6769e9f1468ac2e79d70",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:9805",
+      "label": "verify_my_identity",
+      "canonical_sha256": "cd4ae279d1eb0a48e0341126ca2de7187aed75595e2a7c47f0a6a58cb75effb9",
+      "rendered_input_sha256": "f244db19f5551f64cb98a2ed008f12000849ba91788f59d88d487fd881093f75",
+      "input_tokens": 214
+    },
+    {
+      "id": "test:3009",
+      "label": "verify_my_identity",
+      "canonical_sha256": "1a69f1e8d9f2610b0cbf991bebc7c4f7d27edc99e485fa3625ce7fa519c6f2f4",
+      "rendered_input_sha256": "95caca676096777a2dd57a07135f757068ca4b9972db5ad663631ea75918a405",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:6632",
+      "label": "transfer_timing",
+      "canonical_sha256": "553210b05462e803ea4e4009ce2db116af0b2505273aaca6efcc9af3d74532c6",
+      "rendered_input_sha256": "49164bd3ddca8bfe76df310ac8d309788df5949e24a0f64a905f4826645b8d9b",
+      "input_tokens": 220
+    },
+    {
+      "id": "train:9866",
+      "label": "verify_my_identity",
+      "canonical_sha256": "0eaa6752dedb4fcd4127006a8ee4c9f1eee42741a90f700e1c0031219068bed4",
+      "rendered_input_sha256": "15c705d3c45f74e5c0de2b595bc3838fa67d5a3b5160f3ac60e1e7d1586c51d1",
+      "input_tokens": 215
+    },
+    {
+      "id": "train:1350",
+      "label": "card_not_working",
+      "canonical_sha256": "6f46da9712e2361b4e7eca558528281c75b9b7ff87cbd999e661230b23497694",
+      "rendered_input_sha256": "d91a4e65d9e7b33551db4da3a851e3906ca63caeefe8fd843f216b6079b3c17a",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:9782",
+      "label": "verify_my_identity",
+      "canonical_sha256": "05c8ed37c49e409af04fcce5e5b355d4e8c632663bcc74402034faf012e5c890",
+      "rendered_input_sha256": "913915ec15206f034f9fd3ff4404dc51cc8bb6ea1768ceb106ab2d49c2621c13",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:1300",
+      "label": "card_not_working",
+      "canonical_sha256": "b63fb6654d0ec78ed31bc90cb4745253c5d8729c553c7a036f03f3ded9705b06",
+      "rendered_input_sha256": "8140dd68928cd40b525a7b93b2548bbd2ec06b32e0052f375d6346af2c554696",
+      "input_tokens": 221
+    },
+    {
+      "id": "train:133",
+      "label": "card_arrival",
+      "canonical_sha256": "0a01770b229394b1eaff566acf28eaf93fd48169580d8b6102454268831c3b8c",
+      "rendered_input_sha256": "626c086bb4ebd24d5893583234428aa7e25edd0d61eaf432d6dd738a5d6910a4",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:397",
+      "label": "exchange_rate",
+      "canonical_sha256": "0c1058687223bf6253de1864ab250cf8fc0b6c58444f2b55c3164d65137f750e",
+      "rendered_input_sha256": "a6e572e6c871872247a69ed70064498993818da5da351f791863bb6da8bce4b5",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:6601",
+      "label": "transfer_timing",
+      "canonical_sha256": "9274f263775604579d6c9a721586085f66de1edde4a284b9e004786f5aa0d2e2",
+      "rendered_input_sha256": "709d99c3e670518662c9f9d670f93a4653b4319b552f60805a707c7ab4b618ce",
+      "input_tokens": 224
+    },
+    {
+      "id": "train:1292",
+      "label": "card_not_working",
+      "canonical_sha256": "63db18c509b174b3ba3bc4c06558064681e7931b5fbf839757d862007a5514cc",
+      "rendered_input_sha256": "98b798041bbe3ad672e706770fb984c7f89253efb6ff87cce8ba4835608c2191",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:389",
+      "label": "exchange_rate",
+      "canonical_sha256": "738f3dd889a5d495803e82cfeb2911579473be4da583f2db1d7c10a12425eda1",
+      "rendered_input_sha256": "4d84e5bf15a9a2cb62b75fa6fe054024abe5201912975b51cbffb20144c49fbe",
+      "input_tokens": 215
+    },
+    {
+      "id": "train:1489",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "b8f28aad968bce328949485a93d57f773f2e1645683da7881d6014694ccf988b",
+      "rendered_input_sha256": "d95535be64d5975ac90e1f58be1ee7efa3c726302a31e9e3ae9d064ad71d526a",
+      "input_tokens": 232
+    },
+    {
+      "id": "train:6000",
+      "label": "pending_transfer",
+      "canonical_sha256": "88f8d3eff424a5deedfb5192e75cb2b471711f3014120641516220613a2e42ef",
+      "rendered_input_sha256": "14edecc01cf830af5e3035486fb1c561fb2e863f89f6d23b8c9110fdbcd08fef",
+      "input_tokens": 227
+    },
+    {
+      "id": "train:6043",
+      "label": "pending_transfer",
+      "canonical_sha256": "aa76853b3f55ea6cd2bbc0597cda241b2d59cb4cd5b51fab5fc5cc1cfbae7053",
+      "rendered_input_sha256": "c82216d33c16af4094f10bbf03218caa5f76084f758b81213051e021e52f2767",
+      "input_tokens": 215
+    },
+    {
+      "id": "train:6611",
+      "label": "transfer_timing",
+      "canonical_sha256": "04a4a7f8ed6d7f1874ab673f25c3780e00557f65ca6b1163c384b9c1ded15572",
+      "rendered_input_sha256": "647c46c8c7cce5db653fd5911e0d19eaa3a10131a07ce46ce3404a90ddf78a05",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:6078",
+      "label": "pending_transfer",
+      "canonical_sha256": "4e0fea3ae1bc1d317cc108306628223b618df1a604160b4ae329476278886176",
+      "rendered_input_sha256": "b1f0c45bc5840481c785ec317444de6f53babec973be6cf246795f012d80bbc2",
+      "input_tokens": 220
+    },
+    {
+      "id": "train:9789",
+      "label": "verify_my_identity",
+      "canonical_sha256": "edfb027a077d908b125ec8f6015b493822289f4543464be9202cd71b116b896d",
+      "rendered_input_sha256": "9a466559bf4951d9dfae31e88426ecb8a860a2adc306b85231d101fe92331c4b",
+      "input_tokens": 217
+    },
+    {
+      "id": "train:350",
+      "label": "exchange_rate",
+      "canonical_sha256": "a360691b73b37c638c7673a36dfb5eb1e4884b3d4335e63e4576981dc5d58e62",
+      "rendered_input_sha256": "51926b7d23255929cb941fd26873e833e82341e3ebf692745bbd1875c81a2542",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:138",
+      "label": "card_arrival",
+      "canonical_sha256": "12cd64943e6fdd534f5d968302d51fed87f40142585a7311f86c0cc4193a5462",
+      "rendered_input_sha256": "f412bdbbe92dd35d41957f18d42ad733b475074579f87273c013cfd04a5aeb95",
+      "input_tokens": 221
+    },
+    {
+      "id": "test:479",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "046156e9b2357066cb9927e441c8ac63aa289d610e69741822dcb71965102d8c",
+      "rendered_input_sha256": "f04c617577aca9c3d420a97bfd6dec088e014f23692b85d7bf24d8e76fee9a10",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:61",
+      "label": "card_arrival",
+      "canonical_sha256": "f2ca49c6e2f6d9106faed4aefd276d04613c756ec06cec655b4310098572cc00",
+      "rendered_input_sha256": "72428530769347a8f1556d4d265f91d2ab4b685ffb65b13243fc667fc468897e",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:301",
+      "label": "exchange_rate",
+      "canonical_sha256": "fe1753b8856ac83aa5be24022c8e4886b95de7a0cc3b07b58c3bc4d2448a5e27",
+      "rendered_input_sha256": "876e5a6441b2968c864b75eb78480904f991cd8ec05ba155ca0367425bf4af13",
+      "input_tokens": 217
+    },
+    {
+      "id": "test:475",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "76f38756ee4caf41965e9b5e2a45596ca625cc9ce8f165a084366449a836f664",
+      "rendered_input_sha256": "111eb4deb9329546bcca4b194d9ee52099d9a687166c1fd68f0a6a77b333111c",
+      "input_tokens": 220
+    },
+    {
+      "id": "test:2043",
+      "label": "transfer_timing",
+      "canonical_sha256": "792398dfcf41deb78d236b9361e7937d0c3c31f0c8410c6c59e2870d9f876d31",
+      "rendered_input_sha256": "e9dabc1cde98626de1ab5669f4dcb131093815271746f0f344744644567d486d",
+      "input_tokens": 219
+    },
+    {
+      "id": "train:1285",
+      "label": "card_not_working",
+      "canonical_sha256": "1ae9d15897ffde8c7d279a181a29f7e30e3146a6fe2fb0191fbfa34abd1a5c51",
+      "rendered_input_sha256": "3a1ebedbf04d0f0c36b36be089b971ededab25abe2db41850d588a044b7ff7d4",
+      "input_tokens": 217
+    },
+    {
+      "id": "test:1864",
+      "label": "pending_transfer",
+      "canonical_sha256": "abb9c32fe1c23daf961fd0539d3c953f92b72cd7a3828ebb6b6336844f2421ba",
+      "rendered_input_sha256": "4435aea4df76a91068ce0685caceae5bdc8a9758535792fcf900da92340a58fe",
+      "input_tokens": 215
+    },
+    {
+      "id": "train:6687",
+      "label": "transfer_timing",
+      "canonical_sha256": "f08769d403ccab8092b79ae6d1444ced2e26135c2ad4661e6990876e6c36d70a",
+      "rendered_input_sha256": "8b172bb94f8cc20bb59eae660b6f4efdb5cda3385b9aa40d0bdc344985650393",
+      "input_tokens": 217
+    },
+    {
+      "id": "train:6126",
+      "label": "pending_transfer",
+      "canonical_sha256": "56ab5f04a6f4a1da84c8ebe83a9b92392bfc4c4d59d4f51df98b04c4dc82cc85",
+      "rendered_input_sha256": "5b82ffbe18be5277aace2de4667c6868fe489a876fd0da51c44c277e6f072a14",
+      "input_tokens": 215
+    },
+    {
+      "id": "train:1341",
+      "label": "card_not_working",
+      "canonical_sha256": "11b8b17a491ed7205fae6627f087da93a4f6536de5eecf63a43243415b509e7a",
+      "rendered_input_sha256": "0a6387a8d5a4ced00388767930a42100c7a9f2bc120845a6ba2c43781374467a",
+      "input_tokens": 217
+    },
+    {
+      "id": "train:6947",
+      "label": "change_pin",
+      "canonical_sha256": "b69821f8e4ce43ed04654ec7a43b5a66f104a2b714e07ed55d5d9cc63f703564",
+      "rendered_input_sha256": "467c30bfccd26929488b0c097724afd433c7e5e0dcba61a914d251f03295b5a8",
+      "input_tokens": 219
+    },
+    {
+      "id": "train:6039",
+      "label": "pending_transfer",
+      "canonical_sha256": "8e34e289ef026096affeef3329bc020dd0876dcdda6bee442e238b03d4ded9cb",
+      "rendered_input_sha256": "0eabd323cb7b0c456cb97de506afe565025673f8135af861eaae0aa1ef238866",
+      "input_tokens": 219
+    },
+    {
+      "id": "train:6040",
+      "label": "pending_transfer",
+      "canonical_sha256": "0fedccad18851f0dfad29bd8b93a623110928e820d2ef77b2de31818fef29039",
+      "rendered_input_sha256": "fb51c82dce8edb0d925aa3cee50750da74e3338b517030527dba138266efbf54",
+      "input_tokens": 220
+    },
+    {
+      "id": "test:2047",
+      "label": "transfer_timing",
+      "canonical_sha256": "b81104c255582ee07793783c766334566228d3767127fe8803c92317f644dfdf",
+      "rendered_input_sha256": "d17d76ca13c1724d0ed8f19275f6b16f1c7c16a712ead7458862b789ae6f0938",
+      "input_tokens": 219
+    },
+    {
+      "id": "train:6003",
+      "label": "pending_transfer",
+      "canonical_sha256": "532a9c24d2724a067d7247501f7c7b11c2ac74ecee2b4aae1505069d72fee90d",
+      "rendered_input_sha256": "73832e72722450daa3ad030f19362fb1b7dae72e310b0a8a23d1c9d952f987f6",
+      "input_tokens": 215
+    },
+    {
+      "id": "test:2074",
+      "label": "transfer_timing",
+      "canonical_sha256": "01338667d35d7f5d7f84580bcc84645dceb66f833a1020dc749733ee4873d24c",
+      "rendered_input_sha256": "7931448cb4de9a635c152d29fa284c7593d511e103fad02c4bc5358f3cd259fc",
+      "input_tokens": 230
+    },
+    {
+      "id": "train:1254",
+      "label": "card_not_working",
+      "canonical_sha256": "620072c09ff88145d0e000fe86fbac69e015b166b87944df51c416b020300493",
+      "rendered_input_sha256": "c39c9203cdfb4773a2d66074427bea501a76823af769fff95adcbf6b0cb11c72",
+      "input_tokens": 219
+    },
+    {
+      "id": "test:452",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "d6a497db8c6be5abaffb426acc47bfb06c86274018e883adc9e9f0368c1fab73",
+      "rendered_input_sha256": "fef0e34396f4c5894c9e96942b5744eca8d28d0fec6cdf771c1d3d3290487caf",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:0",
+      "label": "card_arrival",
+      "canonical_sha256": "6229b0c183964470f0c9ec966fad81e0c4f2b4b6c10b9af382f26d3baed0907e",
+      "rendered_input_sha256": "debeb2201434f17a62fc93ef9bfeadf05a7caa948581cd931ed0ebc3a7ba5066",
+      "input_tokens": 216
+    },
+    {
+      "id": "test:107",
+      "label": "exchange_rate",
+      "canonical_sha256": "c4b3090041b348231f6e763b2e52e50a1d58aedfd8b2a72851a702116d9478e6",
+      "rendered_input_sha256": "9ef56c33054b1c2b4601d76662bf4a1f9aa6dd1113a9f0fb896d3576a0346ed9",
+      "input_tokens": 215
+    },
+    {
+      "id": "train:6893",
+      "label": "change_pin",
+      "canonical_sha256": "b21c98ea3bdee952e4a4f04d7301ca20599a11f650f6e457698cd7ebf1803ee5",
+      "rendered_input_sha256": "3ad827ecba7935ca138e3bf2951a87ab044b2f5d1258f84004e9e74ff9f149d6",
+      "input_tokens": 222
+    },
+    {
+      "id": "train:6961",
+      "label": "change_pin",
+      "canonical_sha256": "0f5ab48453395425cc5b827f458aefa5c7a3ae3d7c9159f322bc3930ace40186",
+      "rendered_input_sha256": "8b7f9488b1c531cd6b6b3f6c164f74838daf70a2f04ee4ca325708fd865f9d36",
+      "input_tokens": 220
+    },
+    {
+      "id": "train:378",
+      "label": "exchange_rate",
+      "canonical_sha256": "6e03276335f6de1faf8367c309b402c91b135c339656f5c98f30b281d742a9e7",
+      "rendered_input_sha256": "7ebbc02db1f3649185166ae9ed7ffe4c1711f899446b47b985503ae04afd7a98",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:32",
+      "label": "card_arrival",
+      "canonical_sha256": "39051983e2ad4c86157e80bfb7546dfed7e8017d71551d07a5f176c6640b0764",
+      "rendered_input_sha256": "52b7af0b52e83b57ad10afcccd2ebc8bae10c4ef50119503615e2220e89f1201",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:1481",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "b8a075511350eea335cf516f8c1671af354673dc85516ea6e16b3e5170740d37",
+      "rendered_input_sha256": "52c73386b5b9a694a246136bfce7212c243ac758f426f23ddbffdcf556a0d90a",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:6899",
+      "label": "change_pin",
+      "canonical_sha256": "803a3a5b1c7694f2022497d25213c32d0640a1911bfa8f91b35de6fc9e1162c0",
+      "rendered_input_sha256": "a892125a6f2491100d579c081c617df710766f440b23fd0cdbf6aa022c2cf4d5",
+      "input_tokens": 215
+    },
+    {
+      "id": "train:6066",
+      "label": "pending_transfer",
+      "canonical_sha256": "99ecb22d20ba4e13ef140cd224c45c54e5f9cbd1e8643c9fcae8d83e9a504931",
+      "rendered_input_sha256": "99bbbac40fdc5d850c0638c646abd09c5ecb6b6c230ca2cc86ee48feab28b0a5",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:6938",
+      "label": "change_pin",
+      "canonical_sha256": "8882a185736e8ce9e531387a1e237418224fee102af4788e94276b2781b03324",
+      "rendered_input_sha256": "9d4fa08dc5b1d6f89acfe8d88898b90122c360d7515e6fd021e5cfcd89cbf959",
+      "input_tokens": 219
+    },
+    {
+      "id": "train:1283",
+      "label": "card_not_working",
+      "canonical_sha256": "d68c15f200651564538b47a35731a9f52c4944f19241c7af5063659e61613c66",
+      "rendered_input_sha256": "d52bfc6c35c788c101d6f0ca01f6eab147d8955388cd795d712f4b623d543c60",
+      "input_tokens": 220
+    },
+    {
+      "id": "train:340",
+      "label": "exchange_rate",
+      "canonical_sha256": "748cd9258771679feabf8f2b8484e7661761b24230c5286385511d0da867e38b",
+      "rendered_input_sha256": "9a01067320a95802fe74f0a90c7089ada5bfda1c9dbba961b066d5d4b7494e85",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:6972",
+      "label": "change_pin",
+      "canonical_sha256": "0da39a745f08e25eab3c6ced459286db50537adce25a5608e86a52a855503f29",
+      "rendered_input_sha256": "e2a628e40c6c6a152cbbcc447f74c8384d2aa485a37f3662755c6e98ae7f9a13",
+      "input_tokens": 220
+    },
+    {
+      "id": "train:9795",
+      "label": "verify_my_identity",
+      "canonical_sha256": "a139bcb9bc66dfdc6d5d2eeda4a4f5637f8ad5f7e28f715c353f3ad2c084d295",
+      "rendered_input_sha256": "875880ea3587362bb3e06b394e461f5ae4d401a00b75788eccc624d170269e9f",
+      "input_tokens": 217
+    },
+    {
+      "id": "train:6634",
+      "label": "transfer_timing",
+      "canonical_sha256": "b7d19d010e3a67d5263c5ee14cccecfb310b01d89409948514c2819f97e87f10",
+      "rendered_input_sha256": "2c9e0022687758a7829fcfdf3d23387293c80030eaa58155bd52058e28f1a0d5",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:6710",
+      "label": "transfer_timing",
+      "canonical_sha256": "cb0c3e19318f4449028f833932c1448ee955f522e674d1c3861f87a5e832bb62",
+      "rendered_input_sha256": "f6bfe7c78d4a3c67fdc0b0cdfae4436bf76fb8215977f7e8997ce42a3407a3c1",
+      "input_tokens": 219
+    },
+    {
+      "id": "train:9843",
+      "label": "verify_my_identity",
+      "canonical_sha256": "2b1a3a4de6e438965880681a33344496140e5deea3faed1a93f15bfe58b9d634",
+      "rendered_input_sha256": "d526db903bf1da98eb658fc6df864a135bcc6519db1cddb0d814a6f74119e19c",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:1534",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "1e16320985a5be4cc4a756f9503d1f9c8cf190574aabc20e7f844e04592a1681",
+      "rendered_input_sha256": "0341e425a6625e0e8bbe201adedf5ad6f0d901e92dc7ffede850d163ae20ecfb",
+      "input_tokens": 222
+    },
+    {
+      "id": "train:1256",
+      "label": "card_not_working",
+      "canonical_sha256": "94c0320671883b9c9a71eb81d030f1ea9d9ccce87330bbec3b3cbd4ca575af63",
+      "rendered_input_sha256": "7f0450c1103ac252a52c0ab9db99b96d468eed3719dc7fed929ea939792681a0",
+      "input_tokens": 227
+    },
+    {
+      "id": "train:6915",
+      "label": "change_pin",
+      "canonical_sha256": "f004f306a38c4d256b973fcea5e7ed6a26b219072ff8f507dd21dacb531daf8b",
+      "rendered_input_sha256": "27c3064306c26f0c01317b2f026582a7ab7454d0acc9438802e86fb39af2ad1d",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:1493",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "b4ab1118fc66341c6eb7c38343a20e06bef270eaaed7d60c41f71bf3f6fad804",
+      "rendered_input_sha256": "174ed230385091ba4a2b8f0119fd68130b23a6dae84752f7cbbe72f7e94231a5",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:9851",
+      "label": "verify_my_identity",
+      "canonical_sha256": "c6ee01ba2bb1e40e0349239f4f5213858826fe218f2e6b0e1cc7b0011c07b71d",
+      "rendered_input_sha256": "b09c09bf5b3e04bfdc47ae670ba291514248507b5bb7dfc1e63cfaddd3a9dbd0",
+      "input_tokens": 219
+    },
+    {
+      "id": "test:2140",
+      "label": "change_pin",
+      "canonical_sha256": "99c77b387775939542409d7600282f44948eeaf2d9715ed845aa91d92bdb6bae",
+      "rendered_input_sha256": "ccda1d7a7ec1b4798238b04eef513f552939eb6fb4a687f7dad7e3dc5409c549",
+      "input_tokens": 220
+    },
+    {
+      "id": "train:7004",
+      "label": "change_pin",
+      "canonical_sha256": "3b1acb96013f9ee13bc9d0db72daf8b3fb3dcf1092feeb9785523a2077f2da5a",
+      "rendered_input_sha256": "0bc6b5597de0f94704b6c81c304a07e00b9fc448b6f962f6a81aad790b7e2b2b",
+      "input_tokens": 219
+    },
+    {
+      "id": "train:1531",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "91a2af1b04429b74b547e2106fdfe5ef5bad87b69de3b4a6e06f0469d1264eb2",
+      "rendered_input_sha256": "ca7ffae92f59b9ae075b0781d58fc691cdf73a6710dcf1a5e8223b76309cc7cb",
+      "input_tokens": 245
+    },
+    {
+      "id": "train:1324",
+      "label": "card_not_working",
+      "canonical_sha256": "8c97aded9db85accc37e5b839b9e5481375abfbef4cd2c755d3b525380339f9b",
+      "rendered_input_sha256": "6a9bef1f2ffca9ae222b5ba78b50f8acef5608e8221fd960a41a62c7367ef6f9",
+      "input_tokens": 217
+    },
+    {
+      "id": "train:6017",
+      "label": "pending_transfer",
+      "canonical_sha256": "28cb3f5d3e4a00f2226bd0db835730391e09484624e15651e40f66a1a7bce42f",
+      "rendered_input_sha256": "51df2ec50bbccfe47c44fdc6f70420ac7c21b7d9676c0807f4aa19ab3bca1771",
+      "input_tokens": 242
+    },
+    {
+      "id": "train:353",
+      "label": "exchange_rate",
+      "canonical_sha256": "5064bec58238fa7d0b43f38a12fadf72fbd69f9ec16e674aff4d6c951b849a87",
+      "rendered_input_sha256": "d4d0675aa9336a2715c91c80af14bd41a913dae3c2436a3c4980522ab4f416c3",
+      "input_tokens": 214
+    },
+    {
+      "id": "train:341",
+      "label": "exchange_rate",
+      "canonical_sha256": "86b077ee0d1562d52c8044d9d77553e38f680c77121413640ab8d4f335baffdf",
+      "rendered_input_sha256": "097ad0401848e23587435bcbf150c9eeb5a31c3d09f50670eee1ae5776d2713a",
+      "input_tokens": 215
+    },
+    {
+      "id": "train:1509",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "a4cdca56e0cebd396151e07b75accd7bb30f6e43d1b45dc2d52ca7808e993b70",
+      "rendered_input_sha256": "61ffeb04d1507928c92a3d9ab91388532fbc60f77fb3fbbca095713c13f9cbc0",
+      "input_tokens": 223
+    },
+    {
+      "id": "train:9771",
+      "label": "verify_my_identity",
+      "canonical_sha256": "7d6d5d20e91022b429595dd743a8668735eae14bc8de106e3892c417e0d1d5d5",
+      "rendered_input_sha256": "d74f07b080c1e6b811b482c3fded7e99f9e899c4e321a6df1e5246b1205d84b9",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:6098",
+      "label": "pending_transfer",
+      "canonical_sha256": "1ee80a30d6fe47fb7a7ec6fe7fddab40fef7116ca2a746761003ae93d0d3a37c",
+      "rendered_input_sha256": "0022ab5c6567aaf3bafbf3adcd947f4725d0c3bba32adb020e1622c33e1d710a",
+      "input_tokens": 214
+    },
+    {
+      "id": "train:1500",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "986b068c8370e8d0b28a7a3bc0398feb34b70d1a85f85b140eb50e0963c16164",
+      "rendered_input_sha256": "39c5273cb91fec0294c3cca0dfe7646d8f958f0fc6511677fc4c6c75986ea6c4",
+      "input_tokens": 219
+    },
+    {
+      "id": "train:84",
+      "label": "card_arrival",
+      "canonical_sha256": "53283fabf618fa6a6bace3cfb3d2ed2fef88a062bea3d8ab7ff484b836a221d6",
+      "rendered_input_sha256": "7628cb8b841e63e858289851d10f4ab50bcfc994260b2e893771737b3e406bf9",
+      "input_tokens": 227
+    },
+    {
+      "id": "train:6608",
+      "label": "transfer_timing",
+      "canonical_sha256": "b4fbba95ef404bc5630222ee57ee134d32e4673eb4bcf3daf9cd9c656cdddefc",
+      "rendered_input_sha256": "af2aa6130dfe8581976291ca4b46b7a76134e5791244d37004419a9438e70c11",
+      "input_tokens": 224
+    },
+    {
+      "id": "train:6650",
+      "label": "transfer_timing",
+      "canonical_sha256": "be82f190069bd48e0f5813523818ead83401af929d8996e240b0015209d11a97",
+      "rendered_input_sha256": "29773fec1fd222d5745c5c0fc7dba2a46933e7aca664592bbb083e39fb35241f",
+      "input_tokens": 230
+    },
+    {
+      "id": "train:128",
+      "label": "card_arrival",
+      "canonical_sha256": "88ecf6aac1742efb643931a4a25fe2674a3c9251efd1720cbc7a347792fadae0",
+      "rendered_input_sha256": "3cbe4ac9813047ab97028ec3501d4c501dadd069be58f925146eb32bfc50cc10",
+      "input_tokens": 219
+    },
+    {
+      "id": "train:109",
+      "label": "card_arrival",
+      "canonical_sha256": "f1c5793984b4c49acba8ff1f23d682a9b40c0b95ff60080c1671fbe895887f20",
+      "rendered_input_sha256": "89291750afb2f61863bbfd4b06ca05a09547e5ae1c21a5e8779cc6fd642b8824",
+      "input_tokens": 216
+    },
+    {
+      "id": "train:303",
+      "label": "exchange_rate",
+      "canonical_sha256": "30a496fa9540a1963e350be51b4816af91302918a3a107d03dce1d449bfe2fb9",
+      "rendered_input_sha256": "b1d37d4ed36d7e3faad5ab64135f57b9f440be8014bbeed178387e843d861fd7",
+      "input_tokens": 214
+    },
+    {
+      "id": "train:6923",
+      "label": "change_pin",
+      "canonical_sha256": "8ce1da6e7054bfc16e31bb0a4270c1eb062fcb4c8fa28d714a04849ac52efba2",
+      "rendered_input_sha256": "0cda510a233ce70d7d3cf4d5eb8205aeda23a5cd0ab57c7b0e64eae8ff96517b",
+      "input_tokens": 221
+    },
+    {
+      "id": "train:9841",
+      "label": "verify_my_identity",
+      "canonical_sha256": "cae6f5f288a97f66dae0130084768cb4241aad2bb7d3b8b51922f8784f6dd5cb",
+      "rendered_input_sha256": "56c78700e07aaf8fb0813c101942712f134608b3adcf88429d20ca0ae1a95d69",
+      "input_tokens": 215
+    },
+    {
+      "id": "train:1545",
+      "label": "lost_or_stolen_card",
+      "canonical_sha256": "7a73069807a72e112c59ee2a79d853b4e8bd9c4c5fd7be91a4f87ea61f9d8fb7",
+      "rendered_input_sha256": "b30d633e6a8a06ef849f3a4272e4f2db7b6bc87de7fd0215232dec02791e6c5e",
+      "input_tokens": 218
+    },
+    {
+      "id": "train:308",
+      "label": "exchange_rate",
+      "canonical_sha256": "67af6c256263d06a2be4c61cda4554d0300b9307926daf52c48a5b406837d926",
+      "rendered_input_sha256": "d5516a9303781db0df51ef30becc29b3555c98505808c8934795d9182122df32",
+      "input_tokens": 215
+    },
+    {
+      "id": "train:87",
+      "label": "card_arrival",
+      "canonical_sha256": "32a9ac6d9e945a2b154371846dc1a72c437615e6e87956af35d9773dbf5228fb",
+      "rendered_input_sha256": "3a8e442bd827f73e23c4c1bf6978b0fcb30be54c4842444682b759408d830bab",
+      "input_tokens": 213
+    }
+  ],
+  "source_composition": {
+    "card_arrival": {
+      "train": 11
+    },
+    "card_not_working": {
+      "train": 11
+    },
+    "change_pin": {
+      "train": 10,
+      "test": 1
+    },
+    "exchange_rate": {
+      "train": 10,
+      "test": 1
+    },
+    "lost_or_stolen_card": {
+      "train": 8,
+      "test": 3
+    },
+    "pending_transfer": {
+      "train": 10,
+      "test": 1
+    },
+    "transfer_timing": {
+      "train": 8,
+      "test": 3
+    },
+    "verify_my_identity": {
+      "train": 10,
+      "test": 1
+    }
+  },
+  "smoke_observed_development_ids": [
+    "train:136",
+    "train:1338",
+    "train:6975",
+    "train:403",
+    "train:1513",
+    "train:6129",
+    "train:6646",
+    "train:9864"
+  ],
+  "prior_excluded_id_count": 900,
+  "prior_excluded_canonical_hash_count": 900,
+  "prior_raw_ledger_files": [
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/after_legitimate.jsonl",
+      "sha256": "28892effe493275fe53f1b23a6bfd054559021b50d2753fac3a957d3ef9c8d2e",
+      "id_records": 100
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/after_test.jsonl",
+      "sha256": "549fcf1a6ba8fb4b3ac3eccbd2fd481f4d66ff356d4b08bb22e9c8718a1373b8",
+      "id_records": 200
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/attacker_training.jsonl",
+      "sha256": "36604c975e160b5f7b5eff4f5dccd03efa61f47fcfbd40af74a706a2df2e4a33",
+      "id_records": 0
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/before_legitimate.jsonl",
+      "sha256": "52dd0795d3ad5b07a6119752338dfc99617fb0f56d0d85545a3b4629d7ff09c1",
+      "id_records": 100
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/before_test.jsonl",
+      "sha256": "7cf249a78cbd2d167818b56706dfe96655200b4c3bfdfb84dc4f31a171347aef",
+      "id_records": 200
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/extraction_responses.jsonl",
+      "sha256": "454bb9a149a54de12c0fc90e14bcc10ff81b3bc7d352ccc05af477dfc7d19388",
+      "id_records": 500
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/queries.jsonl",
+      "sha256": "925a826e9783b192a0c3c004d2047c5c9b732c4b8bb4acb8706942292a92d370",
+      "id_records": 0
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/smoke/after.jsonl",
+      "sha256": "4808b183125a970f77d29fc7e1dd0525558f71137f70d125e9a9f72a993eb2a8",
+      "id_records": 8
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/smoke/before.jsonl",
+      "sha256": "b122bfeeeebee999b34ce20cf611fb04904ecae5fb52521e6b1f1a33e0f24474",
+      "id_records": 8
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/smoke/loss.jsonl",
+      "sha256": "e095ff89b1c4ee1dd8d40289bd026c9a27daaf07b8495ce02985cf64a4ef13fa",
+      "id_records": 0
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/smoke/queries.jsonl",
+      "sha256": "2bb0773fea145e0504bfae2f630169a418ce54a3353a4af9fb04fcb63d317606",
+      "id_records": 0
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/smoke/responses.jsonl",
+      "sha256": "64ef2e6611ad93c56ce6be011dd0efb3da285aba760682b779d7b9f6eca79099",
+      "id_records": 8
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/teacher_legitimate.jsonl",
+      "sha256": "29c25e8c8fb8b41899351fb883a58f96110d780316c54756955b91278a84b378",
+      "id_records": 100
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/teacher_test.jsonl",
+      "sha256": "212873c9b078eb2b159b86f0c75b0e59ba8c73a66867ade49cae252b214ab707",
+      "id_records": 200
+    },
+    {
+      "path": "experiments/runs/20261028T195903Z_banking77_seed17_1a1274a4/training_loss.jsonl",
+      "sha256": "7036a59927af7fc6b4603bbd9bccc053a745e626c97cd4a25abc2da0fa0f088a",
+      "id_records": 0
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/attempts.jsonl",
+      "sha256": "3c936594ef8780d4edd2fdde24809ead8b4032fa896b8c36e5e5534cc53d0524",
+      "id_records": 880
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/definitions.jsonl",
+      "sha256": "22dd12bbbab3f4007dba2532ad66180633c392ea7073b5655c0f1ffc89faa7ec",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/reverse.jsonl",
+      "sha256": "089dd173aaaaeec6e363595c82c32b4a76126ca33d2fb57612d428269c52e2d4",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/rotation_0.jsonl",
+      "sha256": "d775f7444b3ce0016000e595e03f992730e272a772e9e8fe8f8c317062d16a82",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/rotation_1.jsonl",
+      "sha256": "1bb6f7660838815726b54a82cacfe4c1cdb673553ca0bd7488865b9cbb391e9c",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/rotation_2.jsonl",
+      "sha256": "e4ff7f2221ccba2db49918082da307a11a16397805c9d7dc15af8e75962beed6",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/rotation_3.jsonl",
+      "sha256": "012b98b425f445d116475f2c0f8a5ee1fb60205a71e66c54b8b47f94bfa4c138",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/rotation_4.jsonl",
+      "sha256": "554c177f491a3aef0bd24a52a1db3c4530fe7745e366c9c7c633b6745de165ca",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/rotation_5.jsonl",
+      "sha256": "5240665a9521de77947883df058b8db939375d0f197b10632a93ccba9da7c86e",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/rotation_6.jsonl",
+      "sha256": "cad1ecdf9753aabeabbefdaf48e5ee3be746ccc6672c3a6efbdd1a51a22747a9",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/small_teacher/rotation_7.jsonl",
+      "sha256": "b00375a0f0b7c4936db45c8b7e5c2aee4a10d6757d99f27d69447afeb5685449",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/attempts.jsonl",
+      "sha256": "252d48138efe33950954692519fb94fc524da9c6ed927c68321feba44f08f815",
+      "id_records": 880
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/definitions.jsonl",
+      "sha256": "860af4b83674923585fe3371902af868015a4e267dddfeb2849ff8069f65e73e",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/reverse.jsonl",
+      "sha256": "0d0dab7543e5240defd5efa08dba4ced75236f634d0459fce3d430217f54dfcc",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/rotation_0.jsonl",
+      "sha256": "c8c6843ad51379f8eb2fcd24337f0de838961a28a8675e5c98ae13ce41afbdac",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/rotation_1.jsonl",
+      "sha256": "6662176fa760344c4f952d5e6894d919fc9ea98b2e9172604be45459c8334911",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/rotation_2.jsonl",
+      "sha256": "2e3e0fa437f29ba5992dd08976f4a46a68f83e7ea2530f0f45fa5be681e80d98",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/rotation_3.jsonl",
+      "sha256": "c2d69e8533ecf9d505a07c4e5b2966d65f6cd96e8d52732f249c0bc9d34bbb77",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/rotation_4.jsonl",
+      "sha256": "908b5b11e553799f8f2643697a8fd1eae9c43dae96531e8b80aabe60ba99f4fe",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/rotation_5.jsonl",
+      "sha256": "525a27ec32df13bdb3ba3891927d4e773500130d2a2b95ea50995461250dc137",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/rotation_6.jsonl",
+      "sha256": "e2f5d3bac029c68ede129d81292de6ff5ad3aa4d4d95be188f3575aeba84967f",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/strong_teacher/rotation_7.jsonl",
+      "sha256": "510060447bf20958c0ce1760243be5094dab4bad0c21c4039eb13869bbe58aaa",
+      "id_records": 88
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/student_adapted/attempts.jsonl",
+      "sha256": "49ccae5b0cdaf7f51332102a6b2447b3731f9c40aa722addd4ec060e93869b94",
+      "id_records": 300
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/student_adapted/legitimate.jsonl",
+      "sha256": "25eed117e848bc4ae5c99cfbfe793dfed33a85992cfa4e5d385d4eed562b4a9a",
+      "id_records": 100
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/student_adapted/test.jsonl",
+      "sha256": "50e8c6af59b1a25318c3a72e6e4a0e8a2ee851c0ed2a24a3ae1cf2cdc200902f",
+      "id_records": 200
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/student_pretrained/attempts.jsonl",
+      "sha256": "b292c8f331a658e801c5c2f36258d38f3a495f615eebebe193ac4060492e99be",
+      "id_records": 300
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/student_pretrained/legitimate.jsonl",
+      "sha256": "ae85df5cdb6b02ad8134a49f98d2572d628dee088c71771940f3422dac301cbf",
+      "id_records": 100
+    },
+    {
+      "path": "experiments/runs/20261029T042435Z_task03_diagnostics_932130fe/student_pretrained/test.jsonl",
+      "sha256": "b60ca6a5b79e571b8f822843405b2cc6810fc96c5334b695c6dbbf9512603759",
+      "id_records": 200
+    }
+  ],
+  "statistics_sha256": "6d2506a38a6bea460630d8fd1d9ec5470c58f02b5ebbd4d61e6f00d73365b434",
+  "decision_sha256": "ef986b2e93b26478d60d633cca754c679396c53c5bd9da0188075c65b1985abd",
+  "model_files": {
+    "config.json": {
+      "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+      "bytes": 660
+    },
+    "generation_config.json": {
+      "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+      "bytes": 242
+    },
+    "LICENSE": {
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "bytes": 11343
+    },
+    "merges.txt": {
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "bytes": 1671839
+    },
+    "model.safetensors": {
+      "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+      "bytes": 3087467144
+    },
+    "README.md": {
+      "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+      "bytes": 4917
+    },
+    "tokenizer.json": {
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "bytes": 7031645
+    },
+    "tokenizer_config.json": {
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "bytes": 7305
+    },
+    "vocab.json": {
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "bytes": 2776833
+    }
+  },
+  "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "prompt_template_sha256": "32c07a68858577e777521a1b7b7976b94a5e284d1cebe1161462ff3f9af2595c",
+  "meaning_of_untouched": "Unused by research pipeline; model-pretraining absence and paraphrase disjointness unproven"
+}
